@@ -1,0 +1,316 @@
+{
+  "communities": {
+    "0": [
+      "scripts_app_gd___process",
+      "scripts_net_network_session_gd___snapshot",
+      "scripts_race_race_world_gd",
+      "scripts_race_race_world_gd__C",
+      "scripts_race_race_world_gd__CHECKPOINT_HALF_WIDTH",
+      "scripts_race_race_world_gd__COLORS",
+      "scripts_race_race_world_gd__DIRECTIONS",
+      "scripts_race_race_world_gd__FORKS",
+      "scripts_race_race_world_gd__GATES",
+      "scripts_race_race_world_gd__PICKUP_STANDS",
+      "scripts_race_race_world_gd__PUDDLES",
+      "scripts_race_race_world_gd__TUNING",
+      "scripts_race_race_world_gd___drop_peel",
+      "scripts_race_race_world_gd___environment",
+      "scripts_race_race_world_gd___floor_arrow",
+      "scripts_race_race_world_gd___gantry",
+      "scripts_race_race_world_gd___gate_states",
+      "scripts_race_race_world_gd___input_received",
+      "scripts_race_race_world_gd___item_snapshot",
+      "scripts_race_race_world_gd___item_visual",
+      "scripts_race_race_world_gd___pickup_stand",
+      "scripts_race_race_world_gd___process",
+      "scripts_race_race_world_gd___ready",
+      "scripts_race_race_world_gd___receive",
+      "scripts_race_race_world_gd___receive_items",
+      "scripts_race_race_world_gd___roster_changed",
+      "scripts_race_race_world_gd___spawn_can",
+      "scripts_race_race_world_gd___track",
+      "scripts_race_race_world_gd__box",
+      "scripts_race_race_world_gd__navigation_text",
+      "scripts_race_race_world_gd__progress",
+      "scripts_race_race_world_gd__puddle",
+      "scripts_race_race_world_gd__rankings",
+      "scripts_race_race_world_gd__sign_text",
+      "scripts_race_race_world_gd__snapshot",
+      "scripts_race_trolley_controller_gd__interpolate"
+    ],
+    "1": [
+      "scripts_app_gd___capture",
+      "scripts_app_gd___cli",
+      "scripts_app_gd___test_process",
+      "scripts_net_network_session_gd",
+      "scripts_net_network_session_gd__MAX_PLAYERS",
+      "scripts_net_network_session_gd__VERSION",
+      "scripts_net_network_session_gd___accept_input",
+      "scripts_net_network_session_gd___broadcast_roster",
+      "scripts_net_network_session_gd___clean_name",
+      "scripts_net_network_session_gd___command_input",
+      "scripts_net_network_session_gd___connected",
+      "scripts_net_network_session_gd___disconnected",
+      "scripts_net_network_session_gd___go",
+      "scripts_net_network_session_gd___load",
+      "scripts_net_network_session_gd___loaded",
+      "scripts_net_network_session_gd___lobby",
+      "scripts_net_network_session_gd___mark_loaded",
+      "scripts_net_network_session_gd___process",
+      "scripts_net_network_session_gd___ready",
+      "scripts_net_network_session_gd___ready_for",
+      "scripts_net_network_session_gd___ready_request",
+      "scripts_net_network_session_gd___register",
+      "scripts_net_network_session_gd___reject",
+      "scripts_net_network_session_gd___roster",
+      "scripts_net_network_session_gd___shift_request",
+      "scripts_net_network_session_gd__back_to_lobby",
+      "scripts_net_network_session_gd__can_start",
+      "scripts_net_network_session_gd__host_session",
+      "scripts_net_network_session_gd__join_session",
+      "scripts_net_network_session_gd__leave",
+      "scripts_net_network_session_gd__send_input",
+      "scripts_net_network_session_gd__set_ready",
+      "scripts_net_network_session_gd__start_race",
+      "scripts_net_network_session_gd__start_solo"
+    ],
+    "2": [
+      "scripts_app_gd",
+      "scripts_app_gd__LIME",
+      "scripts_app_gd__PALE",
+      "scripts_app_gd__R",
+      "scripts_app_gd___begin",
+      "scripts_app_gd___close_overlay",
+      "scripts_app_gd___credits",
+      "scripts_app_gd___destroy_world",
+      "scripts_app_gd___help",
+      "scripts_app_gd___lobby",
+      "scripts_app_gd___main_menu",
+      "scripts_app_gd___message",
+      "scripts_app_gd___modal",
+      "scripts_app_gd___new_screen",
+      "scripts_app_gd___ready",
+      "scripts_app_gd___results",
+      "scripts_app_gd___return_lobby",
+      "scripts_app_gd___session_changed",
+      "scripts_app_gd___settings",
+      "scripts_app_gd___setup_input",
+      "scripts_app_gd___solo_debug_drive",
+      "scripts_app_gd___unhandled_key_input",
+      "scripts_app_gd___update_lobby",
+      "scripts_app_gd__button",
+      "scripts_app_gd__field",
+      "scripts_app_gd__label",
+      "scripts_app_gd__panel",
+      "tests_run_multiplayer_ps1"
+    ],
+    "3": [
+      "SHIFT_MART_GDD_md",
+      "resources_balance_tres",
+      "scripts_net_network_session_gd__publish_snapshot",
+      "scripts_race_race_world_gd___contact",
+      "scripts_race_race_world_gd___physics_process",
+      "scripts_race_race_world_gd___update_cans",
+      "scripts_race_race_world_gd___update_peels",
+      "scripts_race_trolley_controller_gd",
+      "scripts_race_trolley_controller_gd__TUNING",
+      "scripts_race_trolley_controller_gd___ready",
+      "scripts_race_trolley_controller_gd__apply_snapshot",
+      "scripts_race_trolley_controller_gd__box",
+      "scripts_race_trolley_controller_gd__damage",
+      "scripts_race_trolley_controller_gd__simulate",
+      "scripts_race_trolley_controller_gd__start_repair",
+      "scripts_race_trolley_controller_gd__state_data",
+      "scripts_race_trolley_controller_gd__trigger_slip",
+      "scripts_race_trolley_controller_gd__trigger_stun"
+    ],
+    "4": [
+      "scripts_race_race_world_gd___advance_shift",
+      "scripts_race_race_world_gd___checkpoint",
+      "scripts_race_race_world_gd___collect_pickup",
+      "scripts_race_race_world_gd___update_gates",
+      "scripts_race_race_world_gd__setup",
+      "tests_state_test_gd",
+      "tests_state_test_gd__W",
+      "tests_state_test_gd___ready",
+      "tests_state_test_gd__check",
+      "tests_state_test_gd__checkpoint_rules",
+      "tests_state_test_gd__cross_gate",
+      "tests_state_test_gd__items_and_respawn",
+      "tests_state_test_gd__replication",
+      "tests_state_test_gd__reset_cart",
+      "tests_state_test_gd__route_physics",
+      "tests_state_test_gd__shift_rules"
+    ],
+    "5": [
+      "docs_PROGRESS_md",
+      "scripts_net_network_session_gd__request_shift",
+      "scripts_race_race_world_gd__request_shift",
+      "tests_solo_test_gd",
+      "tests_solo_test_gd___ready",
+      "tests_solo_test_gd__check",
+      "tests_solo_test_gd__click",
+      "tests_solo_test_gd__run_solo"
+    ],
+    "6": [
+      "README_md"
+    ],
+    "7": [
+      "docs_WORK_LOG_md"
+    ],
+    "8": [
+      "project_godot"
+    ],
+    "9": [
+      "resources_trolley_tuning_gd"
+    ]
+  },
+  "cohesion": {
+    "0": 0.08571428571428572,
+    "1": 0.11229946524064172,
+    "2": 0.17989417989417988,
+    "3": 0.16339869281045752,
+    "4": 0.25,
+    "5": 0.39285714285714285,
+    "6": 1.0,
+    "7": 1.0,
+    "8": 1.0,
+    "9": 1.0
+  },
+  "gods": [
+    {
+      "id": "scripts_net_network_session_gd__leave",
+      "label": "network_session.leave()",
+      "degree": 14
+    },
+    {
+      "id": "scripts_race_race_world_gd___physics_process",
+      "label": "race_world._physics_process()",
+      "degree": 12
+    },
+    {
+      "id": "scripts_app_gd___main_menu",
+      "label": "app._main_menu()",
+      "degree": 11
+    },
+    {
+      "id": "scripts_app_gd__label",
+      "label": "app.label()",
+      "degree": 10
+    },
+    {
+      "id": "scripts_app_gd___lobby",
+      "label": "app._lobby()",
+      "degree": 10
+    },
+    {
+      "id": "scripts_app_gd__button",
+      "label": "app.button()",
+      "degree": 9
+    },
+    {
+      "id": "tests_solo_test_gd__run_solo",
+      "label": "solo_test.run_solo()",
+      "degree": 9
+    },
+    {
+      "id": "tests_state_test_gd__items_and_respawn",
+      "label": "state_test.items_and_respawn()",
+      "degree": 9
+    },
+    {
+      "id": "scripts_app_gd___modal",
+      "label": "app._modal()",
+      "degree": 8
+    },
+    {
+      "id": "scripts_app_gd___results",
+      "label": "app._results()",
+      "degree": 8
+    }
+  ],
+  "surprises": [
+    {
+      "source": "state_test.replication()",
+      "target": "trolley_controller.state_data()",
+      "source_files": [
+        "tests/state_test.gd",
+        "scripts/race/trolley_controller.gd"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "connects across different repos/directories; bridges separate communities; peripheral node `trolley_controller.state_data()` unexpectedly reaches hub `state_test.replication()`"
+    },
+    {
+      "source": "solo_test._ready()",
+      "target": "network_session.leave()",
+      "source_files": [
+        "tests/solo_test.gd",
+        "scripts/net/network_session.gd"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "connects across different repos/directories; bridges separate communities"
+    },
+    {
+      "source": "solo_test.run_solo()",
+      "target": "network_session.back_to_lobby()",
+      "source_files": [
+        "tests/solo_test.gd",
+        "scripts/net/network_session.gd"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "connects across different repos/directories; bridges separate communities"
+    },
+    {
+      "source": "solo_test.run_solo()",
+      "target": "network_session.can_start()",
+      "source_files": [
+        "tests/solo_test.gd",
+        "scripts/net/network_session.gd"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "connects across different repos/directories; bridges separate communities"
+    },
+    {
+      "source": "solo_test.run_solo()",
+      "target": "network_session.leave()",
+      "source_files": [
+        "tests/solo_test.gd",
+        "scripts/net/network_session.gd"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "connects across different repos/directories; bridges separate communities"
+    }
+  ],
+  "questions": [
+    {
+      "type": "bridge_node",
+      "question": "Why does `network_session._load()` connect `scripts/net/network_session.gd` to `scripts/app.gd`?",
+      "why": "High betweenness centrality (0.005) - this node is a cross-community bridge."
+    },
+    {
+      "type": "isolated_nodes",
+      "question": "What connects `R`, `LIME`, `PALE` to the rest of the system?",
+      "why": "16 weakly-connected nodes found - possible documentation gaps or missing edges."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `scripts/race/race_world.gd` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.08571428571428572 - nodes in this community are weakly interconnected."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `app._solo_debug_drive()` connect `scripts/app.gd` to `scripts/net/network_session.gd`?",
+      "why": "High betweenness centrality (0.005) - this node is a cross-community bridge."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `scripts/net/network_session.gd` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.11229946524064172 - nodes in this community are weakly interconnected."
+    }
+  ]
+}

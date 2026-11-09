@@ -1,0 +1,215 @@
+{
+  "communities": {
+    "0": [
+      "install",
+      "install_get_relativepathcompat",
+      "install_install_continue",
+      "install_require_cmd",
+      "install_resolve_dir",
+      "install_resolve_python",
+      "install_show_usage"
+    ],
+    "1": [
+      "install_copy_skill",
+      "install_install_cline",
+      "install_install_copilot",
+      "install_install_cowork",
+      "install_install_cursor",
+      "install_install_windsurf",
+      "install_test_isexcluded"
+    ],
+    "2": [
+      "scripts_race_race_world_contact",
+      "scripts_race_race_world_obstacles",
+      "scripts_race_race_world_spawn_rocket",
+      "scripts_race_trolley_controller_damage",
+      "scripts_race_trolley_controller_trigger_stun",
+      "shift_mart_gdd_reduced_stun"
+    ],
+    "3": [
+      "install_get_globalrootfortool",
+      "install_get_workspacerootfortool",
+      "install_install_toolauto",
+      "install_install_toolglobal"
+    ],
+    "4": [
+      "resources_trolley_tuning_trolleytuning",
+      "scripts_race_race_world_raceworld",
+      "scripts_race_trolley_controller_trolleycontroller",
+      "tests_state_test_statetest"
+    ],
+    "5": [
+      "scripts_app_app",
+      "scripts_net_network_session_session",
+      "tests_run_multiplayer_ps1"
+    ],
+    "6": [
+      "scripts_race_race_world_pickup_stands",
+      "scripts_race_trolley_controller_trigger_boost",
+      "shift_mart_gdd_buff_mechanisms"
+    ],
+    "7": [
+      "scripts_app_hud",
+      "scripts_race_trolley_controller_state_data"
+    ],
+    "8": [
+      "scripts_race_race_world_gates",
+      "shift_mart_gdd_winding_track"
+    ],
+    "9": [
+      "scripts_race_race_world_puddles",
+      "scripts_race_trolley_controller_trigger_slip"
+    ],
+    "10": [
+      "shift_mart_gdd"
+    ],
+    "11": [
+      "tests_run_multiplayer"
+    ]
+  },
+  "cohesion": {
+    "0": 0.2857142857142857,
+    "1": 0.2857142857142857,
+    "2": 0.3333333333333333,
+    "3": 0.5,
+    "4": 0.8333333333333334,
+    "5": 0.6666666666666666,
+    "6": 0.6666666666666666,
+    "7": 1.0,
+    "8": 1.0,
+    "9": 1.0,
+    "10": 1.0,
+    "11": 1.0
+  },
+  "gods": [
+    {
+      "id": "install_copy_skill",
+      "label": "Copy-Skill()",
+      "degree": 11
+    },
+    {
+      "id": "scripts_race_race_world_raceworld",
+      "label": "RaceWorld System",
+      "degree": 5
+    },
+    {
+      "id": "install_install_toolauto",
+      "label": "Install-ToolAuto()",
+      "degree": 4
+    },
+    {
+      "id": "tests_state_test_statetest",
+      "label": "State & Mechanics Test Suite",
+      "degree": 4
+    },
+    {
+      "id": "install_get_globalrootfortool",
+      "label": "Get-GlobalRootForTool()",
+      "degree": 3
+    },
+    {
+      "id": "install_install_toolglobal",
+      "label": "Install-ToolGlobal()",
+      "degree": 3
+    },
+    {
+      "id": "scripts_race_trolley_controller_trolleycontroller",
+      "label": "TrolleyController",
+      "degree": 3
+    },
+    {
+      "id": "scripts_race_trolley_controller_trigger_stun",
+      "label": "Trolley Stun Handler",
+      "degree": 3
+    },
+    {
+      "id": "scripts_net_network_session_session",
+      "label": "NetworkSession ENet Manager",
+      "degree": 3
+    },
+    {
+      "id": "install_get_relativepathcompat",
+      "label": "Get-RelativePathCompat()",
+      "degree": 2
+    }
+  ],
+  "surprises": [
+    {
+      "source": "Headless Multiplayer Integration Runner",
+      "target": "NetworkSession ENet Manager",
+      "source_files": [
+        "tests/run_multiplayer.ps1",
+        "scripts/net/network_session.gd"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "crosses file types (doc ↔ code); connects across different repos/directories"
+    },
+    {
+      "source": "RaceWorld System",
+      "target": "TrolleyTuning Balance Config",
+      "source_files": [
+        "scripts/race/race_world.gd",
+        "resources/trolley_tuning.gd"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "connects across different repos/directories; peripheral node `TrolleyTuning Balance Config` unexpectedly reaches hub `RaceWorld System`"
+    },
+    {
+      "source": "State & Mechanics Test Suite",
+      "target": "12-Checkpoint Winding Circuit",
+      "source_files": [
+        "tests/state_test.gd",
+        "scripts/race/race_world.gd"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "connects across different repos/directories; bridges separate communities"
+    },
+    {
+      "source": "State & Mechanics Test Suite",
+      "target": "Trolley NOS Boost Handler",
+      "source_files": [
+        "tests/state_test.gd",
+        "scripts/race/trolley_controller.gd"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "connects across different repos/directories; bridges separate communities"
+    },
+    {
+      "source": "12-Checkpoint Winding Circuit",
+      "target": "Winding Circuit Design",
+      "source_files": [
+        "scripts/race/race_world.gd",
+        "SHIFT_MART_GDD.md"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "implements",
+      "why": "connects across different repos/directories"
+    }
+  ],
+  "questions": [
+    {
+      "type": "bridge_node",
+      "question": "Why does `RaceWorld System` connect `Community 4` to `Community 5`, `Community 7`?",
+      "why": "High betweenness centrality (0.060) - this node is a cross-community bridge."
+    },
+    {
+      "type": "isolated_nodes",
+      "question": "What connects `SHIFT MART Game Design Document`, `Winding Circuit Design`, `Supermarket Buff & Weapon System` to the rest of the system?",
+      "why": "10 weakly-connected nodes found - possible documentation gaps or missing edges."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `State & Mechanics Test Suite` connect `Community 4` to `Community 8`, `Community 6`?",
+      "why": "High betweenness centrality (0.056) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `NetworkSession ENet Manager` connect `Community 5` to `Community 4`?",
+      "why": "High betweenness centrality (0.028) - this node is a cross-community bridge."
+    }
+  ]
+}

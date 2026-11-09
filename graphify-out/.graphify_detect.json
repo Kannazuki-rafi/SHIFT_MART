@@ -1,0 +1,38 @@
+{
+  "scan_root": "D:\\codingan\\Godot\\SHIFT_MART_3D",
+  "total_files": 23,
+  "total_words": 20303,
+  "files": {
+    "code": [
+      "D:\\codingan\\Godot\\SHIFT_MART_3D\\install.ps1",
+      "D:\\codingan\\Godot\\SHIFT_MART_3D\\tests\\run_multiplayer.ps1"
+    ],
+    "document": [
+      "D:\\codingan\\Godot\\SHIFT_MART_3D\\CREDITS.md",
+      "D:\\codingan\\Godot\\SHIFT_MART_3D\\export_presets.cfg",
+      "D:\\codingan\\Godot\\SHIFT_MART_3D\\project.godot",
+      "D:\\codingan\\Godot\\SHIFT_MART_3D\\README.md",
+      "D:\\codingan\\Godot\\SHIFT_MART_3D\\SHIFT_MART_GDD.md",
+      "D:\\codingan\\Godot\\SHIFT_MART_3D\\docs\\ASSET_LIST.md",
+      "D:\\codingan\\Godot\\SHIFT_MART_3D\\docs\\DECISIONS.md",
+      "D:\\codingan\\Godot\\SHIFT_MART_3D\\docs\\IMPLEMENTATION_PLAN.md",
+      "D:\\codingan\\Godot\\SHIFT_MART_3D\\docs\\ITCH_DRAFT.md",
+      "D:\\codingan\\Godot\\SHIFT_MART_3D\\docs\\PROGRESS.md",
+      "D:\\codingan\\Godot\\SHIFT_MART_3D\\docs\\TEST_MATRIX.md",
+      "D:\\codingan\\Godot\\SHIFT_MART_3D\\resources\\balance.tres",
+      "D:\\codingan\\Godot\\SHIFT_MART_3D\\resources\\trolley_tuning.gd",
+      "D:\\codingan\\Godot\\SHIFT_MART_3D\\scenes\\app.tscn",
+      "D:\\codingan\\Godot\\SHIFT_MART_3D\\scripts\\app.gd",
+      "D:\\codingan\\Godot\\SHIFT_MART_3D\\tests\\state_test.gd",
+      "D:\\codingan\\Godot\\SHIFT_MART_3D\\tests\\state_test.tscn",
+      "D:\\codingan\\Godot\\SHIFT_MART_3D\\scripts\\net\\network_session.gd",
+      "D:\\codingan\\Godot\\SHIFT_MART_3D\\scripts\\race\\race_world.gd",
+      "D:\\codingan\\Godot\\SHIFT_MART_3D\\scripts\\race\\trolley_controller.gd"
+    ],
+    "paper": [],
+    "image": [
+      "D:\\codingan\\Godot\\SHIFT_MART_3D\\tests\\screenshot.png"
+    ],
+    "video": []
+  }
+}

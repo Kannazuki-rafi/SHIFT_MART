@@ -1,0 +1,11 @@
+{
+  "http_status": 200,
+  "saved_at": "2026-11-09T06:53:00.505412+00:00",
+  "response": {
+    "success": true,
+    "id": 3,
+    "title": "SHIFT MART GDD course rebuild and offline Solo Debug Drive fix ? verified handoff",
+    "project": "SHIFT_MART_3D",
+    "message": "Memory saved as observation #3"
+  }
+}

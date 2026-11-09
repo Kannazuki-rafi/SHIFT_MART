@@ -1,0 +1,19 @@
+extends Resource
+@export var top_speed: float = 12.0
+@export var acceleration: float = 16.0
+@export var steering: float = 2.3
+@export var grip: float = 9.0
+@export var reverse_speed: float = 4.0
+@export var contact_threshold: float = 4.0
+@export var ram_damage: float = 20.0
+@export var ram_attacker_damage_ratio: float = 0.2
+@export var camera_speed_pullback: float = 1.5
+@export var rider_lean_degrees: float = 10.0
+@export var repair_seconds: float = 3.0
+@export var protection_seconds: float = 1.5
+@export var total_laps: int = 3
+@export var race_seconds: float = 300.0
+@export var finish_grace: float = 20.0
+@export var default_stun_ticks: int = 18
+@export var can_damage: float = 15.0
+@export var can_speed: float = 32.0

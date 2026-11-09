@@ -1,0 +1,576 @@
+{
+  "nodes": [
+    {
+      "id": "install",
+      "label": "install.ps1",
+      "file_type": "code",
+      "source_file": "install.ps1",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "install_show_usage",
+      "label": "Show-Usage()",
+      "file_type": "code",
+      "source_file": "install.ps1",
+      "source_location": "L74",
+      "_origin": "ast"
+    },
+    {
+      "id": "install_require_cmd",
+      "label": "Require-Cmd()",
+      "file_type": "code",
+      "source_file": "install.ps1",
+      "source_location": "L130",
+      "_origin": "ast"
+    },
+    {
+      "id": "install_resolve_python",
+      "label": "Resolve-Python()",
+      "file_type": "code",
+      "source_file": "install.ps1",
+      "source_location": "L141",
+      "_origin": "ast"
+    },
+    {
+      "id": "install_resolve_dir",
+      "label": "Resolve-Dir()",
+      "file_type": "code",
+      "source_file": "install.ps1",
+      "source_location": "L156",
+      "_origin": "ast"
+    },
+    {
+      "id": "install_get_relativepathcompat",
+      "label": "Get-RelativePathCompat()",
+      "file_type": "code",
+      "source_file": "install.ps1",
+      "source_location": "L164",
+      "_origin": "ast"
+    },
+    {
+      "id": "install_test_isexcluded",
+      "label": "Test-IsExcluded()",
+      "file_type": "code",
+      "source_file": "install.ps1",
+      "source_location": "L192",
+      "_origin": "ast"
+    },
+    {
+      "id": "install_copy_skill",
+      "label": "Copy-Skill()",
+      "file_type": "code",
+      "source_file": "install.ps1",
+      "source_location": "L220",
+      "_origin": "ast"
+    },
+    {
+      "id": "install_get_globalrootfortool",
+      "label": "Get-GlobalRootForTool()",
+      "file_type": "code",
+      "source_file": "install.ps1",
+      "source_location": "L283",
+      "_origin": "ast"
+    },
+    {
+      "id": "install_get_workspacerootfortool",
+      "label": "Get-WorkspaceRootForTool()",
+      "file_type": "code",
+      "source_file": "install.ps1",
+      "source_location": "L293",
+      "_origin": "ast"
+    },
+    {
+      "id": "install_install_toolauto",
+      "label": "Install-ToolAuto()",
+      "file_type": "code",
+      "source_file": "install.ps1",
+      "source_location": "L318",
+      "_origin": "ast"
+    },
+    {
+      "id": "install_install_toolglobal",
+      "label": "Install-ToolGlobal()",
+      "file_type": "code",
+      "source_file": "install.ps1",
+      "source_location": "L337",
+      "_origin": "ast"
+    },
+    {
+      "id": "install_install_cursor",
+      "label": "Install-Cursor()",
+      "file_type": "code",
+      "source_file": "install.ps1",
+      "source_location": "L351",
+      "_origin": "ast"
+    },
+    {
+      "id": "install_install_windsurf",
+      "label": "Install-Windsurf()",
+      "file_type": "code",
+      "source_file": "install.ps1",
+      "source_location": "L378",
+      "_origin": "ast"
+    },
+    {
+      "id": "install_install_continue",
+      "label": "Install-Continue()",
+      "file_type": "code",
+      "source_file": "install.ps1",
+      "source_location": "L397",
+      "_origin": "ast"
+    },
+    {
+      "id": "install_install_copilot",
+      "label": "Install-Copilot()",
+      "file_type": "code",
+      "source_file": "install.ps1",
+      "source_location": "L434",
+      "_origin": "ast"
+    },
+    {
+      "id": "install_install_cowork",
+      "label": "Install-Cowork()",
+      "file_type": "code",
+      "source_file": "install.ps1",
+      "source_location": "L461",
+      "_origin": "ast"
+    },
+    {
+      "id": "install_install_cline",
+      "label": "Install-Cline()",
+      "file_type": "code",
+      "source_file": "install.ps1",
+      "source_location": "L503",
+      "_origin": "ast"
+    },
+    {
+      "id": "tests_run_multiplayer",
+      "label": "run_multiplayer.ps1",
+      "file_type": "code",
+      "source_file": "tests/run_multiplayer.ps1",
+      "source_location": "L1",
+      "_origin": "ast"
+    }
+  ],
+  "edges": [
+    {
+      "source": "install",
+      "target": "install_show_usage",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "install.ps1",
+      "source_location": "L74",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "install",
+      "target": "install_require_cmd",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "install.ps1",
+      "source_location": "L130",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "install",
+      "target": "install_resolve_python",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "install.ps1",
+      "source_location": "L141",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "install",
+      "target": "install_resolve_dir",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "install.ps1",
+      "source_location": "L156",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "install",
+      "target": "install_get_relativepathcompat",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "install.ps1",
+      "source_location": "L164",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "install",
+      "target": "install_test_isexcluded",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "install.ps1",
+      "source_location": "L192",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "install",
+      "target": "install_copy_skill",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "install.ps1",
+      "source_location": "L220",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "install",
+      "target": "install_get_globalrootfortool",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "install.ps1",
+      "source_location": "L283",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "install",
+      "target": "install_get_workspacerootfortool",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "install.ps1",
+      "source_location": "L293",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "install",
+      "target": "install_install_toolauto",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "install.ps1",
+      "source_location": "L318",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "install",
+      "target": "install_install_toolglobal",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "install.ps1",
+      "source_location": "L337",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "install",
+      "target": "install_install_cursor",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "install.ps1",
+      "source_location": "L351",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "install",
+      "target": "install_install_windsurf",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "install.ps1",
+      "source_location": "L378",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "install",
+      "target": "install_install_continue",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "install.ps1",
+      "source_location": "L397",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "install",
+      "target": "install_install_copilot",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "install.ps1",
+      "source_location": "L434",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "install",
+      "target": "install_install_cowork",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "install.ps1",
+      "source_location": "L461",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "install",
+      "target": "install_install_cline",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "install.ps1",
+      "source_location": "L503",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "install_copy_skill",
+      "target": "install_get_relativepathcompat",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "install.ps1",
+      "source_location": "L255",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "install_copy_skill",
+      "target": "install_test_isexcluded",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "install.ps1",
+      "source_location": "L257",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "install_install_toolauto",
+      "target": "install_get_workspacerootfortool",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "install.ps1",
+      "source_location": "L324",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "install_install_toolauto",
+      "target": "install_get_globalrootfortool",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "install.ps1",
+      "source_location": "L330",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "install_install_toolauto",
+      "target": "install_copy_skill",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "install.ps1",
+      "source_location": "L334",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "install_install_toolglobal",
+      "target": "install_get_globalrootfortool",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "install.ps1",
+      "source_location": "L343",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "install_install_toolglobal",
+      "target": "install_copy_skill",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "install.ps1",
+      "source_location": "L345",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "install_install_cursor",
+      "target": "install_copy_skill",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "install.ps1",
+      "source_location": "L374",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "install_install_windsurf",
+      "target": "install_copy_skill",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "install.ps1",
+      "source_location": "L393",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "install_install_continue",
+      "target": "install_copy_skill",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "install.ps1",
+      "source_location": "L430",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "install_install_copilot",
+      "target": "install_copy_skill",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "install.ps1",
+      "source_location": "L456",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "install_install_cowork",
+      "target": "install_copy_skill",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "install.ps1",
+      "source_location": "L480",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "install_install_cline",
+      "target": "install_copy_skill",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "install.ps1",
+      "source_location": "L526",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "install",
+      "target": "install_show_usage",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "install.ps1",
+      "source_location": "L567",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "install",
+      "target": "install_resolve_python",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "install.ps1",
+      "source_location": "L585",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "install",
+      "target": "install_resolve_dir",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "install.ps1",
+      "source_location": "L666",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "install",
+      "target": "install_install_toolauto",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "install.ps1",
+      "source_location": "L742",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "install",
+      "target": "install_install_cowork",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "install.ps1",
+      "source_location": "L745",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "install",
+      "target": "install_install_cursor",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "install.ps1",
+      "source_location": "L746",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "install",
+      "target": "install_install_windsurf",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "install.ps1",
+      "source_location": "L747",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "install",
+      "target": "install_install_continue",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "install.ps1",
+      "source_location": "L748",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "install",
+      "target": "install_install_copilot",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "install.ps1",
+      "source_location": "L749",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "install",
+      "target": "install_install_cline",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "install.ps1",
+      "source_location": "L750",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "install",
+      "target": "install_install_toolglobal",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "install.ps1",
+      "source_location": "L752",
+      "weight": 1.0,
+      "_origin": "ast"
+    }
+  ],
+  "input_tokens": 0,
+  "output_tokens": 0,
+  "failed_sources": [],
+  "skipped_sources": [],
+  "extracted_sources": [
+    "D:\\codingan\\Godot\\SHIFT_MART_3D\\install.ps1",
+    "D:\\codingan\\Godot\\SHIFT_MART_3D\\tests\\run_multiplayer.ps1"
+  ]
+}

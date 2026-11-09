@@ -1,0 +1,522 @@
+{
+  "nodes": [
+    {
+      "id": "shift_mart_gdd",
+      "label": "SHIFT MART Game Design Document",
+      "file_type": "document",
+      "source_file": "D:\\codingan\\Godot\\SHIFT_MART_3D\\SHIFT_MART_GDD.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "High-octane after-hours supermarket trolley racing party game for 2-5 players with physical sabotage and dynamic track"
+    },
+    {
+      "id": "shift_mart_gdd_winding_track",
+      "label": "Winding Circuit Design",
+      "file_type": "concept",
+      "source_file": "D:\\codingan\\Godot\\SHIFT_MART_3D\\SHIFT_MART_GDD.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "Replaced straight layout with winding one-way S-curve circuit snaking through checkout, produce, bakery, freezer, snacks, and cleaning"
+    },
+    {
+      "id": "shift_mart_gdd_buff_mechanisms",
+      "label": "Supermarket Buff & Weapon System",
+      "file_type": "concept",
+      "source_file": "D:\\codingan\\Godot\\SHIFT_MART_3D\\SHIFT_MART_GDD.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "NOS nitro boost for speed bursts and Rocket launchers for depleting enemy cart durability"
+    },
+    {
+      "id": "shift_mart_gdd_reduced_stun",
+      "label": "Reduced Stun Tuning",
+      "file_type": "rationale",
+      "source_file": "D:\\codingan\\Godot\\SHIFT_MART_3D\\SHIFT_MART_GDD.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "rationale": "Reduced wall collision stun to 18 ticks and rocket stun to 25 ticks to preserve driving flow and prevent frustrating player stalls"
+    },
+    {
+      "id": "scripts_race_race_world_raceworld",
+      "label": "RaceWorld System",
+      "file_type": "code",
+      "source_file": "D:\\codingan\\Godot\\SHIFT_MART_3D\\scripts\\race\\race_world.gd",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "scripts_race_race_world_gates",
+      "label": "12-Checkpoint Winding Circuit",
+      "file_type": "code",
+      "source_file": "D:\\codingan\\Godot\\SHIFT_MART_3D\\scripts\\race\\race_world.gd",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "scripts_race_race_world_obstacles",
+      "label": "Track Obstacles & Inner Barriers",
+      "file_type": "code",
+      "source_file": "D:\\codingan\\Godot\\SHIFT_MART_3D\\scripts\\race\\race_world.gd",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "scripts_race_race_world_pickup_stands",
+      "label": "Item Pickup Stands",
+      "file_type": "code",
+      "source_file": "D:\\codingan\\Godot\\SHIFT_MART_3D\\scripts\\race\\race_world.gd",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "scripts_race_race_world_spawn_rocket",
+      "label": "Rocket Projectile Engine",
+      "file_type": "code",
+      "source_file": "D:\\codingan\\Godot\\SHIFT_MART_3D\\scripts\\race\\race_world.gd",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "scripts_race_race_world_puddles",
+      "label": "Water Hazard Puddles",
+      "file_type": "code",
+      "source_file": "D:\\codingan\\Godot\\SHIFT_MART_3D\\scripts\\race\\race_world.gd",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "scripts_race_race_world_contact",
+      "label": "Cart Collision & Ramming Physics",
+      "file_type": "code",
+      "source_file": "D:\\codingan\\Godot\\SHIFT_MART_3D\\scripts\\race\\race_world.gd",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "scripts_race_trolley_controller_trolleycontroller",
+      "label": "TrolleyController",
+      "file_type": "code",
+      "source_file": "D:\\codingan\\Godot\\SHIFT_MART_3D\\scripts\\race\\trolley_controller.gd",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "scripts_race_trolley_controller_trigger_boost",
+      "label": "Trolley NOS Boost Handler",
+      "file_type": "code",
+      "source_file": "D:\\codingan\\Godot\\SHIFT_MART_3D\\scripts\\race\\trolley_controller.gd",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "scripts_race_trolley_controller_trigger_stun",
+      "label": "Trolley Stun Handler",
+      "file_type": "code",
+      "source_file": "D:\\codingan\\Godot\\SHIFT_MART_3D\\scripts\\race\\trolley_controller.gd",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "scripts_race_trolley_controller_trigger_slip",
+      "label": "Trolley Slip Handler",
+      "file_type": "code",
+      "source_file": "D:\\codingan\\Godot\\SHIFT_MART_3D\\scripts\\race\\trolley_controller.gd",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "scripts_race_trolley_controller_damage",
+      "label": "Durability & Armor System",
+      "file_type": "code",
+      "source_file": "D:\\codingan\\Godot\\SHIFT_MART_3D\\scripts\\race\\trolley_controller.gd",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "scripts_race_trolley_controller_state_data",
+      "label": "19-Float State Snapshot",
+      "file_type": "code",
+      "source_file": "D:\\codingan\\Godot\\SHIFT_MART_3D\\scripts\\race\\trolley_controller.gd",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "scripts_app_app",
+      "label": "App Master UI & Client",
+      "file_type": "code",
+      "source_file": "D:\\codingan\\Godot\\SHIFT_MART_3D\\scripts\\app.gd",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "scripts_app_hud",
+      "label": "Race Status HUD",
+      "file_type": "code",
+      "source_file": "D:\\codingan\\Godot\\SHIFT_MART_3D\\scripts\\app.gd",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "scripts_net_network_session_session",
+      "label": "NetworkSession ENet Manager",
+      "file_type": "code",
+      "source_file": "D:\\codingan\\Godot\\SHIFT_MART_3D\\scripts\\net\\network_session.gd",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "resources_trolley_tuning_trolleytuning",
+      "label": "TrolleyTuning Balance Config",
+      "file_type": "code",
+      "source_file": "D:\\codingan\\Godot\\SHIFT_MART_3D\\resources\\trolley_tuning.gd",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "tests_state_test_statetest",
+      "label": "State & Mechanics Test Suite",
+      "file_type": "code",
+      "source_file": "D:\\codingan\\Godot\\SHIFT_MART_3D\\tests\\state_test.gd",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    },
+    {
+      "id": "tests_run_multiplayer_ps1",
+      "label": "Headless Multiplayer Integration Runner",
+      "file_type": "code",
+      "source_file": "D:\\codingan\\Godot\\SHIFT_MART_3D\\tests\\run_multiplayer.ps1",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null
+    }
+  ],
+  "edges": [
+    {
+      "source": "scripts_race_race_world_gates",
+      "target": "shift_mart_gdd_winding_track",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "D:\\codingan\\Godot\\SHIFT_MART_3D\\scripts\\race\\race_world.gd",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_race_race_world_pickup_stands",
+      "target": "shift_mart_gdd_buff_mechanisms",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "D:\\codingan\\Godot\\SHIFT_MART_3D\\scripts\\race\\race_world.gd",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_race_trolley_controller_trigger_stun",
+      "target": "shift_mart_gdd_reduced_stun",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "D:\\codingan\\Godot\\SHIFT_MART_3D\\scripts\\race\\trolley_controller.gd",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_race_race_world_raceworld",
+      "target": "scripts_race_trolley_controller_trolleycontroller",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "D:\\codingan\\Godot\\SHIFT_MART_3D\\scripts\\race\\race_world.gd",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_race_race_world_pickup_stands",
+      "target": "scripts_race_trolley_controller_trigger_boost",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "D:\\codingan\\Godot\\SHIFT_MART_3D\\scripts\\race\\race_world.gd",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_race_race_world_spawn_rocket",
+      "target": "scripts_race_trolley_controller_damage",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "D:\\codingan\\Godot\\SHIFT_MART_3D\\scripts\\race\\race_world.gd",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_race_race_world_spawn_rocket",
+      "target": "scripts_race_trolley_controller_trigger_stun",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "D:\\codingan\\Godot\\SHIFT_MART_3D\\scripts\\race\\race_world.gd",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_race_race_world_puddles",
+      "target": "scripts_race_trolley_controller_trigger_slip",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "D:\\codingan\\Godot\\SHIFT_MART_3D\\scripts\\race\\race_world.gd",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_race_race_world_obstacles",
+      "target": "scripts_race_trolley_controller_trigger_stun",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "D:\\codingan\\Godot\\SHIFT_MART_3D\\scripts\\race\\race_world.gd",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_race_race_world_contact",
+      "target": "scripts_race_trolley_controller_damage",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "D:\\codingan\\Godot\\SHIFT_MART_3D\\scripts\\race\\race_world.gd",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_race_race_world_raceworld",
+      "target": "scripts_race_trolley_controller_state_data",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "D:\\codingan\\Godot\\SHIFT_MART_3D\\scripts\\race\\race_world.gd",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_race_race_world_raceworld",
+      "target": "scripts_net_network_session_session",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "D:\\codingan\\Godot\\SHIFT_MART_3D\\scripts\\race\\race_world.gd",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_app_app",
+      "target": "scripts_net_network_session_session",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "D:\\codingan\\Godot\\SHIFT_MART_3D\\scripts\\app.gd",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_app_hud",
+      "target": "scripts_race_trolley_controller_state_data",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "D:\\codingan\\Godot\\SHIFT_MART_3D\\scripts\\app.gd",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_race_trolley_controller_trolleycontroller",
+      "target": "resources_trolley_tuning_trolleytuning",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "D:\\codingan\\Godot\\SHIFT_MART_3D\\scripts\\race\\trolley_controller.gd",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_race_race_world_raceworld",
+      "target": "resources_trolley_tuning_trolleytuning",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "D:\\codingan\\Godot\\SHIFT_MART_3D\\scripts\\race\\race_world.gd",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "tests_state_test_statetest",
+      "target": "scripts_race_race_world_raceworld",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "D:\\codingan\\Godot\\SHIFT_MART_3D\\tests\\state_test.gd",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "tests_state_test_statetest",
+      "target": "scripts_race_trolley_controller_trolleycontroller",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "D:\\codingan\\Godot\\SHIFT_MART_3D\\tests\\state_test.gd",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "tests_state_test_statetest",
+      "target": "scripts_race_race_world_gates",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "D:\\codingan\\Godot\\SHIFT_MART_3D\\tests\\state_test.gd",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "tests_state_test_statetest",
+      "target": "scripts_race_trolley_controller_trigger_boost",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "D:\\codingan\\Godot\\SHIFT_MART_3D\\tests\\state_test.gd",
+      "source_location": null,
+      "weight": 1.0
+    },
+    {
+      "source": "tests_run_multiplayer_ps1",
+      "target": "scripts_net_network_session_session",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "D:\\codingan\\Godot\\SHIFT_MART_3D\\tests\\run_multiplayer.ps1",
+      "source_location": null,
+      "weight": 1.0
+    }
+  ],
+  "hyperedges": [
+    {
+      "id": "supermarket_combat_racing_pipeline",
+      "label": "Combat Racing Gameplay Loop",
+      "nodes": [
+        "scripts_race_race_world_raceworld",
+        "scripts_race_trolley_controller_trolleycontroller",
+        "scripts_race_race_world_pickup_stands",
+        "scripts_race_race_world_spawn_rocket",
+        "scripts_race_trolley_controller_trigger_boost",
+        "scripts_race_race_world_contact"
+      ],
+      "relation": "implement",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.95,
+      "source_file": "D:\\codingan\\Godot\\SHIFT_MART_3D\\scripts\\race\\race_world.gd"
+    },
+    {
+      "id": "multiplayer_state_synchronization",
+      "label": "Authoritative ENet Snapshot Architecture",
+      "nodes": [
+        "scripts_net_network_session_session",
+        "scripts_race_race_world_raceworld",
+        "scripts_race_trolley_controller_state_data",
+        "scripts_app_app"
+      ],
+      "relation": "participate_in",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.95,
+      "source_file": "D:\\codingan\\Godot\\SHIFT_MART_3D\\scripts\\net\\network_session.gd"
+    }
+  ],
+  "input_tokens": 14500,
+  "output_tokens": 3200,
+  "coverage": {
+    "D:\\codingan\\Godot\\SHIFT_MART_3D\\SHIFT_MART_GDD.md": 270,
+    "D:\\codingan\\Godot\\SHIFT_MART_3D\\scripts\\race\\race_world.gd": 633,
+    "D:\\codingan\\Godot\\SHIFT_MART_3D\\scripts\\race\\trolley_controller.gd": 244,
+    "D:\\codingan\\Godot\\SHIFT_MART_3D\\scripts\\app.gd": 345,
+    "D:\\codingan\\Godot\\SHIFT_MART_3D\\scripts\\net\\network_session.gd": 226,
+    "D:\\codingan\\Godot\\SHIFT_MART_3D\\resources\\trolley_tuning.gd": 20,
+    "D:\\codingan\\Godot\\SHIFT_MART_3D\\resources\\balance.tres": 4,
+    "D:\\codingan\\Godot\\SHIFT_MART_3D\\tests\\state_test.gd": 109,
+    "D:\\codingan\\Godot\\SHIFT_MART_3D\\tests\\run_multiplayer.ps1": 26,
+    "D:\\codingan\\Godot\\SHIFT_MART_3D\\docs\\DECISIONS.md": 35,
+    "D:\\codingan\\Godot\\SHIFT_MART_3D\\docs\\IMPLEMENTATION_PLAN.md": 329,
+    "D:\\codingan\\Godot\\SHIFT_MART_3D\\docs\\PROGRESS.md": 53,
+    "D:\\codingan\\Godot\\SHIFT_MART_3D\\README.md": 108
+  }
+}

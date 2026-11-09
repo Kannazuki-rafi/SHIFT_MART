@@ -1,0 +1,4352 @@
+{
+  ".cline/skills/seo/resources/config/scoring.json": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0473163,
+    "ast_hash": "769aeff4c16d00ce5f3ff012198f5972",
+    "semantic_hash": ""
+  },
+  ".cline/skills/seo/resources/schema/templates.json": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0473268,
+    "ast_hash": "37bfa0fdf6822a0e0e6b1c5fc6efac79",
+    "semantic_hash": ""
+  },
+  ".cline/skills/seo/scripts/__init__.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0473309,
+    "ast_hash": "eb270c4b7afa0338b23eae0db57bd783",
+    "semantic_hash": ""
+  },
+  ".cline/skills/seo/scripts/a11y_seo_checker.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0473328,
+    "ast_hash": "0f3e9cc0e819583dbdf4ce447e40ab22",
+    "semantic_hash": ""
+  },
+  ".cline/skills/seo/scripts/ai_crawler_policy_matrix.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0473354,
+    "ast_hash": "1d9c45f9c6d4ec6be81a5a6c9342f6fa",
+    "semantic_hash": ""
+  },
+  ".cline/skills/seo/scripts/analyze_visual.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0473375,
+    "ast_hash": "e68319f68571c549da79d44aec1ba08a",
+    "semantic_hash": ""
+  },
+  ".cline/skills/seo/scripts/anchor_text_audit.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.04734,
+    "ast_hash": "b51776ac59738cc6a923219d28cb49c9",
+    "semantic_hash": ""
+  },
+  ".cline/skills/seo/scripts/answer_block_scanner.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0473418,
+    "ast_hash": "c83235b0af729d25f825d40e1a93134c",
+    "semantic_hash": ""
+  },
+  ".cline/skills/seo/scripts/article_seo.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0473437,
+    "ast_hash": "b70b89ce61e409ebe5c7a6324ccee980",
+    "semantic_hash": ""
+  },
+  ".cline/skills/seo/scripts/audit_runner.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0473454,
+    "ast_hash": "e9211ef677a7cc171b2e2e5d6012229d",
+    "semantic_hash": ""
+  },
+  ".cline/skills/seo/scripts/broken_links.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0473478,
+    "ast_hash": "5869bca392daee37a3fa17cdab2c7290",
+    "semantic_hash": ""
+  },
+  ".cline/skills/seo/scripts/cache_compression_checker.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.04735,
+    "ast_hash": "eb2c3034bd3b900bde6d92f8385a34dd",
+    "semantic_hash": ""
+  },
+  ".cline/skills/seo/scripts/canonical_checker.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0473518,
+    "ast_hash": "d70a002c56d4e1f85f88dafe529993d3",
+    "semantic_hash": ""
+  },
+  ".cline/skills/seo/scripts/capture_screenshot.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0473535,
+    "ast_hash": "25c3b60816b62b5db8766987abc6317d",
+    "semantic_hash": ""
+  },
+  ".cline/skills/seo/scripts/citation_readiness.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0473554,
+    "ast_hash": "78b06aee1d7e97396d4e7adc89b864be",
+    "semantic_hash": ""
+  },
+  ".cline/skills/seo/scripts/collection_page_checker.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.047357,
+    "ast_hash": "24696c8a3ab3375cc5a4038c9236d837",
+    "semantic_hash": ""
+  },
+  ".cline/skills/seo/scripts/competitor_gap.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.047359,
+    "ast_hash": "7ae90a64030a23d441ab5c3993f412c3",
+    "semantic_hash": ""
+  },
+  ".cline/skills/seo/scripts/content_decay_detector.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0473607,
+    "ast_hash": "63d05d2003eb349e12cdaf896474893a",
+    "semantic_hash": ""
+  },
+  ".cline/skills/seo/scripts/content_intent_matcher.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0473626,
+    "ast_hash": "1a08f41e54f6f492910045b3a8a43476",
+    "semantic_hash": ""
+  },
+  ".cline/skills/seo/scripts/crawl_audit.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.047364,
+    "ast_hash": "0ab37ef5ef46f0a128e3b43d15b1978c",
+    "semantic_hash": ""
+  },
+  ".cline/skills/seo/scripts/critical_request_chain.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.047366,
+    "ast_hash": "bcfa44bb69b946da1f4ad672a58f4656",
+    "semantic_hash": ""
+  },
+  ".cline/skills/seo/scripts/duplicate_content.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0473673,
+    "ast_hash": "52fbe99ece59c456178ec1ab92da1560",
+    "semantic_hash": ""
+  },
+  ".cline/skills/seo/scripts/eeat_signal_checker.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0473704,
+    "ast_hash": "c957a7e09995b9a5e36e442c18694ab1",
+    "semantic_hash": ""
+  },
+  ".cline/skills/seo/scripts/entity_checker.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0473723,
+    "ast_hash": "b43d1052f29fdc20312dda93a3b80147",
+    "semantic_hash": ""
+  },
+  ".cline/skills/seo/scripts/env_loader.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.047374,
+    "ast_hash": "6a28406af8494cb4912f6a4c6352be22",
+    "semantic_hash": ""
+  },
+  ".cline/skills/seo/scripts/external_link_quality.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0473757,
+    "ast_hash": "29944e71053850394b1e9f6f5211c96b",
+    "semantic_hash": ""
+  },
+  ".cline/skills/seo/scripts/faceted_nav_audit.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0473773,
+    "ast_hash": "3c287b35170dc0b9a32a5cda6c214510",
+    "semantic_hash": ""
+  },
+  ".cline/skills/seo/scripts/fetch_page.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0473793,
+    "ast_hash": "f55f62a4f2361b4e694d126a0693c0b7",
+    "semantic_hash": ""
+  },
+  ".cline/skills/seo/scripts/finding_verifier.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0473807,
+    "ast_hash": "d1fdeeba4065ebcbee661d804ffe813c",
+    "semantic_hash": ""
+  },
+  ".cline/skills/seo/scripts/font_audit.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0473826,
+    "ast_hash": "3faaf555ae43bf00fcdf1f5cf17f3a69",
+    "semantic_hash": ""
+  },
+  ".cline/skills/seo/scripts/freshness_checker.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0473843,
+    "ast_hash": "c3662524a467c89bdb95eeaf3ba27159",
+    "semantic_hash": ""
+  },
+  ".cline/skills/seo/scripts/generate_report.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0473862,
+    "ast_hash": "a6074030a9b57796dfae43ce009bd236",
+    "semantic_hash": ""
+  },
+  ".cline/skills/seo/scripts/github_api.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0473878,
+    "ast_hash": "48994d53c29d27bb3e48ed2c0a7bf1fd",
+    "semantic_hash": ""
+  },
+  ".cline/skills/seo/scripts/github_community_health.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0473895,
+    "ast_hash": "9ed5ed9dca72e49788aed156a9e80509",
+    "semantic_hash": ""
+  },
+  ".cline/skills/seo/scripts/github_competitor_research.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.047391,
+    "ast_hash": "d8b6d0641351096b12869f5051021941",
+    "semantic_hash": ""
+  },
+  ".cline/skills/seo/scripts/github_readme_lint.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0473928,
+    "ast_hash": "a8d836ae7d3e489566411fa5a114764a",
+    "semantic_hash": ""
+  },
+  ".cline/skills/seo/scripts/github_repo_audit.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0473943,
+    "ast_hash": "474c7dcd746231176948b342650846e3",
+    "semantic_hash": ""
+  },
+  ".cline/skills/seo/scripts/github_search_benchmark.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0473962,
+    "ast_hash": "4b57254433565122fb0d15d04346e089",
+    "semantic_hash": ""
+  },
+  ".cline/skills/seo/scripts/github_seo_report.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0473976,
+    "ast_hash": "bca6cef11fa4c4b5890de5a78a679968",
+    "semantic_hash": ""
+  },
+  ".cline/skills/seo/scripts/github_traffic_archiver.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0473995,
+    "ast_hash": "5666498fb66c5e3637450bbbcccd1433",
+    "semantic_hash": ""
+  },
+  ".cline/skills/seo/scripts/github_weekly_scorecard.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.047401,
+    "ast_hash": "80b7208d94520b255bc3cff28693879e",
+    "semantic_hash": ""
+  },
+  ".cline/skills/seo/scripts/gsc_checker.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0474029,
+    "ast_hash": "38fd725a52da376801172d0a812d1172",
+    "semantic_hash": ""
+  },
+  ".cline/skills/seo/scripts/hreflang_checker.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0474045,
+    "ast_hash": "104794b607f1af23e7877f597ea30343",
+    "semantic_hash": ""
+  },
+  ".cline/skills/seo/scripts/hreflang_sitemap_validator.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0474079,
+    "ast_hash": "8d69f0c571ec912b9f4de224018b0d05",
+    "semantic_hash": ""
+  },
+  ".cline/skills/seo/scripts/image_inventory.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0474098,
+    "ast_hash": "d631dc4ffac0c14e79d5804b4feb7254",
+    "semantic_hash": ""
+  },
+  ".cline/skills/seo/scripts/image_weight_audit.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0474112,
+    "ast_hash": "2f7b3db1f4d1643713213aea6cb8f760",
+    "semantic_hash": ""
+  },
+  ".cline/skills/seo/scripts/indexability_matrix.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0474133,
+    "ast_hash": "98a1708200c70b6402add6dcab7d59c3",
+    "semantic_hash": ""
+  },
+  ".cline/skills/seo/scripts/indexnow_checker.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0474148,
+    "ast_hash": "6705f5c85298359c543459f952b01c1b",
+    "semantic_hash": ""
+  },
+  ".cline/skills/seo/scripts/internal_links.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0474167,
+    "ast_hash": "9d3f783a634528f3e49dd796a42ca6c5",
+    "semantic_hash": ""
+  },
+  ".cline/skills/seo/scripts/javascript_render_audit.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0474184,
+    "ast_hash": "f8cebfb33f277add84130998ed97c8ed",
+    "semantic_hash": ""
+  },
+  ".cline/skills/seo/scripts/lcp_subparts.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0474203,
+    "ast_hash": "54be6f6e885a946e6d6a3e8ff817d1b0",
+    "semantic_hash": ""
+  },
+  ".cline/skills/seo/scripts/lib/__init__.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0474217,
+    "ast_hash": "7600f9d5d8b90691c4a4f3a3978c848a",
+    "semantic_hash": ""
+  },
+  ".cline/skills/seo/scripts/lib/safe_http.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0474236,
+    "ast_hash": "fc51f86376fac30f3bd3d38ba7a217fe",
+    "semantic_hash": ""
+  },
+  ".cline/skills/seo/scripts/lighthouse_runner.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.047425,
+    "ast_hash": "4f31ff9d71c5d116985a0b353f8594bd",
+    "semantic_hash": ""
+  },
+  ".cline/skills/seo/scripts/link_profile.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0474267,
+    "ast_hash": "e6cbe1f15b27bbd9af8611cc8b5f1080",
+    "semantic_hash": ""
+  },
+  ".cline/skills/seo/scripts/llms_txt_checker.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0474284,
+    "ast_hash": "281bb55a67f65e33d40c1961bd651fc4",
+    "semantic_hash": ""
+  },
+  ".cline/skills/seo/scripts/llms_txt_generator.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.04743,
+    "ast_hash": "06be038d9be566251d1b9e51b5d2e73b",
+    "semantic_hash": ""
+  },
+  ".cline/skills/seo/scripts/local_seo_checker.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0474322,
+    "ast_hash": "7c8e39d292ac1119650f95a7a2525e1b",
+    "semantic_hash": ""
+  },
+  ".cline/skills/seo/scripts/log_file_analyzer.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0474336,
+    "ast_hash": "4aef759ecdcc636bafd1dd44bc8652f1",
+    "semantic_hash": ""
+  },
+  ".cline/skills/seo/scripts/mobile_render_checker.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0474355,
+    "ast_hash": "e2abf16aee84ebe0bff5fc9376bbcd46",
+    "semantic_hash": ""
+  },
+  ".cline/skills/seo/scripts/orphan_pages_from_sitemap.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.047437,
+    "ast_hash": "9777d03ec0cdfe8c4426ec5067046aaf",
+    "semantic_hash": ""
+  },
+  ".cline/skills/seo/scripts/pagespeed.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0474386,
+    "ast_hash": "ddea18eab836626f0411c4bbf90e2e5e",
+    "semantic_hash": ""
+  },
+  ".cline/skills/seo/scripts/parse_html.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0474403,
+    "ast_hash": "1e4e254222b7b3c71c2ad23aa8e52bfd",
+    "semantic_hash": ""
+  },
+  ".cline/skills/seo/scripts/pre_commit_seo_check.sh": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.047442,
+    "ast_hash": "f707e37c15f1af10a581b45af473ecce",
+    "semantic_hash": ""
+  },
+  ".cline/skills/seo/scripts/product_schema_checker.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0474436,
+    "ast_hash": "cfb4cb2e330f9bd9ef496198c13c343f",
+    "semantic_hash": ""
+  },
+  ".cline/skills/seo/scripts/readability.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0474453,
+    "ast_hash": "e256478bb40134892226135f68ca0b77",
+    "semantic_hash": ""
+  },
+  ".cline/skills/seo/scripts/redirect_backlink_reclaim.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0474467,
+    "ast_hash": "4aea1039e5b3243833484c0c48d11806",
+    "semantic_hash": ""
+  },
+  ".cline/skills/seo/scripts/redirect_checker.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0474484,
+    "ast_hash": "d4d801389f993f1ec142cb2050cc50e1",
+    "semantic_hash": ""
+  },
+  ".cline/skills/seo/scripts/reference_freshness.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0474498,
+    "ast_hash": "c7e629ac137e17173846fb2805657726",
+    "semantic_hash": ""
+  },
+  ".cline/skills/seo/scripts/repo_docs_site_checker.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0474515,
+    "ast_hash": "0a9ebdb267b6a08d3e1aa330ff995f90",
+    "semantic_hash": ""
+  },
+  ".cline/skills/seo/scripts/repo_file_inventory.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0474532,
+    "ast_hash": "082ed8ad517b1a69c443f50b4a6ff4aa",
+    "semantic_hash": ""
+  },
+  ".cline/skills/seo/scripts/repo_release_seo.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0474548,
+    "ast_hash": "1a0824e3d40d3508d6d3b9b4eea83d91",
+    "semantic_hash": ""
+  },
+  ".cline/skills/seo/scripts/repo_social_preview_checker.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0474565,
+    "ast_hash": "3ef53fd2b07cce837ffa93f3a5dc5f11",
+    "semantic_hash": ""
+  },
+  ".cline/skills/seo/scripts/repo_topic_suggester.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0474584,
+    "ast_hash": "37dd31d9c4f425bda923f37be77725a4",
+    "semantic_hash": ""
+  },
+  ".cline/skills/seo/scripts/review_schema_checker.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0474598,
+    "ast_hash": "bb6129dd2ab650b3ce61132460388784",
+    "semantic_hash": ""
+  },
+  ".cline/skills/seo/scripts/rich_results_guard.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0474613,
+    "ast_hash": "d5a700d20e085286e755e0998226bf1c",
+    "semantic_hash": ""
+  },
+  ".cline/skills/seo/scripts/robots_checker.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0474632,
+    "ast_hash": "45343f94a331e0ee0af4b85da0ea7442",
+    "semantic_hash": ""
+  },
+  ".cline/skills/seo/scripts/robots_path_tester.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0474646,
+    "ast_hash": "cde86873c273cd01539bcaa8037fccd3",
+    "semantic_hash": ""
+  },
+  ".cline/skills/seo/scripts/schema_diff.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0474665,
+    "ast_hash": "f3b3defc889b090a6b1efccd2d45eff3",
+    "semantic_hash": ""
+  },
+  ".cline/skills/seo/scripts/schema_required_props.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.047468,
+    "ast_hash": "0254d0d95da1ee829398a6c0ce597501",
+    "semantic_hash": ""
+  },
+  ".cline/skills/seo/scripts/schema_template_generator.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0474699,
+    "ast_hash": "69846d518c7cb4e4378354c723abe05c",
+    "semantic_hash": ""
+  },
+  ".cline/skills/seo/scripts/security_headers.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0474713,
+    "ast_hash": "398192aabe58e0cb63f80fac49edb388",
+    "semantic_hash": ""
+  },
+  ".cline/skills/seo/scripts/seo_common.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.047473,
+    "ast_hash": "b23da58c6e4897027a0bbf272bc01b56",
+    "semantic_hash": ""
+  },
+  ".cline/skills/seo/scripts/sitemap_checker.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0474746,
+    "ast_hash": "c8638e85696f8eadbc88a203e7ef50e3",
+    "semantic_hash": ""
+  },
+  ".cline/skills/seo/scripts/sitemap_generator.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0474765,
+    "ast_hash": "dd015d8ff091022ad7de4efef243acbc",
+    "semantic_hash": ""
+  },
+  ".cline/skills/seo/scripts/social_meta.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0474782,
+    "ast_hash": "fabcd45cd5f5f57d6d1896d73cfa7184",
+    "semantic_hash": ""
+  },
+  ".cline/skills/seo/scripts/third_party_script_audit.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0474815,
+    "ast_hash": "1985ccca11451156c8e3d87ccf0a32ca",
+    "semantic_hash": ""
+  },
+  ".cline/skills/seo/scripts/topical_cluster_mapper.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0474834,
+    "ast_hash": "7275c79c820d5e7960e84e29559e5080",
+    "semantic_hash": ""
+  },
+  ".cline/skills/seo/scripts/url_quality.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.047485,
+    "ast_hash": "ee2cb81da70b527f5b0fe04b32e6e70e",
+    "semantic_hash": ""
+  },
+  ".cline/skills/seo/scripts/validate_schema.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.047487,
+    "ast_hash": "502ca8d4431a6232ae1d27ce7e264ff3",
+    "semantic_hash": ""
+  },
+  ".cline/skills/seo/scripts/validate_skill_inventory.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0474887,
+    "ast_hash": "fabf69f7cd3274b2a70196fa12ac988d",
+    "semantic_hash": ""
+  },
+  ".cline/skills/seo/scripts/video_schema_checker.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0474904,
+    "ast_hash": "efc4f7a539a7a51ccd96a8b7cfe30a15",
+    "semantic_hash": ""
+  },
+  ".cline/skills/seo/scripts/visual_regression_snapshot.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0474923,
+    "ast_hash": "19f8e83ab5d62cad10a66e3b136bcf0c",
+    "semantic_hash": ""
+  },
+  ".cline/skills/seo/scripts/x_robots_header_checker.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0474942,
+    "ast_hash": "84aa0fe046bdf3d0f5171838374e0da7",
+    "semantic_hash": ""
+  },
+  ".continue/skills/seo/resources/config/scoring.json": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0474958,
+    "ast_hash": "769aeff4c16d00ce5f3ff012198f5972",
+    "semantic_hash": ""
+  },
+  ".continue/skills/seo/resources/schema/templates.json": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0474977,
+    "ast_hash": "37bfa0fdf6822a0e0e6b1c5fc6efac79",
+    "semantic_hash": ""
+  },
+  ".continue/skills/seo/scripts/__init__.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0474994,
+    "ast_hash": "eb270c4b7afa0338b23eae0db57bd783",
+    "semantic_hash": ""
+  },
+  ".continue/skills/seo/scripts/a11y_seo_checker.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0475013,
+    "ast_hash": "0f3e9cc0e819583dbdf4ce447e40ab22",
+    "semantic_hash": ""
+  },
+  ".continue/skills/seo/scripts/ai_crawler_policy_matrix.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.047503,
+    "ast_hash": "1d9c45f9c6d4ec6be81a5a6c9342f6fa",
+    "semantic_hash": ""
+  },
+  ".continue/skills/seo/scripts/analyze_visual.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0475047,
+    "ast_hash": "e68319f68571c549da79d44aec1ba08a",
+    "semantic_hash": ""
+  },
+  ".continue/skills/seo/scripts/anchor_text_audit.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0475066,
+    "ast_hash": "b51776ac59738cc6a923219d28cb49c9",
+    "semantic_hash": ""
+  },
+  ".continue/skills/seo/scripts/answer_block_scanner.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0475085,
+    "ast_hash": "c83235b0af729d25f825d40e1a93134c",
+    "semantic_hash": ""
+  },
+  ".continue/skills/seo/scripts/article_seo.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.04751,
+    "ast_hash": "b70b89ce61e409ebe5c7a6324ccee980",
+    "semantic_hash": ""
+  },
+  ".continue/skills/seo/scripts/audit_runner.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0475116,
+    "ast_hash": "e9211ef677a7cc171b2e2e5d6012229d",
+    "semantic_hash": ""
+  },
+  ".continue/skills/seo/scripts/broken_links.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.047513,
+    "ast_hash": "5869bca392daee37a3fa17cdab2c7290",
+    "semantic_hash": ""
+  },
+  ".continue/skills/seo/scripts/cache_compression_checker.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.047515,
+    "ast_hash": "eb2c3034bd3b900bde6d92f8385a34dd",
+    "semantic_hash": ""
+  },
+  ".continue/skills/seo/scripts/canonical_checker.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0475163,
+    "ast_hash": "d70a002c56d4e1f85f88dafe529993d3",
+    "semantic_hash": ""
+  },
+  ".continue/skills/seo/scripts/capture_screenshot.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0475183,
+    "ast_hash": "25c3b60816b62b5db8766987abc6317d",
+    "semantic_hash": ""
+  },
+  ".continue/skills/seo/scripts/citation_readiness.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.04752,
+    "ast_hash": "78b06aee1d7e97396d4e7adc89b864be",
+    "semantic_hash": ""
+  },
+  ".continue/skills/seo/scripts/collection_page_checker.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0475216,
+    "ast_hash": "24696c8a3ab3375cc5a4038c9236d837",
+    "semantic_hash": ""
+  },
+  ".continue/skills/seo/scripts/competitor_gap.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0475233,
+    "ast_hash": "7ae90a64030a23d441ab5c3993f412c3",
+    "semantic_hash": ""
+  },
+  ".continue/skills/seo/scripts/content_decay_detector.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.047525,
+    "ast_hash": "63d05d2003eb349e12cdaf896474893a",
+    "semantic_hash": ""
+  },
+  ".continue/skills/seo/scripts/content_intent_matcher.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0475264,
+    "ast_hash": "1a08f41e54f6f492910045b3a8a43476",
+    "semantic_hash": ""
+  },
+  ".continue/skills/seo/scripts/crawl_audit.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0475283,
+    "ast_hash": "0ab37ef5ef46f0a128e3b43d15b1978c",
+    "semantic_hash": ""
+  },
+  ".continue/skills/seo/scripts/critical_request_chain.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0475297,
+    "ast_hash": "bcfa44bb69b946da1f4ad672a58f4656",
+    "semantic_hash": ""
+  },
+  ".continue/skills/seo/scripts/duplicate_content.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0475316,
+    "ast_hash": "52fbe99ece59c456178ec1ab92da1560",
+    "semantic_hash": ""
+  },
+  ".continue/skills/seo/scripts/eeat_signal_checker.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0475328,
+    "ast_hash": "c957a7e09995b9a5e36e442c18694ab1",
+    "semantic_hash": ""
+  },
+  ".continue/skills/seo/scripts/entity_checker.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0475347,
+    "ast_hash": "b43d1052f29fdc20312dda93a3b80147",
+    "semantic_hash": ""
+  },
+  ".continue/skills/seo/scripts/env_loader.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0475364,
+    "ast_hash": "6a28406af8494cb4912f6a4c6352be22",
+    "semantic_hash": ""
+  },
+  ".continue/skills/seo/scripts/external_link_quality.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0475378,
+    "ast_hash": "29944e71053850394b1e9f6f5211c96b",
+    "semantic_hash": ""
+  },
+  ".continue/skills/seo/scripts/faceted_nav_audit.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0475395,
+    "ast_hash": "3c287b35170dc0b9a32a5cda6c214510",
+    "semantic_hash": ""
+  },
+  ".continue/skills/seo/scripts/fetch_page.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0475411,
+    "ast_hash": "f55f62a4f2361b4e694d126a0693c0b7",
+    "semantic_hash": ""
+  },
+  ".continue/skills/seo/scripts/finding_verifier.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0475428,
+    "ast_hash": "d1fdeeba4065ebcbee661d804ffe813c",
+    "semantic_hash": ""
+  },
+  ".continue/skills/seo/scripts/font_audit.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0475445,
+    "ast_hash": "3faaf555ae43bf00fcdf1f5cf17f3a69",
+    "semantic_hash": ""
+  },
+  ".continue/skills/seo/scripts/freshness_checker.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0475464,
+    "ast_hash": "c3662524a467c89bdb95eeaf3ba27159",
+    "semantic_hash": ""
+  },
+  ".continue/skills/seo/scripts/generate_report.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0475478,
+    "ast_hash": "a6074030a9b57796dfae43ce009bd236",
+    "semantic_hash": ""
+  },
+  ".continue/skills/seo/scripts/github_api.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0475497,
+    "ast_hash": "48994d53c29d27bb3e48ed2c0a7bf1fd",
+    "semantic_hash": ""
+  },
+  ".continue/skills/seo/scripts/github_community_health.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0475512,
+    "ast_hash": "9ed5ed9dca72e49788aed156a9e80509",
+    "semantic_hash": ""
+  },
+  ".continue/skills/seo/scripts/github_competitor_research.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.047553,
+    "ast_hash": "d8b6d0641351096b12869f5051021941",
+    "semantic_hash": ""
+  },
+  ".continue/skills/seo/scripts/github_readme_lint.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0475547,
+    "ast_hash": "a8d836ae7d3e489566411fa5a114764a",
+    "semantic_hash": ""
+  },
+  ".continue/skills/seo/scripts/github_repo_audit.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0475564,
+    "ast_hash": "474c7dcd746231176948b342650846e3",
+    "semantic_hash": ""
+  },
+  ".continue/skills/seo/scripts/github_search_benchmark.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0475578,
+    "ast_hash": "4b57254433565122fb0d15d04346e089",
+    "semantic_hash": ""
+  },
+  ".continue/skills/seo/scripts/github_seo_report.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.04756,
+    "ast_hash": "bca6cef11fa4c4b5890de5a78a679968",
+    "semantic_hash": ""
+  },
+  ".continue/skills/seo/scripts/github_traffic_archiver.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0475616,
+    "ast_hash": "5666498fb66c5e3637450bbbcccd1433",
+    "semantic_hash": ""
+  },
+  ".continue/skills/seo/scripts/github_weekly_scorecard.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0475633,
+    "ast_hash": "80b7208d94520b255bc3cff28693879e",
+    "semantic_hash": ""
+  },
+  ".continue/skills/seo/scripts/gsc_checker.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.047565,
+    "ast_hash": "38fd725a52da376801172d0a812d1172",
+    "semantic_hash": ""
+  },
+  ".continue/skills/seo/scripts/hreflang_checker.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.047567,
+    "ast_hash": "104794b607f1af23e7877f597ea30343",
+    "semantic_hash": ""
+  },
+  ".continue/skills/seo/scripts/hreflang_sitemap_validator.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0475683,
+    "ast_hash": "8d69f0c571ec912b9f4de224018b0d05",
+    "semantic_hash": ""
+  },
+  ".continue/skills/seo/scripts/image_inventory.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0475702,
+    "ast_hash": "d631dc4ffac0c14e79d5804b4feb7254",
+    "semantic_hash": ""
+  },
+  ".continue/skills/seo/scripts/image_weight_audit.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0475717,
+    "ast_hash": "2f7b3db1f4d1643713213aea6cb8f760",
+    "semantic_hash": ""
+  },
+  ".continue/skills/seo/scripts/indexability_matrix.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0475736,
+    "ast_hash": "98a1708200c70b6402add6dcab7d59c3",
+    "semantic_hash": ""
+  },
+  ".continue/skills/seo/scripts/indexnow_checker.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.047575,
+    "ast_hash": "6705f5c85298359c543459f952b01c1b",
+    "semantic_hash": ""
+  },
+  ".continue/skills/seo/scripts/internal_links.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.047577,
+    "ast_hash": "9d3f783a634528f3e49dd796a42ca6c5",
+    "semantic_hash": ""
+  },
+  ".continue/skills/seo/scripts/javascript_render_audit.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0475786,
+    "ast_hash": "f8cebfb33f277add84130998ed97c8ed",
+    "semantic_hash": ""
+  },
+  ".continue/skills/seo/scripts/lcp_subparts.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0475802,
+    "ast_hash": "54be6f6e885a946e6d6a3e8ff817d1b0",
+    "semantic_hash": ""
+  },
+  ".continue/skills/seo/scripts/lib/__init__.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0475817,
+    "ast_hash": "7600f9d5d8b90691c4a4f3a3978c848a",
+    "semantic_hash": ""
+  },
+  ".continue/skills/seo/scripts/lib/safe_http.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0475836,
+    "ast_hash": "fc51f86376fac30f3bd3d38ba7a217fe",
+    "semantic_hash": ""
+  },
+  ".continue/skills/seo/scripts/lighthouse_runner.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.047585,
+    "ast_hash": "4f31ff9d71c5d116985a0b353f8594bd",
+    "semantic_hash": ""
+  },
+  ".continue/skills/seo/scripts/link_profile.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.047587,
+    "ast_hash": "e6cbe1f15b27bbd9af8611cc8b5f1080",
+    "semantic_hash": ""
+  },
+  ".continue/skills/seo/scripts/llms_txt_checker.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0475883,
+    "ast_hash": "281bb55a67f65e33d40c1961bd651fc4",
+    "semantic_hash": ""
+  },
+  ".continue/skills/seo/scripts/llms_txt_generator.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0475898,
+    "ast_hash": "06be038d9be566251d1b9e51b5d2e73b",
+    "semantic_hash": ""
+  },
+  ".continue/skills/seo/scripts/local_seo_checker.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0475917,
+    "ast_hash": "7c8e39d292ac1119650f95a7a2525e1b",
+    "semantic_hash": ""
+  },
+  ".continue/skills/seo/scripts/log_file_analyzer.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.047593,
+    "ast_hash": "4aef759ecdcc636bafd1dd44bc8652f1",
+    "semantic_hash": ""
+  },
+  ".continue/skills/seo/scripts/mobile_render_checker.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.047595,
+    "ast_hash": "e2abf16aee84ebe0bff5fc9376bbcd46",
+    "semantic_hash": ""
+  },
+  ".continue/skills/seo/scripts/orphan_pages_from_sitemap.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0475967,
+    "ast_hash": "9777d03ec0cdfe8c4426ec5067046aaf",
+    "semantic_hash": ""
+  },
+  ".continue/skills/seo/scripts/pagespeed.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0475984,
+    "ast_hash": "ddea18eab836626f0411c4bbf90e2e5e",
+    "semantic_hash": ""
+  },
+  ".continue/skills/seo/scripts/parse_html.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0475998,
+    "ast_hash": "1e4e254222b7b3c71c2ad23aa8e52bfd",
+    "semantic_hash": ""
+  },
+  ".continue/skills/seo/scripts/pre_commit_seo_check.sh": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0476015,
+    "ast_hash": "f707e37c15f1af10a581b45af473ecce",
+    "semantic_hash": ""
+  },
+  ".continue/skills/seo/scripts/product_schema_checker.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.047603,
+    "ast_hash": "cfb4cb2e330f9bd9ef496198c13c343f",
+    "semantic_hash": ""
+  },
+  ".continue/skills/seo/scripts/readability.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0476048,
+    "ast_hash": "e256478bb40134892226135f68ca0b77",
+    "semantic_hash": ""
+  },
+  ".continue/skills/seo/scripts/redirect_backlink_reclaim.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0476062,
+    "ast_hash": "4aea1039e5b3243833484c0c48d11806",
+    "semantic_hash": ""
+  },
+  ".continue/skills/seo/scripts/redirect_checker.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0476081,
+    "ast_hash": "d4d801389f993f1ec142cb2050cc50e1",
+    "semantic_hash": ""
+  },
+  ".continue/skills/seo/scripts/reference_freshness.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0476098,
+    "ast_hash": "c7e629ac137e17173846fb2805657726",
+    "semantic_hash": ""
+  },
+  ".continue/skills/seo/scripts/repo_docs_site_checker.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0476115,
+    "ast_hash": "0a9ebdb267b6a08d3e1aa330ff995f90",
+    "semantic_hash": ""
+  },
+  ".continue/skills/seo/scripts/repo_file_inventory.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0476131,
+    "ast_hash": "082ed8ad517b1a69c443f50b4a6ff4aa",
+    "semantic_hash": ""
+  },
+  ".continue/skills/seo/scripts/repo_release_seo.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0476148,
+    "ast_hash": "1a0824e3d40d3508d6d3b9b4eea83d91",
+    "semantic_hash": ""
+  },
+  ".continue/skills/seo/scripts/repo_social_preview_checker.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0476165,
+    "ast_hash": "3ef53fd2b07cce837ffa93f3a5dc5f11",
+    "semantic_hash": ""
+  },
+  ".continue/skills/seo/scripts/repo_topic_suggester.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0476184,
+    "ast_hash": "37dd31d9c4f425bda923f37be77725a4",
+    "semantic_hash": ""
+  },
+  ".continue/skills/seo/scripts/review_schema_checker.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0476198,
+    "ast_hash": "bb6129dd2ab650b3ce61132460388784",
+    "semantic_hash": ""
+  },
+  ".continue/skills/seo/scripts/rich_results_guard.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0476217,
+    "ast_hash": "d5a700d20e085286e755e0998226bf1c",
+    "semantic_hash": ""
+  },
+  ".continue/skills/seo/scripts/robots_checker.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0476232,
+    "ast_hash": "45343f94a331e0ee0af4b85da0ea7442",
+    "semantic_hash": ""
+  },
+  ".continue/skills/seo/scripts/robots_path_tester.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0476274,
+    "ast_hash": "cde86873c273cd01539bcaa8037fccd3",
+    "semantic_hash": ""
+  },
+  ".continue/skills/seo/scripts/schema_diff.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0476294,
+    "ast_hash": "f3b3defc889b090a6b1efccd2d45eff3",
+    "semantic_hash": ""
+  },
+  ".continue/skills/seo/scripts/schema_required_props.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0476305,
+    "ast_hash": "0254d0d95da1ee829398a6c0ce597501",
+    "semantic_hash": ""
+  },
+  ".continue/skills/seo/scripts/schema_template_generator.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0476325,
+    "ast_hash": "69846d518c7cb4e4378354c723abe05c",
+    "semantic_hash": ""
+  },
+  ".continue/skills/seo/scripts/security_headers.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.047634,
+    "ast_hash": "398192aabe58e0cb63f80fac49edb388",
+    "semantic_hash": ""
+  },
+  ".continue/skills/seo/scripts/seo_common.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0476356,
+    "ast_hash": "b23da58c6e4897027a0bbf272bc01b56",
+    "semantic_hash": ""
+  },
+  ".continue/skills/seo/scripts/sitemap_checker.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.047637,
+    "ast_hash": "c8638e85696f8eadbc88a203e7ef50e3",
+    "semantic_hash": ""
+  },
+  ".continue/skills/seo/scripts/sitemap_generator.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.047639,
+    "ast_hash": "dd015d8ff091022ad7de4efef243acbc",
+    "semantic_hash": ""
+  },
+  ".continue/skills/seo/scripts/social_meta.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0476406,
+    "ast_hash": "fabcd45cd5f5f57d6d1896d73cfa7184",
+    "semantic_hash": ""
+  },
+  ".continue/skills/seo/scripts/third_party_script_audit.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0476422,
+    "ast_hash": "1985ccca11451156c8e3d87ccf0a32ca",
+    "semantic_hash": ""
+  },
+  ".continue/skills/seo/scripts/topical_cluster_mapper.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.047644,
+    "ast_hash": "7275c79c820d5e7960e84e29559e5080",
+    "semantic_hash": ""
+  },
+  ".continue/skills/seo/scripts/url_quality.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0476458,
+    "ast_hash": "ee2cb81da70b527f5b0fe04b32e6e70e",
+    "semantic_hash": ""
+  },
+  ".continue/skills/seo/scripts/validate_schema.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0476472,
+    "ast_hash": "502ca8d4431a6232ae1d27ce7e264ff3",
+    "semantic_hash": ""
+  },
+  ".continue/skills/seo/scripts/validate_skill_inventory.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.047649,
+    "ast_hash": "fabf69f7cd3274b2a70196fa12ac988d",
+    "semantic_hash": ""
+  },
+  ".continue/skills/seo/scripts/video_schema_checker.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0476506,
+    "ast_hash": "efc4f7a539a7a51ccd96a8b7cfe30a15",
+    "semantic_hash": ""
+  },
+  ".continue/skills/seo/scripts/visual_regression_snapshot.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.047652,
+    "ast_hash": "19f8e83ab5d62cad10a66e3b136bcf0c",
+    "semantic_hash": ""
+  },
+  ".continue/skills/seo/scripts/x_robots_header_checker.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0476537,
+    "ast_hash": "84aa0fe046bdf3d0f5171838374e0da7",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/seo/resources/config/scoring.json": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0476553,
+    "ast_hash": "769aeff4c16d00ce5f3ff012198f5972",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/seo/resources/schema/templates.json": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.047657,
+    "ast_hash": "37bfa0fdf6822a0e0e6b1c5fc6efac79",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/seo/scripts/__init__.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0476587,
+    "ast_hash": "eb270c4b7afa0338b23eae0db57bd783",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/seo/scripts/a11y_seo_checker.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0476604,
+    "ast_hash": "0f3e9cc0e819583dbdf4ce447e40ab22",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/seo/scripts/ai_crawler_policy_matrix.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0476618,
+    "ast_hash": "1d9c45f9c6d4ec6be81a5a6c9342f6fa",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/seo/scripts/analyze_visual.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0476637,
+    "ast_hash": "e68319f68571c549da79d44aec1ba08a",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/seo/scripts/anchor_text_audit.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0476654,
+    "ast_hash": "b51776ac59738cc6a923219d28cb49c9",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/seo/scripts/answer_block_scanner.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0476668,
+    "ast_hash": "c83235b0af729d25f825d40e1a93134c",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/seo/scripts/article_seo.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0476682,
+    "ast_hash": "b70b89ce61e409ebe5c7a6324ccee980",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/seo/scripts/audit_runner.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0476701,
+    "ast_hash": "e9211ef677a7cc171b2e2e5d6012229d",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/seo/scripts/broken_links.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0476718,
+    "ast_hash": "5869bca392daee37a3fa17cdab2c7290",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/seo/scripts/cache_compression_checker.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0476732,
+    "ast_hash": "eb2c3034bd3b900bde6d92f8385a34dd",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/seo/scripts/canonical_checker.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.047675,
+    "ast_hash": "d70a002c56d4e1f85f88dafe529993d3",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/seo/scripts/capture_screenshot.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0476766,
+    "ast_hash": "25c3b60816b62b5db8766987abc6317d",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/seo/scripts/citation_readiness.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0476782,
+    "ast_hash": "78b06aee1d7e97396d4e7adc89b864be",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/seo/scripts/collection_page_checker.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0476797,
+    "ast_hash": "24696c8a3ab3375cc5a4038c9236d837",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/seo/scripts/competitor_gap.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0476816,
+    "ast_hash": "7ae90a64030a23d441ab5c3993f412c3",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/seo/scripts/content_decay_detector.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.047683,
+    "ast_hash": "63d05d2003eb349e12cdaf896474893a",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/seo/scripts/content_intent_matcher.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0476851,
+    "ast_hash": "1a08f41e54f6f492910045b3a8a43476",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/seo/scripts/crawl_audit.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0476863,
+    "ast_hash": "0ab37ef5ef46f0a128e3b43d15b1978c",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/seo/scripts/critical_request_chain.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0476882,
+    "ast_hash": "bcfa44bb69b946da1f4ad672a58f4656",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/seo/scripts/duplicate_content.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0476897,
+    "ast_hash": "52fbe99ece59c456178ec1ab92da1560",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/seo/scripts/eeat_signal_checker.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0476913,
+    "ast_hash": "c957a7e09995b9a5e36e442c18694ab1",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/seo/scripts/entity_checker.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0476928,
+    "ast_hash": "b43d1052f29fdc20312dda93a3b80147",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/seo/scripts/env_loader.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0476947,
+    "ast_hash": "6a28406af8494cb4912f6a4c6352be22",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/seo/scripts/external_link_quality.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.047696,
+    "ast_hash": "29944e71053850394b1e9f6f5211c96b",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/seo/scripts/faceted_nav_audit.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.047698,
+    "ast_hash": "3c287b35170dc0b9a32a5cda6c214510",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/seo/scripts/fetch_page.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0476997,
+    "ast_hash": "f55f62a4f2361b4e694d126a0693c0b7",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/seo/scripts/finding_verifier.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0477014,
+    "ast_hash": "d1fdeeba4065ebcbee661d804ffe813c",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/seo/scripts/font_audit.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.047703,
+    "ast_hash": "3faaf555ae43bf00fcdf1f5cf17f3a69",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/seo/scripts/freshness_checker.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0477045,
+    "ast_hash": "c3662524a467c89bdb95eeaf3ba27159",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/seo/scripts/generate_report.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0477064,
+    "ast_hash": "a6074030a9b57796dfae43ce009bd236",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/seo/scripts/github_api.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0477083,
+    "ast_hash": "48994d53c29d27bb3e48ed2c0a7bf1fd",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/seo/scripts/github_community_health.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0477097,
+    "ast_hash": "9ed5ed9dca72e49788aed156a9e80509",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/seo/scripts/github_competitor_research.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0477114,
+    "ast_hash": "d8b6d0641351096b12869f5051021941",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/seo/scripts/github_readme_lint.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0477133,
+    "ast_hash": "a8d836ae7d3e489566411fa5a114764a",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/seo/scripts/github_repo_audit.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0477152,
+    "ast_hash": "474c7dcd746231176948b342650846e3",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/seo/scripts/github_search_benchmark.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0477166,
+    "ast_hash": "4b57254433565122fb0d15d04346e089",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/seo/scripts/github_seo_report.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0477183,
+    "ast_hash": "bca6cef11fa4c4b5890de5a78a679968",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/seo/scripts/github_traffic_archiver.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0477202,
+    "ast_hash": "5666498fb66c5e3637450bbbcccd1433",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/seo/scripts/github_weekly_scorecard.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.047722,
+    "ast_hash": "80b7208d94520b255bc3cff28693879e",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/seo/scripts/gsc_checker.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0477235,
+    "ast_hash": "38fd725a52da376801172d0a812d1172",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/seo/scripts/hreflang_checker.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.047725,
+    "ast_hash": "104794b607f1af23e7877f597ea30343",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/seo/scripts/hreflang_sitemap_validator.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0477269,
+    "ast_hash": "8d69f0c571ec912b9f4de224018b0d05",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/seo/scripts/image_inventory.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0477285,
+    "ast_hash": "d631dc4ffac0c14e79d5804b4feb7254",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/seo/scripts/image_weight_audit.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0477302,
+    "ast_hash": "2f7b3db1f4d1643713213aea6cb8f760",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/seo/scripts/indexability_matrix.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0477319,
+    "ast_hash": "98a1708200c70b6402add6dcab7d59c3",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/seo/scripts/indexnow_checker.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0477338,
+    "ast_hash": "6705f5c85298359c543459f952b01c1b",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/seo/scripts/internal_links.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0477352,
+    "ast_hash": "9d3f783a634528f3e49dd796a42ca6c5",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/seo/scripts/javascript_render_audit.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.047737,
+    "ast_hash": "f8cebfb33f277add84130998ed97c8ed",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/seo/scripts/lcp_subparts.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0477386,
+    "ast_hash": "54be6f6e885a946e6d6a3e8ff817d1b0",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/seo/scripts/lib/__init__.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.04774,
+    "ast_hash": "7600f9d5d8b90691c4a4f3a3978c848a",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/seo/scripts/lib/safe_http.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0477417,
+    "ast_hash": "fc51f86376fac30f3bd3d38ba7a217fe",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/seo/scripts/lighthouse_runner.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0477436,
+    "ast_hash": "4f31ff9d71c5d116985a0b353f8594bd",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/seo/scripts/link_profile.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.047745,
+    "ast_hash": "e6cbe1f15b27bbd9af8611cc8b5f1080",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/seo/scripts/llms_txt_checker.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.047747,
+    "ast_hash": "281bb55a67f65e33d40c1961bd651fc4",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/seo/scripts/llms_txt_generator.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0477486,
+    "ast_hash": "06be038d9be566251d1b9e51b5d2e73b",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/seo/scripts/local_seo_checker.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0477505,
+    "ast_hash": "7c8e39d292ac1119650f95a7a2525e1b",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/seo/scripts/log_file_analyzer.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.047752,
+    "ast_hash": "4aef759ecdcc636bafd1dd44bc8652f1",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/seo/scripts/mobile_render_checker.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0477538,
+    "ast_hash": "e2abf16aee84ebe0bff5fc9376bbcd46",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/seo/scripts/orphan_pages_from_sitemap.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0477552,
+    "ast_hash": "9777d03ec0cdfe8c4426ec5067046aaf",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/seo/scripts/pagespeed.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0477571,
+    "ast_hash": "ddea18eab836626f0411c4bbf90e2e5e",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/seo/scripts/parse_html.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0477586,
+    "ast_hash": "1e4e254222b7b3c71c2ad23aa8e52bfd",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/seo/scripts/pre_commit_seo_check.sh": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0477605,
+    "ast_hash": "f707e37c15f1af10a581b45af473ecce",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/seo/scripts/product_schema_checker.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.047762,
+    "ast_hash": "cfb4cb2e330f9bd9ef496198c13c343f",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/seo/scripts/readability.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0477633,
+    "ast_hash": "e256478bb40134892226135f68ca0b77",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/seo/scripts/redirect_backlink_reclaim.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.047765,
+    "ast_hash": "4aea1039e5b3243833484c0c48d11806",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/seo/scripts/redirect_checker.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0477667,
+    "ast_hash": "d4d801389f993f1ec142cb2050cc50e1",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/seo/scripts/reference_freshness.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0477684,
+    "ast_hash": "c7e629ac137e17173846fb2805657726",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/seo/scripts/repo_docs_site_checker.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0477698,
+    "ast_hash": "0a9ebdb267b6a08d3e1aa330ff995f90",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/seo/scripts/repo_file_inventory.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0477715,
+    "ast_hash": "082ed8ad517b1a69c443f50b4a6ff4aa",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/seo/scripts/repo_release_seo.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.047773,
+    "ast_hash": "1a0824e3d40d3508d6d3b9b4eea83d91",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/seo/scripts/repo_social_preview_checker.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0477748,
+    "ast_hash": "3ef53fd2b07cce837ffa93f3a5dc5f11",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/seo/scripts/repo_topic_suggester.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0477762,
+    "ast_hash": "37dd31d9c4f425bda923f37be77725a4",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/seo/scripts/review_schema_checker.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.047778,
+    "ast_hash": "bb6129dd2ab650b3ce61132460388784",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/seo/scripts/rich_results_guard.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0477796,
+    "ast_hash": "d5a700d20e085286e755e0998226bf1c",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/seo/scripts/robots_checker.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0477812,
+    "ast_hash": "45343f94a331e0ee0af4b85da0ea7442",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/seo/scripts/robots_path_tester.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.047783,
+    "ast_hash": "cde86873c273cd01539bcaa8037fccd3",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/seo/scripts/schema_diff.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.047784,
+    "ast_hash": "f3b3defc889b090a6b1efccd2d45eff3",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/seo/scripts/schema_required_props.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.047786,
+    "ast_hash": "0254d0d95da1ee829398a6c0ce597501",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/seo/scripts/schema_template_generator.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0477877,
+    "ast_hash": "69846d518c7cb4e4378354c723abe05c",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/seo/scripts/security_headers.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0477896,
+    "ast_hash": "398192aabe58e0cb63f80fac49edb388",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/seo/scripts/seo_common.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.047791,
+    "ast_hash": "b23da58c6e4897027a0bbf272bc01b56",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/seo/scripts/sitemap_checker.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0477927,
+    "ast_hash": "c8638e85696f8eadbc88a203e7ef50e3",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/seo/scripts/sitemap_generator.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.047794,
+    "ast_hash": "dd015d8ff091022ad7de4efef243acbc",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/seo/scripts/social_meta.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.047796,
+    "ast_hash": "fabcd45cd5f5f57d6d1896d73cfa7184",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/seo/scripts/third_party_script_audit.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0477974,
+    "ast_hash": "1985ccca11451156c8e3d87ccf0a32ca",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/seo/scripts/topical_cluster_mapper.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0477993,
+    "ast_hash": "7275c79c820d5e7960e84e29559e5080",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/seo/scripts/url_quality.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0478008,
+    "ast_hash": "ee2cb81da70b527f5b0fe04b32e6e70e",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/seo/scripts/validate_schema.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0478027,
+    "ast_hash": "502ca8d4431a6232ae1d27ce7e264ff3",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/seo/scripts/validate_skill_inventory.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.047804,
+    "ast_hash": "fabf69f7cd3274b2a70196fa12ac988d",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/seo/scripts/video_schema_checker.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0478058,
+    "ast_hash": "efc4f7a539a7a51ccd96a8b7cfe30a15",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/seo/scripts/visual_regression_snapshot.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0478072,
+    "ast_hash": "19f8e83ab5d62cad10a66e3b136bcf0c",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/seo/scripts/x_robots_header_checker.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0478091,
+    "ast_hash": "84aa0fe046bdf3d0f5171838374e0da7",
+    "semantic_hash": ""
+  },
+  ".github/skills/seo/resources/config/scoring.json": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0478106,
+    "ast_hash": "769aeff4c16d00ce5f3ff012198f5972",
+    "semantic_hash": ""
+  },
+  ".github/skills/seo/resources/schema/templates.json": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.047812,
+    "ast_hash": "37bfa0fdf6822a0e0e6b1c5fc6efac79",
+    "semantic_hash": ""
+  },
+  ".github/skills/seo/scripts/__init__.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0478137,
+    "ast_hash": "eb270c4b7afa0338b23eae0db57bd783",
+    "semantic_hash": ""
+  },
+  ".github/skills/seo/scripts/a11y_seo_checker.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0478153,
+    "ast_hash": "0f3e9cc0e819583dbdf4ce447e40ab22",
+    "semantic_hash": ""
+  },
+  ".github/skills/seo/scripts/ai_crawler_policy_matrix.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.047817,
+    "ast_hash": "1d9c45f9c6d4ec6be81a5a6c9342f6fa",
+    "semantic_hash": ""
+  },
+  ".github/skills/seo/scripts/analyze_visual.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0478184,
+    "ast_hash": "e68319f68571c549da79d44aec1ba08a",
+    "semantic_hash": ""
+  },
+  ".github/skills/seo/scripts/anchor_text_audit.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0478203,
+    "ast_hash": "b51776ac59738cc6a923219d28cb49c9",
+    "semantic_hash": ""
+  },
+  ".github/skills/seo/scripts/answer_block_scanner.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.047822,
+    "ast_hash": "c83235b0af729d25f825d40e1a93134c",
+    "semantic_hash": ""
+  },
+  ".github/skills/seo/scripts/article_seo.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.047824,
+    "ast_hash": "b70b89ce61e409ebe5c7a6324ccee980",
+    "semantic_hash": ""
+  },
+  ".github/skills/seo/scripts/audit_runner.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0478256,
+    "ast_hash": "e9211ef677a7cc171b2e2e5d6012229d",
+    "semantic_hash": ""
+  },
+  ".github/skills/seo/scripts/broken_links.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0478272,
+    "ast_hash": "5869bca392daee37a3fa17cdab2c7290",
+    "semantic_hash": ""
+  },
+  ".github/skills/seo/scripts/cache_compression_checker.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.047829,
+    "ast_hash": "eb2c3034bd3b900bde6d92f8385a34dd",
+    "semantic_hash": ""
+  },
+  ".github/skills/seo/scripts/canonical_checker.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0478306,
+    "ast_hash": "d70a002c56d4e1f85f88dafe529993d3",
+    "semantic_hash": ""
+  },
+  ".github/skills/seo/scripts/capture_screenshot.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0478323,
+    "ast_hash": "25c3b60816b62b5db8766987abc6317d",
+    "semantic_hash": ""
+  },
+  ".github/skills/seo/scripts/citation_readiness.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.047834,
+    "ast_hash": "78b06aee1d7e97396d4e7adc89b864be",
+    "semantic_hash": ""
+  },
+  ".github/skills/seo/scripts/collection_page_checker.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0478354,
+    "ast_hash": "24696c8a3ab3375cc5a4038c9236d837",
+    "semantic_hash": ""
+  },
+  ".github/skills/seo/scripts/competitor_gap.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0478373,
+    "ast_hash": "7ae90a64030a23d441ab5c3993f412c3",
+    "semantic_hash": ""
+  },
+  ".github/skills/seo/scripts/content_decay_detector.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0478387,
+    "ast_hash": "63d05d2003eb349e12cdaf896474893a",
+    "semantic_hash": ""
+  },
+  ".github/skills/seo/scripts/content_intent_matcher.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0478404,
+    "ast_hash": "1a08f41e54f6f492910045b3a8a43476",
+    "semantic_hash": ""
+  },
+  ".github/skills/seo/scripts/crawl_audit.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0478418,
+    "ast_hash": "0ab37ef5ef46f0a128e3b43d15b1978c",
+    "semantic_hash": ""
+  },
+  ".github/skills/seo/scripts/critical_request_chain.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0478437,
+    "ast_hash": "bcfa44bb69b946da1f4ad672a58f4656",
+    "semantic_hash": ""
+  },
+  ".github/skills/seo/scripts/duplicate_content.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0478451,
+    "ast_hash": "52fbe99ece59c456178ec1ab92da1560",
+    "semantic_hash": ""
+  },
+  ".github/skills/seo/scripts/eeat_signal_checker.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0478466,
+    "ast_hash": "c957a7e09995b9a5e36e442c18694ab1",
+    "semantic_hash": ""
+  },
+  ".github/skills/seo/scripts/entity_checker.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0478482,
+    "ast_hash": "b43d1052f29fdc20312dda93a3b80147",
+    "semantic_hash": ""
+  },
+  ".github/skills/seo/scripts/env_loader.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0478501,
+    "ast_hash": "6a28406af8494cb4912f6a4c6352be22",
+    "semantic_hash": ""
+  },
+  ".github/skills/seo/scripts/external_link_quality.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0478518,
+    "ast_hash": "29944e71053850394b1e9f6f5211c96b",
+    "semantic_hash": ""
+  },
+  ".github/skills/seo/scripts/faceted_nav_audit.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0478535,
+    "ast_hash": "3c287b35170dc0b9a32a5cda6c214510",
+    "semantic_hash": ""
+  },
+  ".github/skills/seo/scripts/fetch_page.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0478551,
+    "ast_hash": "f55f62a4f2361b4e694d126a0693c0b7",
+    "semantic_hash": ""
+  },
+  ".github/skills/seo/scripts/finding_verifier.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0478568,
+    "ast_hash": "d1fdeeba4065ebcbee661d804ffe813c",
+    "semantic_hash": ""
+  },
+  ".github/skills/seo/scripts/font_audit.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0478582,
+    "ast_hash": "3faaf555ae43bf00fcdf1f5cf17f3a69",
+    "semantic_hash": ""
+  },
+  ".github/skills/seo/scripts/freshness_checker.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.04786,
+    "ast_hash": "c3662524a467c89bdb95eeaf3ba27159",
+    "semantic_hash": ""
+  },
+  ".github/skills/seo/scripts/generate_report.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0478616,
+    "ast_hash": "a6074030a9b57796dfae43ce009bd236",
+    "semantic_hash": ""
+  },
+  ".github/skills/seo/scripts/github_api.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0478632,
+    "ast_hash": "48994d53c29d27bb3e48ed2c0a7bf1fd",
+    "semantic_hash": ""
+  },
+  ".github/skills/seo/scripts/github_community_health.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.047865,
+    "ast_hash": "9ed5ed9dca72e49788aed156a9e80509",
+    "semantic_hash": ""
+  },
+  ".github/skills/seo/scripts/github_competitor_research.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0478663,
+    "ast_hash": "d8b6d0641351096b12869f5051021941",
+    "semantic_hash": ""
+  },
+  ".github/skills/seo/scripts/github_readme_lint.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.047868,
+    "ast_hash": "a8d836ae7d3e489566411fa5a114764a",
+    "semantic_hash": ""
+  },
+  ".github/skills/seo/scripts/github_repo_audit.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0478697,
+    "ast_hash": "474c7dcd746231176948b342650846e3",
+    "semantic_hash": ""
+  },
+  ".github/skills/seo/scripts/github_search_benchmark.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.047871,
+    "ast_hash": "4b57254433565122fb0d15d04346e089",
+    "semantic_hash": ""
+  },
+  ".github/skills/seo/scripts/github_seo_report.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.047873,
+    "ast_hash": "bca6cef11fa4c4b5890de5a78a679968",
+    "semantic_hash": ""
+  },
+  ".github/skills/seo/scripts/github_traffic_archiver.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0478745,
+    "ast_hash": "5666498fb66c5e3637450bbbcccd1433",
+    "semantic_hash": ""
+  },
+  ".github/skills/seo/scripts/github_weekly_scorecard.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0478761,
+    "ast_hash": "80b7208d94520b255bc3cff28693879e",
+    "semantic_hash": ""
+  },
+  ".github/skills/seo/scripts/gsc_checker.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0478778,
+    "ast_hash": "38fd725a52da376801172d0a812d1172",
+    "semantic_hash": ""
+  },
+  ".github/skills/seo/scripts/hreflang_checker.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0478795,
+    "ast_hash": "104794b607f1af23e7877f597ea30343",
+    "semantic_hash": ""
+  },
+  ".github/skills/seo/scripts/hreflang_sitemap_validator.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0478811,
+    "ast_hash": "8d69f0c571ec912b9f4de224018b0d05",
+    "semantic_hash": ""
+  },
+  ".github/skills/seo/scripts/image_inventory.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0478828,
+    "ast_hash": "d631dc4ffac0c14e79d5804b4feb7254",
+    "semantic_hash": ""
+  },
+  ".github/skills/seo/scripts/image_weight_audit.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0478845,
+    "ast_hash": "2f7b3db1f4d1643713213aea6cb8f760",
+    "semantic_hash": ""
+  },
+  ".github/skills/seo/scripts/indexability_matrix.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0478861,
+    "ast_hash": "98a1708200c70b6402add6dcab7d59c3",
+    "semantic_hash": ""
+  },
+  ".github/skills/seo/scripts/indexnow_checker.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0478876,
+    "ast_hash": "6705f5c85298359c543459f952b01c1b",
+    "semantic_hash": ""
+  },
+  ".github/skills/seo/scripts/internal_links.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0478897,
+    "ast_hash": "9d3f783a634528f3e49dd796a42ca6c5",
+    "semantic_hash": ""
+  },
+  ".github/skills/seo/scripts/javascript_render_audit.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0478914,
+    "ast_hash": "f8cebfb33f277add84130998ed97c8ed",
+    "semantic_hash": ""
+  },
+  ".github/skills/seo/scripts/lcp_subparts.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.047893,
+    "ast_hash": "54be6f6e885a946e6d6a3e8ff817d1b0",
+    "semantic_hash": ""
+  },
+  ".github/skills/seo/scripts/lib/__init__.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0478945,
+    "ast_hash": "7600f9d5d8b90691c4a4f3a3978c848a",
+    "semantic_hash": ""
+  },
+  ".github/skills/seo/scripts/lib/safe_http.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0478964,
+    "ast_hash": "fc51f86376fac30f3bd3d38ba7a217fe",
+    "semantic_hash": ""
+  },
+  ".github/skills/seo/scripts/lighthouse_runner.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0478978,
+    "ast_hash": "4f31ff9d71c5d116985a0b353f8594bd",
+    "semantic_hash": ""
+  },
+  ".github/skills/seo/scripts/link_profile.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0478997,
+    "ast_hash": "e6cbe1f15b27bbd9af8611cc8b5f1080",
+    "semantic_hash": ""
+  },
+  ".github/skills/seo/scripts/llms_txt_checker.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0479014,
+    "ast_hash": "281bb55a67f65e33d40c1961bd651fc4",
+    "semantic_hash": ""
+  },
+  ".github/skills/seo/scripts/llms_txt_generator.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.047903,
+    "ast_hash": "06be038d9be566251d1b9e51b5d2e73b",
+    "semantic_hash": ""
+  },
+  ".github/skills/seo/scripts/local_seo_checker.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0479045,
+    "ast_hash": "7c8e39d292ac1119650f95a7a2525e1b",
+    "semantic_hash": ""
+  },
+  ".github/skills/seo/scripts/log_file_analyzer.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0479064,
+    "ast_hash": "4aef759ecdcc636bafd1dd44bc8652f1",
+    "semantic_hash": ""
+  },
+  ".github/skills/seo/scripts/mobile_render_checker.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0479078,
+    "ast_hash": "e2abf16aee84ebe0bff5fc9376bbcd46",
+    "semantic_hash": ""
+  },
+  ".github/skills/seo/scripts/orphan_pages_from_sitemap.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0479124,
+    "ast_hash": "9777d03ec0cdfe8c4426ec5067046aaf",
+    "semantic_hash": ""
+  },
+  ".github/skills/seo/scripts/pagespeed.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.047914,
+    "ast_hash": "ddea18eab836626f0411c4bbf90e2e5e",
+    "semantic_hash": ""
+  },
+  ".github/skills/seo/scripts/parse_html.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0479157,
+    "ast_hash": "1e4e254222b7b3c71c2ad23aa8e52bfd",
+    "semantic_hash": ""
+  },
+  ".github/skills/seo/scripts/pre_commit_seo_check.sh": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0479174,
+    "ast_hash": "f707e37c15f1af10a581b45af473ecce",
+    "semantic_hash": ""
+  },
+  ".github/skills/seo/scripts/product_schema_checker.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0479188,
+    "ast_hash": "cfb4cb2e330f9bd9ef496198c13c343f",
+    "semantic_hash": ""
+  },
+  ".github/skills/seo/scripts/readability.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0479205,
+    "ast_hash": "e256478bb40134892226135f68ca0b77",
+    "semantic_hash": ""
+  },
+  ".github/skills/seo/scripts/redirect_backlink_reclaim.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.047922,
+    "ast_hash": "4aea1039e5b3243833484c0c48d11806",
+    "semantic_hash": ""
+  },
+  ".github/skills/seo/scripts/redirect_checker.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0479238,
+    "ast_hash": "d4d801389f993f1ec142cb2050cc50e1",
+    "semantic_hash": ""
+  },
+  ".github/skills/seo/scripts/reference_freshness.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0479255,
+    "ast_hash": "c7e629ac137e17173846fb2805657726",
+    "semantic_hash": ""
+  },
+  ".github/skills/seo/scripts/repo_docs_site_checker.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0479271,
+    "ast_hash": "0a9ebdb267b6a08d3e1aa330ff995f90",
+    "semantic_hash": ""
+  },
+  ".github/skills/seo/scripts/repo_file_inventory.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0479286,
+    "ast_hash": "082ed8ad517b1a69c443f50b4a6ff4aa",
+    "semantic_hash": ""
+  },
+  ".github/skills/seo/scripts/repo_release_seo.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0479305,
+    "ast_hash": "1a0824e3d40d3508d6d3b9b4eea83d91",
+    "semantic_hash": ""
+  },
+  ".github/skills/seo/scripts/repo_social_preview_checker.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.047932,
+    "ast_hash": "3ef53fd2b07cce837ffa93f3a5dc5f11",
+    "semantic_hash": ""
+  },
+  ".github/skills/seo/scripts/repo_topic_suggester.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0479336,
+    "ast_hash": "37dd31d9c4f425bda923f37be77725a4",
+    "semantic_hash": ""
+  },
+  ".github/skills/seo/scripts/review_schema_checker.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.047935,
+    "ast_hash": "bb6129dd2ab650b3ce61132460388784",
+    "semantic_hash": ""
+  },
+  ".github/skills/seo/scripts/rich_results_guard.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0479367,
+    "ast_hash": "d5a700d20e085286e755e0998226bf1c",
+    "semantic_hash": ""
+  },
+  ".github/skills/seo/scripts/robots_checker.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0479383,
+    "ast_hash": "45343f94a331e0ee0af4b85da0ea7442",
+    "semantic_hash": ""
+  },
+  ".github/skills/seo/scripts/robots_path_tester.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0479398,
+    "ast_hash": "cde86873c273cd01539bcaa8037fccd3",
+    "semantic_hash": ""
+  },
+  ".github/skills/seo/scripts/schema_diff.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0479414,
+    "ast_hash": "f3b3defc889b090a6b1efccd2d45eff3",
+    "semantic_hash": ""
+  },
+  ".github/skills/seo/scripts/schema_required_props.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.047943,
+    "ast_hash": "0254d0d95da1ee829398a6c0ce597501",
+    "semantic_hash": ""
+  },
+  ".github/skills/seo/scripts/schema_template_generator.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.047945,
+    "ast_hash": "69846d518c7cb4e4378354c723abe05c",
+    "semantic_hash": ""
+  },
+  ".github/skills/seo/scripts/security_headers.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0479465,
+    "ast_hash": "398192aabe58e0cb63f80fac49edb388",
+    "semantic_hash": ""
+  },
+  ".github/skills/seo/scripts/seo_common.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0479484,
+    "ast_hash": "b23da58c6e4897027a0bbf272bc01b56",
+    "semantic_hash": ""
+  },
+  ".github/skills/seo/scripts/sitemap_checker.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0479498,
+    "ast_hash": "c8638e85696f8eadbc88a203e7ef50e3",
+    "semantic_hash": ""
+  },
+  ".github/skills/seo/scripts/sitemap_generator.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.047952,
+    "ast_hash": "dd015d8ff091022ad7de4efef243acbc",
+    "semantic_hash": ""
+  },
+  ".github/skills/seo/scripts/social_meta.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0479534,
+    "ast_hash": "fabcd45cd5f5f57d6d1896d73cfa7184",
+    "semantic_hash": ""
+  },
+  ".github/skills/seo/scripts/third_party_script_audit.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.047955,
+    "ast_hash": "1985ccca11451156c8e3d87ccf0a32ca",
+    "semantic_hash": ""
+  },
+  ".github/skills/seo/scripts/topical_cluster_mapper.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0479567,
+    "ast_hash": "7275c79c820d5e7960e84e29559e5080",
+    "semantic_hash": ""
+  },
+  ".github/skills/seo/scripts/url_quality.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0479586,
+    "ast_hash": "ee2cb81da70b527f5b0fe04b32e6e70e",
+    "semantic_hash": ""
+  },
+  ".github/skills/seo/scripts/validate_schema.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.04796,
+    "ast_hash": "502ca8d4431a6232ae1d27ce7e264ff3",
+    "semantic_hash": ""
+  },
+  ".github/skills/seo/scripts/validate_skill_inventory.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0479617,
+    "ast_hash": "fabf69f7cd3274b2a70196fa12ac988d",
+    "semantic_hash": ""
+  },
+  ".github/skills/seo/scripts/video_schema_checker.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0479634,
+    "ast_hash": "efc4f7a539a7a51ccd96a8b7cfe30a15",
+    "semantic_hash": ""
+  },
+  ".github/skills/seo/scripts/visual_regression_snapshot.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0479648,
+    "ast_hash": "19f8e83ab5d62cad10a66e3b136bcf0c",
+    "semantic_hash": ""
+  },
+  ".github/skills/seo/scripts/x_robots_header_checker.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0479667,
+    "ast_hash": "84aa0fe046bdf3d0f5171838374e0da7",
+    "semantic_hash": ""
+  },
+  ".windsurf/skills/seo/resources/config/scoring.json": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0479686,
+    "ast_hash": "769aeff4c16d00ce5f3ff012198f5972",
+    "semantic_hash": ""
+  },
+  ".windsurf/skills/seo/resources/schema/templates.json": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0479703,
+    "ast_hash": "37bfa0fdf6822a0e0e6b1c5fc6efac79",
+    "semantic_hash": ""
+  },
+  ".windsurf/skills/seo/scripts/__init__.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0479722,
+    "ast_hash": "eb270c4b7afa0338b23eae0db57bd783",
+    "semantic_hash": ""
+  },
+  ".windsurf/skills/seo/scripts/a11y_seo_checker.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0479736,
+    "ast_hash": "0f3e9cc0e819583dbdf4ce447e40ab22",
+    "semantic_hash": ""
+  },
+  ".windsurf/skills/seo/scripts/ai_crawler_policy_matrix.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0479755,
+    "ast_hash": "1d9c45f9c6d4ec6be81a5a6c9342f6fa",
+    "semantic_hash": ""
+  },
+  ".windsurf/skills/seo/scripts/analyze_visual.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.047977,
+    "ast_hash": "e68319f68571c549da79d44aec1ba08a",
+    "semantic_hash": ""
+  },
+  ".windsurf/skills/seo/scripts/anchor_text_audit.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0479784,
+    "ast_hash": "b51776ac59738cc6a923219d28cb49c9",
+    "semantic_hash": ""
+  },
+  ".windsurf/skills/seo/scripts/answer_block_scanner.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0479803,
+    "ast_hash": "c83235b0af729d25f825d40e1a93134c",
+    "semantic_hash": ""
+  },
+  ".windsurf/skills/seo/scripts/article_seo.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.047982,
+    "ast_hash": "b70b89ce61e409ebe5c7a6324ccee980",
+    "semantic_hash": ""
+  },
+  ".windsurf/skills/seo/scripts/audit_runner.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.047984,
+    "ast_hash": "e9211ef677a7cc171b2e2e5d6012229d",
+    "semantic_hash": ""
+  },
+  ".windsurf/skills/seo/scripts/broken_links.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0479856,
+    "ast_hash": "5869bca392daee37a3fa17cdab2c7290",
+    "semantic_hash": ""
+  },
+  ".windsurf/skills/seo/scripts/cache_compression_checker.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0479875,
+    "ast_hash": "eb2c3034bd3b900bde6d92f8385a34dd",
+    "semantic_hash": ""
+  },
+  ".windsurf/skills/seo/scripts/canonical_checker.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.047989,
+    "ast_hash": "d70a002c56d4e1f85f88dafe529993d3",
+    "semantic_hash": ""
+  },
+  ".windsurf/skills/seo/scripts/capture_screenshot.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.047991,
+    "ast_hash": "25c3b60816b62b5db8766987abc6317d",
+    "semantic_hash": ""
+  },
+  ".windsurf/skills/seo/scripts/citation_readiness.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0479932,
+    "ast_hash": "78b06aee1d7e97396d4e7adc89b864be",
+    "semantic_hash": ""
+  },
+  ".windsurf/skills/seo/scripts/collection_page_checker.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0479946,
+    "ast_hash": "24696c8a3ab3375cc5a4038c9236d837",
+    "semantic_hash": ""
+  },
+  ".windsurf/skills/seo/scripts/competitor_gap.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0479965,
+    "ast_hash": "7ae90a64030a23d441ab5c3993f412c3",
+    "semantic_hash": ""
+  },
+  ".windsurf/skills/seo/scripts/content_decay_detector.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.047998,
+    "ast_hash": "63d05d2003eb349e12cdaf896474893a",
+    "semantic_hash": ""
+  },
+  ".windsurf/skills/seo/scripts/content_intent_matcher.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0479999,
+    "ast_hash": "1a08f41e54f6f492910045b3a8a43476",
+    "semantic_hash": ""
+  },
+  ".windsurf/skills/seo/scripts/crawl_audit.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0480018,
+    "ast_hash": "0ab37ef5ef46f0a128e3b43d15b1978c",
+    "semantic_hash": ""
+  },
+  ".windsurf/skills/seo/scripts/critical_request_chain.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0480034,
+    "ast_hash": "bcfa44bb69b946da1f4ad672a58f4656",
+    "semantic_hash": ""
+  },
+  ".windsurf/skills/seo/scripts/duplicate_content.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0480049,
+    "ast_hash": "52fbe99ece59c456178ec1ab92da1560",
+    "semantic_hash": ""
+  },
+  ".windsurf/skills/seo/scripts/eeat_signal_checker.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.048007,
+    "ast_hash": "c957a7e09995b9a5e36e442c18694ab1",
+    "semantic_hash": ""
+  },
+  ".windsurf/skills/seo/scripts/entity_checker.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0480084,
+    "ast_hash": "b43d1052f29fdc20312dda93a3b80147",
+    "semantic_hash": ""
+  },
+  ".windsurf/skills/seo/scripts/env_loader.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0480103,
+    "ast_hash": "6a28406af8494cb4912f6a4c6352be22",
+    "semantic_hash": ""
+  },
+  ".windsurf/skills/seo/scripts/external_link_quality.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0480118,
+    "ast_hash": "29944e71053850394b1e9f6f5211c96b",
+    "semantic_hash": ""
+  },
+  ".windsurf/skills/seo/scripts/faceted_nav_audit.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0480132,
+    "ast_hash": "3c287b35170dc0b9a32a5cda6c214510",
+    "semantic_hash": ""
+  },
+  ".windsurf/skills/seo/scripts/fetch_page.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0480149,
+    "ast_hash": "f55f62a4f2361b4e694d126a0693c0b7",
+    "semantic_hash": ""
+  },
+  ".windsurf/skills/seo/scripts/finding_verifier.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0480163,
+    "ast_hash": "d1fdeeba4065ebcbee661d804ffe813c",
+    "semantic_hash": ""
+  },
+  ".windsurf/skills/seo/scripts/font_audit.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0480182,
+    "ast_hash": "3faaf555ae43bf00fcdf1f5cf17f3a69",
+    "semantic_hash": ""
+  },
+  ".windsurf/skills/seo/scripts/freshness_checker.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0480196,
+    "ast_hash": "c3662524a467c89bdb95eeaf3ba27159",
+    "semantic_hash": ""
+  },
+  ".windsurf/skills/seo/scripts/generate_report.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0480216,
+    "ast_hash": "a6074030a9b57796dfae43ce009bd236",
+    "semantic_hash": ""
+  },
+  ".windsurf/skills/seo/scripts/github_api.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.048023,
+    "ast_hash": "48994d53c29d27bb3e48ed2c0a7bf1fd",
+    "semantic_hash": ""
+  },
+  ".windsurf/skills/seo/scripts/github_community_health.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0480247,
+    "ast_hash": "9ed5ed9dca72e49788aed156a9e80509",
+    "semantic_hash": ""
+  },
+  ".windsurf/skills/seo/scripts/github_competitor_research.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.048026,
+    "ast_hash": "d8b6d0641351096b12869f5051021941",
+    "semantic_hash": ""
+  },
+  ".windsurf/skills/seo/scripts/github_readme_lint.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.048028,
+    "ast_hash": "a8d836ae7d3e489566411fa5a114764a",
+    "semantic_hash": ""
+  },
+  ".windsurf/skills/seo/scripts/github_repo_audit.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0480294,
+    "ast_hash": "474c7dcd746231176948b342650846e3",
+    "semantic_hash": ""
+  },
+  ".windsurf/skills/seo/scripts/github_search_benchmark.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0480313,
+    "ast_hash": "4b57254433565122fb0d15d04346e089",
+    "semantic_hash": ""
+  },
+  ".windsurf/skills/seo/scripts/github_seo_report.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0480328,
+    "ast_hash": "bca6cef11fa4c4b5890de5a78a679968",
+    "semantic_hash": ""
+  },
+  ".windsurf/skills/seo/scripts/github_traffic_archiver.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0480342,
+    "ast_hash": "5666498fb66c5e3637450bbbcccd1433",
+    "semantic_hash": ""
+  },
+  ".windsurf/skills/seo/scripts/github_weekly_scorecard.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.048036,
+    "ast_hash": "80b7208d94520b255bc3cff28693879e",
+    "semantic_hash": ""
+  },
+  ".windsurf/skills/seo/scripts/gsc_checker.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0480375,
+    "ast_hash": "38fd725a52da376801172d0a812d1172",
+    "semantic_hash": ""
+  },
+  ".windsurf/skills/seo/scripts/hreflang_checker.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0480394,
+    "ast_hash": "104794b607f1af23e7877f597ea30343",
+    "semantic_hash": ""
+  },
+  ".windsurf/skills/seo/scripts/hreflang_sitemap_validator.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0480409,
+    "ast_hash": "8d69f0c571ec912b9f4de224018b0d05",
+    "semantic_hash": ""
+  },
+  ".windsurf/skills/seo/scripts/image_inventory.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0480428,
+    "ast_hash": "d631dc4ffac0c14e79d5804b4feb7254",
+    "semantic_hash": ""
+  },
+  ".windsurf/skills/seo/scripts/image_weight_audit.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0480444,
+    "ast_hash": "2f7b3db1f4d1643713213aea6cb8f760",
+    "semantic_hash": ""
+  },
+  ".windsurf/skills/seo/scripts/indexability_matrix.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0480464,
+    "ast_hash": "98a1708200c70b6402add6dcab7d59c3",
+    "semantic_hash": ""
+  },
+  ".windsurf/skills/seo/scripts/indexnow_checker.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0480478,
+    "ast_hash": "6705f5c85298359c543459f952b01c1b",
+    "semantic_hash": ""
+  },
+  ".windsurf/skills/seo/scripts/internal_links.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0480494,
+    "ast_hash": "9d3f783a634528f3e49dd796a42ca6c5",
+    "semantic_hash": ""
+  },
+  ".windsurf/skills/seo/scripts/javascript_render_audit.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.048051,
+    "ast_hash": "f8cebfb33f277add84130998ed97c8ed",
+    "semantic_hash": ""
+  },
+  ".windsurf/skills/seo/scripts/lcp_subparts.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0480528,
+    "ast_hash": "54be6f6e885a946e6d6a3e8ff817d1b0",
+    "semantic_hash": ""
+  },
+  ".windsurf/skills/seo/scripts/lib/__init__.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0480542,
+    "ast_hash": "7600f9d5d8b90691c4a4f3a3978c848a",
+    "semantic_hash": ""
+  },
+  ".windsurf/skills/seo/scripts/lib/safe_http.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0480561,
+    "ast_hash": "fc51f86376fac30f3bd3d38ba7a217fe",
+    "semantic_hash": ""
+  },
+  ".windsurf/skills/seo/scripts/lighthouse_runner.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0480576,
+    "ast_hash": "4f31ff9d71c5d116985a0b353f8594bd",
+    "semantic_hash": ""
+  },
+  ".windsurf/skills/seo/scripts/link_profile.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0480595,
+    "ast_hash": "e6cbe1f15b27bbd9af8611cc8b5f1080",
+    "semantic_hash": ""
+  },
+  ".windsurf/skills/seo/scripts/llms_txt_checker.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.048061,
+    "ast_hash": "281bb55a67f65e33d40c1961bd651fc4",
+    "semantic_hash": ""
+  },
+  ".windsurf/skills/seo/scripts/llms_txt_generator.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0480626,
+    "ast_hash": "06be038d9be566251d1b9e51b5d2e73b",
+    "semantic_hash": ""
+  },
+  ".windsurf/skills/seo/scripts/local_seo_checker.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.048064,
+    "ast_hash": "7c8e39d292ac1119650f95a7a2525e1b",
+    "semantic_hash": ""
+  },
+  ".windsurf/skills/seo/scripts/log_file_analyzer.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0480654,
+    "ast_hash": "4aef759ecdcc636bafd1dd44bc8652f1",
+    "semantic_hash": ""
+  },
+  ".windsurf/skills/seo/scripts/mobile_render_checker.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.048067,
+    "ast_hash": "e2abf16aee84ebe0bff5fc9376bbcd46",
+    "semantic_hash": ""
+  },
+  ".windsurf/skills/seo/scripts/orphan_pages_from_sitemap.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0480688,
+    "ast_hash": "9777d03ec0cdfe8c4426ec5067046aaf",
+    "semantic_hash": ""
+  },
+  ".windsurf/skills/seo/scripts/pagespeed.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0480704,
+    "ast_hash": "ddea18eab836626f0411c4bbf90e2e5e",
+    "semantic_hash": ""
+  },
+  ".windsurf/skills/seo/scripts/parse_html.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.048072,
+    "ast_hash": "1e4e254222b7b3c71c2ad23aa8e52bfd",
+    "semantic_hash": ""
+  },
+  ".windsurf/skills/seo/scripts/pre_commit_seo_check.sh": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0480738,
+    "ast_hash": "f707e37c15f1af10a581b45af473ecce",
+    "semantic_hash": ""
+  },
+  ".windsurf/skills/seo/scripts/product_schema_checker.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0480752,
+    "ast_hash": "cfb4cb2e330f9bd9ef496198c13c343f",
+    "semantic_hash": ""
+  },
+  ".windsurf/skills/seo/scripts/readability.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0480769,
+    "ast_hash": "e256478bb40134892226135f68ca0b77",
+    "semantic_hash": ""
+  },
+  ".windsurf/skills/seo/scripts/redirect_backlink_reclaim.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0480783,
+    "ast_hash": "4aea1039e5b3243833484c0c48d11806",
+    "semantic_hash": ""
+  },
+  ".windsurf/skills/seo/scripts/redirect_checker.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.04808,
+    "ast_hash": "d4d801389f993f1ec142cb2050cc50e1",
+    "semantic_hash": ""
+  },
+  ".windsurf/skills/seo/scripts/reference_freshness.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0480814,
+    "ast_hash": "c7e629ac137e17173846fb2805657726",
+    "semantic_hash": ""
+  },
+  ".windsurf/skills/seo/scripts/repo_docs_site_checker.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0480833,
+    "ast_hash": "0a9ebdb267b6a08d3e1aa330ff995f90",
+    "semantic_hash": ""
+  },
+  ".windsurf/skills/seo/scripts/repo_file_inventory.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.048085,
+    "ast_hash": "082ed8ad517b1a69c443f50b4a6ff4aa",
+    "semantic_hash": ""
+  },
+  ".windsurf/skills/seo/scripts/repo_release_seo.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.048087,
+    "ast_hash": "1a0824e3d40d3508d6d3b9b4eea83d91",
+    "semantic_hash": ""
+  },
+  ".windsurf/skills/seo/scripts/repo_social_preview_checker.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0480883,
+    "ast_hash": "3ef53fd2b07cce837ffa93f3a5dc5f11",
+    "semantic_hash": ""
+  },
+  ".windsurf/skills/seo/scripts/repo_topic_suggester.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0480902,
+    "ast_hash": "37dd31d9c4f425bda923f37be77725a4",
+    "semantic_hash": ""
+  },
+  ".windsurf/skills/seo/scripts/review_schema_checker.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.048092,
+    "ast_hash": "bb6129dd2ab650b3ce61132460388784",
+    "semantic_hash": ""
+  },
+  ".windsurf/skills/seo/scripts/rich_results_guard.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0480936,
+    "ast_hash": "d5a700d20e085286e755e0998226bf1c",
+    "semantic_hash": ""
+  },
+  ".windsurf/skills/seo/scripts/robots_checker.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.048095,
+    "ast_hash": "45343f94a331e0ee0af4b85da0ea7442",
+    "semantic_hash": ""
+  },
+  ".windsurf/skills/seo/scripts/robots_path_tester.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0480967,
+    "ast_hash": "cde86873c273cd01539bcaa8037fccd3",
+    "semantic_hash": ""
+  },
+  ".windsurf/skills/seo/scripts/schema_diff.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0480983,
+    "ast_hash": "f3b3defc889b090a6b1efccd2d45eff3",
+    "semantic_hash": ""
+  },
+  ".windsurf/skills/seo/scripts/schema_required_props.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0480998,
+    "ast_hash": "0254d0d95da1ee829398a6c0ce597501",
+    "semantic_hash": ""
+  },
+  ".windsurf/skills/seo/scripts/schema_template_generator.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0481014,
+    "ast_hash": "69846d518c7cb4e4378354c723abe05c",
+    "semantic_hash": ""
+  },
+  ".windsurf/skills/seo/scripts/security_headers.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0481029,
+    "ast_hash": "398192aabe58e0cb63f80fac49edb388",
+    "semantic_hash": ""
+  },
+  ".windsurf/skills/seo/scripts/seo_common.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0481045,
+    "ast_hash": "b23da58c6e4897027a0bbf272bc01b56",
+    "semantic_hash": ""
+  },
+  ".windsurf/skills/seo/scripts/sitemap_checker.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.048106,
+    "ast_hash": "c8638e85696f8eadbc88a203e7ef50e3",
+    "semantic_hash": ""
+  },
+  ".windsurf/skills/seo/scripts/sitemap_generator.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0481079,
+    "ast_hash": "dd015d8ff091022ad7de4efef243acbc",
+    "semantic_hash": ""
+  },
+  ".windsurf/skills/seo/scripts/social_meta.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0481093,
+    "ast_hash": "fabcd45cd5f5f57d6d1896d73cfa7184",
+    "semantic_hash": ""
+  },
+  ".windsurf/skills/seo/scripts/third_party_script_audit.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.048111,
+    "ast_hash": "1985ccca11451156c8e3d87ccf0a32ca",
+    "semantic_hash": ""
+  },
+  ".windsurf/skills/seo/scripts/topical_cluster_mapper.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0481126,
+    "ast_hash": "7275c79c820d5e7960e84e29559e5080",
+    "semantic_hash": ""
+  },
+  ".windsurf/skills/seo/scripts/url_quality.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.048114,
+    "ast_hash": "ee2cb81da70b527f5b0fe04b32e6e70e",
+    "semantic_hash": ""
+  },
+  ".windsurf/skills/seo/scripts/validate_schema.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.048116,
+    "ast_hash": "502ca8d4431a6232ae1d27ce7e264ff3",
+    "semantic_hash": ""
+  },
+  ".windsurf/skills/seo/scripts/validate_skill_inventory.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0481179,
+    "ast_hash": "fabf69f7cd3274b2a70196fa12ac988d",
+    "semantic_hash": ""
+  },
+  ".windsurf/skills/seo/scripts/video_schema_checker.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0481193,
+    "ast_hash": "efc4f7a539a7a51ccd96a8b7cfe30a15",
+    "semantic_hash": ""
+  },
+  ".windsurf/skills/seo/scripts/visual_regression_snapshot.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.048121,
+    "ast_hash": "19f8e83ab5d62cad10a66e3b136bcf0c",
+    "semantic_hash": ""
+  },
+  ".windsurf/skills/seo/scripts/x_robots_header_checker.py": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0481226,
+    "ast_hash": "84aa0fe046bdf3d0f5171838374e0da7",
+    "semantic_hash": ""
+  },
+  "install.ps1": {
+    "mtime": 1794191730.3477633,
+    "seen": 1794207009.048124,
+    "ast_hash": "b5a976abda8e775fb9fe3acf2542919c",
+    "semantic_hash": ""
+  },
+  "tests/run_multiplayer.ps1": {
+    "mtime": 1794205459.3987703,
+    "seen": 1794207009.0481257,
+    "ast_hash": "e68d3e257bb7f1d92886398d8685ea99",
+    "semantic_hash": ""
+  },
+  ".cline/skills/seo/SKILL.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0481274,
+    "ast_hash": "4ed204028d8288e2fb60ff39819ba100",
+    "semantic_hash": ""
+  },
+  ".cline/skills/seo/resources/agents/seo-content.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.048129,
+    "ast_hash": "2c96f75d004545eea5f3504dfebfbdc4",
+    "semantic_hash": ""
+  },
+  ".cline/skills/seo/resources/agents/seo-github-analyst.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0481308,
+    "ast_hash": "c69f12a224b1ae1071dbb11ca3e42add",
+    "semantic_hash": ""
+  },
+  ".cline/skills/seo/resources/agents/seo-github-benchmark.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0481324,
+    "ast_hash": "135fe8ba75c602e7c1b6b0397adbbd89",
+    "semantic_hash": ""
+  },
+  ".cline/skills/seo/resources/agents/seo-github-data.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.048134,
+    "ast_hash": "a9b12f9da26c624ea440b9da0764709d",
+    "semantic_hash": ""
+  },
+  ".cline/skills/seo/resources/agents/seo-performance.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0481358,
+    "ast_hash": "bd9d93ffaabb23f4a8c88afe9b377c4a",
+    "semantic_hash": ""
+  },
+  ".cline/skills/seo/resources/agents/seo-schema.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0481374,
+    "ast_hash": "28c73e8013dba4fb6e99ea9a2f88945e",
+    "semantic_hash": ""
+  },
+  ".cline/skills/seo/resources/agents/seo-sitemap.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.048139,
+    "ast_hash": "42dc6be6c43d27872acacc6b5f971baf",
+    "semantic_hash": ""
+  },
+  ".cline/skills/seo/resources/agents/seo-technical.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0481408,
+    "ast_hash": "df3386c91a9fbf81a3a8975a807165cb",
+    "semantic_hash": ""
+  },
+  ".cline/skills/seo/resources/agents/seo-verifier.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0481427,
+    "ast_hash": "c6ce319bdccaca600d2e294f83666e15",
+    "semantic_hash": ""
+  },
+  ".cline/skills/seo/resources/agents/seo-visual.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0481443,
+    "ast_hash": "65294304e5a6da0d86af17f565655668",
+    "semantic_hash": ""
+  },
+  ".cline/skills/seo/resources/references/cwv-thresholds.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.048146,
+    "ast_hash": "57b34c8aa800b87e08fe79b70e051253",
+    "semantic_hash": ""
+  },
+  ".cline/skills/seo/resources/references/eeat-framework.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0481477,
+    "ast_hash": "60087ef394e0d4dcdf2b0a5df1850d52",
+    "semantic_hash": ""
+  },
+  ".cline/skills/seo/resources/references/github-api-ops.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0481496,
+    "ast_hash": "d9b7477804ed980dbada7973418c8acb",
+    "semantic_hash": ""
+  },
+  ".cline/skills/seo/resources/references/github-ranking-factors.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0481508,
+    "ast_hash": "229ee76f5591db8a51e32e4812327d0b",
+    "semantic_hash": ""
+  },
+  ".cline/skills/seo/resources/references/google-seo-reference.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0481527,
+    "ast_hash": "30c5fd18f001827320e591f2e38a1044",
+    "semantic_hash": ""
+  },
+  ".cline/skills/seo/resources/references/link-building.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.048154,
+    "ast_hash": "2509ece7328f928619b9d7b2d86965a9",
+    "semantic_hash": ""
+  },
+  ".cline/skills/seo/resources/references/llm-audit-rubric.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.048156,
+    "ast_hash": "a5be819ed8a49609729ec2fef1b45105",
+    "semantic_hash": ""
+  },
+  ".cline/skills/seo/resources/references/quality-gates.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0481575,
+    "ast_hash": "3ab01586f386bad9333015dcad5a9648",
+    "semantic_hash": ""
+  },
+  ".cline/skills/seo/resources/references/readme-audit-rubric.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.048159,
+    "ast_hash": "396ea44cccee4cda122488fc1cc2bcec",
+    "semantic_hash": ""
+  },
+  ".cline/skills/seo/resources/references/schema-types.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0481608,
+    "ast_hash": "8e148d049a877e7035adc0c137beddcd",
+    "semantic_hash": ""
+  },
+  ".cline/skills/seo/resources/skills/seo-aeo.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0481622,
+    "ast_hash": "fc0ccb2814590195193c01a4e67b637d",
+    "semantic_hash": ""
+  },
+  ".cline/skills/seo/resources/skills/seo-article.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0481641,
+    "ast_hash": "152f731c6774a16b4789ed03481bf8af",
+    "semantic_hash": ""
+  },
+  ".cline/skills/seo/resources/skills/seo-audit.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0481656,
+    "ast_hash": "8081f40ccea2e49dd69f9e51d6678600",
+    "semantic_hash": ""
+  },
+  ".cline/skills/seo/resources/skills/seo-competitor-pages.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0481675,
+    "ast_hash": "62610de524d8dca6053c3ac4c4fafd8e",
+    "semantic_hash": ""
+  },
+  ".cline/skills/seo/resources/skills/seo-content.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.048169,
+    "ast_hash": "7d95b9e8077fc67fcaceff577b884164",
+    "semantic_hash": ""
+  },
+  ".cline/skills/seo/resources/skills/seo-geo.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.048171,
+    "ast_hash": "e6d74e59205bfc4121923669ea9feb40",
+    "semantic_hash": ""
+  },
+  ".cline/skills/seo/resources/skills/seo-github.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0481725,
+    "ast_hash": "fb34ebea10541abc7f17cfcff22c8d21",
+    "semantic_hash": ""
+  },
+  ".cline/skills/seo/resources/skills/seo-hreflang.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0481741,
+    "ast_hash": "295ce961527b06f691866ba51cb86348",
+    "semantic_hash": ""
+  },
+  ".cline/skills/seo/resources/skills/seo-images.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0481758,
+    "ast_hash": "1381e917e01987662cbb44aa370b5426",
+    "semantic_hash": ""
+  },
+  ".cline/skills/seo/resources/skills/seo-links.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0481777,
+    "ast_hash": "cdd527f9c1dee39b60909ed01585a313",
+    "semantic_hash": ""
+  },
+  ".cline/skills/seo/resources/skills/seo-page.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0481791,
+    "ast_hash": "1014003a08e67bd4abb30726f94820b7",
+    "semantic_hash": ""
+  },
+  ".cline/skills/seo/resources/skills/seo-plan.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.048181,
+    "ast_hash": "847dfa6a8bc34845e8363daff0dd2e03",
+    "semantic_hash": ""
+  },
+  ".cline/skills/seo/resources/skills/seo-programmatic.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0481825,
+    "ast_hash": "7fe1d3fe6632aa6a70d20da517b09fa9",
+    "semantic_hash": ""
+  },
+  ".cline/skills/seo/resources/skills/seo-schema.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0481844,
+    "ast_hash": "7d51218acab435aa3665f553a9694d3d",
+    "semantic_hash": ""
+  },
+  ".cline/skills/seo/resources/skills/seo-sitemap.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0481858,
+    "ast_hash": "a7f8c7a4874207148b6fcf7bb9f3f70f",
+    "semantic_hash": ""
+  },
+  ".cline/skills/seo/resources/skills/seo-technical.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0481875,
+    "ast_hash": "10562323155622e8f7e943284e157dfd",
+    "semantic_hash": ""
+  },
+  ".cline/skills/seo/resources/templates/agency.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0481892,
+    "ast_hash": "4965bf78dac73d91f256877c9fdc31f5",
+    "semantic_hash": ""
+  },
+  ".cline/skills/seo/resources/templates/blog-post.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0481908,
+    "ast_hash": "6a11d07b4c9f8b85dfa79761f601c5fb",
+    "semantic_hash": ""
+  },
+  ".cline/skills/seo/resources/templates/ecommerce.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0481925,
+    "ast_hash": "27412d2c9d27928fbb33d19091fa0113",
+    "semantic_hash": ""
+  },
+  ".cline/skills/seo/resources/templates/generic.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.048194,
+    "ast_hash": "248f681d12da7ca62bd95e5173662726",
+    "semantic_hash": ""
+  },
+  ".cline/skills/seo/resources/templates/github-seo-report.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0481956,
+    "ast_hash": "b2b653bc88ccd83a1ab5ebec9c7ff059",
+    "semantic_hash": ""
+  },
+  ".cline/skills/seo/resources/templates/github-weekly-scorecard.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.048197,
+    "ast_hash": "d28fdd572901bde3ed912cd8deec8f72",
+    "semantic_hash": ""
+  },
+  ".cline/skills/seo/resources/templates/local-service.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.048199,
+    "ast_hash": "458c6f75deb679b67eeafdab33045df1",
+    "semantic_hash": ""
+  },
+  ".cline/skills/seo/resources/templates/news-article.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0482006,
+    "ast_hash": "cf6b75e998daa1f98bd70fcaa25518d7",
+    "semantic_hash": ""
+  },
+  ".cline/skills/seo/resources/templates/publisher.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0482025,
+    "ast_hash": "115e24b12341831a04d03d6dfdf52a86",
+    "semantic_hash": ""
+  },
+  ".cline/skills/seo/resources/templates/saas.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.048204,
+    "ast_hash": "240015c202035be51cd7bbd14a111116",
+    "semantic_hash": ""
+  },
+  ".cline/skills/seo/resources/templates/technical-article.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0482059,
+    "ast_hash": "6c1b21bb6c336aadbac882477de6bee5",
+    "semantic_hash": ""
+  },
+  ".continue/skills/seo/SKILL.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0482073,
+    "ast_hash": "4ed204028d8288e2fb60ff39819ba100",
+    "semantic_hash": ""
+  },
+  ".continue/skills/seo/resources/agents/seo-content.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0482092,
+    "ast_hash": "2c96f75d004545eea5f3504dfebfbdc4",
+    "semantic_hash": ""
+  },
+  ".continue/skills/seo/resources/agents/seo-github-analyst.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0482106,
+    "ast_hash": "c69f12a224b1ae1071dbb11ca3e42add",
+    "semantic_hash": ""
+  },
+  ".continue/skills/seo/resources/agents/seo-github-benchmark.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0482123,
+    "ast_hash": "135fe8ba75c602e7c1b6b0397adbbd89",
+    "semantic_hash": ""
+  },
+  ".continue/skills/seo/resources/agents/seo-github-data.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.048214,
+    "ast_hash": "a9b12f9da26c624ea440b9da0764709d",
+    "semantic_hash": ""
+  },
+  ".continue/skills/seo/resources/agents/seo-performance.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0482156,
+    "ast_hash": "bd9d93ffaabb23f4a8c88afe9b377c4a",
+    "semantic_hash": ""
+  },
+  ".continue/skills/seo/resources/agents/seo-schema.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0482175,
+    "ast_hash": "28c73e8013dba4fb6e99ea9a2f88945e",
+    "semantic_hash": ""
+  },
+  ".continue/skills/seo/resources/agents/seo-sitemap.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0482194,
+    "ast_hash": "42dc6be6c43d27872acacc6b5f971baf",
+    "semantic_hash": ""
+  },
+  ".continue/skills/seo/resources/agents/seo-technical.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0482209,
+    "ast_hash": "df3386c91a9fbf81a3a8975a807165cb",
+    "semantic_hash": ""
+  },
+  ".continue/skills/seo/resources/agents/seo-verifier.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0482225,
+    "ast_hash": "c6ce319bdccaca600d2e294f83666e15",
+    "semantic_hash": ""
+  },
+  ".continue/skills/seo/resources/agents/seo-visual.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.048224,
+    "ast_hash": "65294304e5a6da0d86af17f565655668",
+    "semantic_hash": ""
+  },
+  ".continue/skills/seo/resources/references/cwv-thresholds.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0482259,
+    "ast_hash": "57b34c8aa800b87e08fe79b70e051253",
+    "semantic_hash": ""
+  },
+  ".continue/skills/seo/resources/references/eeat-framework.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0482273,
+    "ast_hash": "60087ef394e0d4dcdf2b0a5df1850d52",
+    "semantic_hash": ""
+  },
+  ".continue/skills/seo/resources/references/github-api-ops.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0482292,
+    "ast_hash": "d9b7477804ed980dbada7973418c8acb",
+    "semantic_hash": ""
+  },
+  ".continue/skills/seo/resources/references/github-ranking-factors.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0482306,
+    "ast_hash": "229ee76f5591db8a51e32e4812327d0b",
+    "semantic_hash": ""
+  },
+  ".continue/skills/seo/resources/references/google-seo-reference.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.048232,
+    "ast_hash": "30c5fd18f001827320e591f2e38a1044",
+    "semantic_hash": ""
+  },
+  ".continue/skills/seo/resources/references/link-building.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0482337,
+    "ast_hash": "2509ece7328f928619b9d7b2d86965a9",
+    "semantic_hash": ""
+  },
+  ".continue/skills/seo/resources/references/llm-audit-rubric.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0482354,
+    "ast_hash": "a5be819ed8a49609729ec2fef1b45105",
+    "semantic_hash": ""
+  },
+  ".continue/skills/seo/resources/references/quality-gates.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.048237,
+    "ast_hash": "3ab01586f386bad9333015dcad5a9648",
+    "semantic_hash": ""
+  },
+  ".continue/skills/seo/resources/references/readme-audit-rubric.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0482388,
+    "ast_hash": "396ea44cccee4cda122488fc1cc2bcec",
+    "semantic_hash": ""
+  },
+  ".continue/skills/seo/resources/references/schema-types.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0482404,
+    "ast_hash": "8e148d049a877e7035adc0c137beddcd",
+    "semantic_hash": ""
+  },
+  ".continue/skills/seo/resources/skills/seo-aeo.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.048242,
+    "ast_hash": "fc0ccb2814590195193c01a4e67b637d",
+    "semantic_hash": ""
+  },
+  ".continue/skills/seo/resources/skills/seo-article.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0482438,
+    "ast_hash": "152f731c6774a16b4789ed03481bf8af",
+    "semantic_hash": ""
+  },
+  ".continue/skills/seo/resources/skills/seo-audit.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0482454,
+    "ast_hash": "8081f40ccea2e49dd69f9e51d6678600",
+    "semantic_hash": ""
+  },
+  ".continue/skills/seo/resources/skills/seo-competitor-pages.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.048247,
+    "ast_hash": "62610de524d8dca6053c3ac4c4fafd8e",
+    "semantic_hash": ""
+  },
+  ".continue/skills/seo/resources/skills/seo-content.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0482488,
+    "ast_hash": "7d95b9e8077fc67fcaceff577b884164",
+    "semantic_hash": ""
+  },
+  ".continue/skills/seo/resources/skills/seo-geo.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0482507,
+    "ast_hash": "e6d74e59205bfc4121923669ea9feb40",
+    "semantic_hash": ""
+  },
+  ".continue/skills/seo/resources/skills/seo-github.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0482523,
+    "ast_hash": "fb34ebea10541abc7f17cfcff22c8d21",
+    "semantic_hash": ""
+  },
+  ".continue/skills/seo/resources/skills/seo-hreflang.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0482538,
+    "ast_hash": "295ce961527b06f691866ba51cb86348",
+    "semantic_hash": ""
+  },
+  ".continue/skills/seo/resources/skills/seo-images.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0482554,
+    "ast_hash": "1381e917e01987662cbb44aa370b5426",
+    "semantic_hash": ""
+  },
+  ".continue/skills/seo/resources/skills/seo-links.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.048257,
+    "ast_hash": "cdd527f9c1dee39b60909ed01585a313",
+    "semantic_hash": ""
+  },
+  ".continue/skills/seo/resources/skills/seo-page.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0482588,
+    "ast_hash": "1014003a08e67bd4abb30726f94820b7",
+    "semantic_hash": ""
+  },
+  ".continue/skills/seo/resources/skills/seo-plan.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0482607,
+    "ast_hash": "847dfa6a8bc34845e8363daff0dd2e03",
+    "semantic_hash": ""
+  },
+  ".continue/skills/seo/resources/skills/seo-programmatic.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0482624,
+    "ast_hash": "7fe1d3fe6632aa6a70d20da517b09fa9",
+    "semantic_hash": ""
+  },
+  ".continue/skills/seo/resources/skills/seo-schema.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0482645,
+    "ast_hash": "7d51218acab435aa3665f553a9694d3d",
+    "semantic_hash": ""
+  },
+  ".continue/skills/seo/resources/skills/seo-sitemap.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.048266,
+    "ast_hash": "a7f8c7a4874207148b6fcf7bb9f3f70f",
+    "semantic_hash": ""
+  },
+  ".continue/skills/seo/resources/skills/seo-technical.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0482676,
+    "ast_hash": "10562323155622e8f7e943284e157dfd",
+    "semantic_hash": ""
+  },
+  ".continue/skills/seo/resources/templates/agency.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0482693,
+    "ast_hash": "4965bf78dac73d91f256877c9fdc31f5",
+    "semantic_hash": ""
+  },
+  ".continue/skills/seo/resources/templates/blog-post.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.048271,
+    "ast_hash": "6a11d07b4c9f8b85dfa79761f601c5fb",
+    "semantic_hash": ""
+  },
+  ".continue/skills/seo/resources/templates/ecommerce.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0482726,
+    "ast_hash": "27412d2c9d27928fbb33d19091fa0113",
+    "semantic_hash": ""
+  },
+  ".continue/skills/seo/resources/templates/generic.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0482745,
+    "ast_hash": "248f681d12da7ca62bd95e5173662726",
+    "semantic_hash": ""
+  },
+  ".continue/skills/seo/resources/templates/github-seo-report.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0482762,
+    "ast_hash": "b2b653bc88ccd83a1ab5ebec9c7ff059",
+    "semantic_hash": ""
+  },
+  ".continue/skills/seo/resources/templates/github-weekly-scorecard.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.048278,
+    "ast_hash": "d28fdd572901bde3ed912cd8deec8f72",
+    "semantic_hash": ""
+  },
+  ".continue/skills/seo/resources/templates/local-service.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0482795,
+    "ast_hash": "458c6f75deb679b67eeafdab33045df1",
+    "semantic_hash": ""
+  },
+  ".continue/skills/seo/resources/templates/news-article.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0482812,
+    "ast_hash": "cf6b75e998daa1f98bd70fcaa25518d7",
+    "semantic_hash": ""
+  },
+  ".continue/skills/seo/resources/templates/publisher.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0482829,
+    "ast_hash": "115e24b12341831a04d03d6dfdf52a86",
+    "semantic_hash": ""
+  },
+  ".continue/skills/seo/resources/templates/saas.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0482845,
+    "ast_hash": "240015c202035be51cd7bbd14a111116",
+    "semantic_hash": ""
+  },
+  ".continue/skills/seo/resources/templates/technical-article.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0482862,
+    "ast_hash": "6c1b21bb6c336aadbac882477de6bee5",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/seo/SKILL.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0482876,
+    "ast_hash": "4ed204028d8288e2fb60ff39819ba100",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/seo/resources/agents/seo-content.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0482895,
+    "ast_hash": "2c96f75d004545eea5f3504dfebfbdc4",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/seo/resources/agents/seo-github-analyst.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0482914,
+    "ast_hash": "c69f12a224b1ae1071dbb11ca3e42add",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/seo/resources/agents/seo-github-benchmark.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0482929,
+    "ast_hash": "135fe8ba75c602e7c1b6b0397adbbd89",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/seo/resources/agents/seo-github-data.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0482945,
+    "ast_hash": "a9b12f9da26c624ea440b9da0764709d",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/seo/resources/agents/seo-performance.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0482962,
+    "ast_hash": "bd9d93ffaabb23f4a8c88afe9b377c4a",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/seo/resources/agents/seo-schema.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.048298,
+    "ast_hash": "28c73e8013dba4fb6e99ea9a2f88945e",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/seo/resources/agents/seo-sitemap.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0482998,
+    "ast_hash": "42dc6be6c43d27872acacc6b5f971baf",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/seo/resources/agents/seo-technical.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0483015,
+    "ast_hash": "df3386c91a9fbf81a3a8975a807165cb",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/seo/resources/agents/seo-verifier.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0483036,
+    "ast_hash": "c6ce319bdccaca600d2e294f83666e15",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/seo/resources/agents/seo-visual.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0483055,
+    "ast_hash": "65294304e5a6da0d86af17f565655668",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/seo/resources/references/cwv-thresholds.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.048307,
+    "ast_hash": "57b34c8aa800b87e08fe79b70e051253",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/seo/resources/references/eeat-framework.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0483084,
+    "ast_hash": "60087ef394e0d4dcdf2b0a5df1850d52",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/seo/resources/references/github-api-ops.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.04831,
+    "ast_hash": "d9b7477804ed980dbada7973418c8acb",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/seo/resources/references/github-ranking-factors.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0483117,
+    "ast_hash": "229ee76f5591db8a51e32e4812327d0b",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/seo/resources/references/google-seo-reference.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0483134,
+    "ast_hash": "30c5fd18f001827320e591f2e38a1044",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/seo/resources/references/link-building.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0483148,
+    "ast_hash": "2509ece7328f928619b9d7b2d86965a9",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/seo/resources/references/llm-audit-rubric.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0483167,
+    "ast_hash": "a5be819ed8a49609729ec2fef1b45105",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/seo/resources/references/quality-gates.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0483184,
+    "ast_hash": "3ab01586f386bad9333015dcad5a9648",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/seo/resources/references/readme-audit-rubric.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0483203,
+    "ast_hash": "396ea44cccee4cda122488fc1cc2bcec",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/seo/resources/references/schema-types.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.048322,
+    "ast_hash": "8e148d049a877e7035adc0c137beddcd",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/seo/resources/skills/seo-aeo.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0483236,
+    "ast_hash": "fc0ccb2814590195193c01a4e67b637d",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/seo/resources/skills/seo-article.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.048325,
+    "ast_hash": "152f731c6774a16b4789ed03481bf8af",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/seo/resources/skills/seo-audit.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.048327,
+    "ast_hash": "8081f40ccea2e49dd69f9e51d6678600",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/seo/resources/skills/seo-competitor-pages.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0483286,
+    "ast_hash": "62610de524d8dca6053c3ac4c4fafd8e",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/seo/resources/skills/seo-content.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0483303,
+    "ast_hash": "7d95b9e8077fc67fcaceff577b884164",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/seo/resources/skills/seo-geo.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.048332,
+    "ast_hash": "e6d74e59205bfc4121923669ea9feb40",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/seo/resources/skills/seo-github.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.048334,
+    "ast_hash": "fb34ebea10541abc7f17cfcff22c8d21",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/seo/resources/skills/seo-hreflang.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0483356,
+    "ast_hash": "295ce961527b06f691866ba51cb86348",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/seo/resources/skills/seo-images.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0483372,
+    "ast_hash": "1381e917e01987662cbb44aa370b5426",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/seo/resources/skills/seo-links.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0483387,
+    "ast_hash": "cdd527f9c1dee39b60909ed01585a313",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/seo/resources/skills/seo-page.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0483406,
+    "ast_hash": "1014003a08e67bd4abb30726f94820b7",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/seo/resources/skills/seo-plan.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0483422,
+    "ast_hash": "847dfa6a8bc34845e8363daff0dd2e03",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/seo/resources/skills/seo-programmatic.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.048344,
+    "ast_hash": "7fe1d3fe6632aa6a70d20da517b09fa9",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/seo/resources/skills/seo-schema.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0483456,
+    "ast_hash": "7d51218acab435aa3665f553a9694d3d",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/seo/resources/skills/seo-sitemap.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0483472,
+    "ast_hash": "a7f8c7a4874207148b6fcf7bb9f3f70f",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/seo/resources/skills/seo-technical.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0483487,
+    "ast_hash": "10562323155622e8f7e943284e157dfd",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/seo/resources/templates/agency.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0483506,
+    "ast_hash": "4965bf78dac73d91f256877c9fdc31f5",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/seo/resources/templates/blog-post.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.048352,
+    "ast_hash": "6a11d07b4c9f8b85dfa79761f601c5fb",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/seo/resources/templates/ecommerce.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0483534,
+    "ast_hash": "27412d2c9d27928fbb33d19091fa0113",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/seo/resources/templates/generic.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0483553,
+    "ast_hash": "248f681d12da7ca62bd95e5173662726",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/seo/resources/templates/github-seo-report.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0483568,
+    "ast_hash": "b2b653bc88ccd83a1ab5ebec9c7ff059",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/seo/resources/templates/github-weekly-scorecard.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0483587,
+    "ast_hash": "d28fdd572901bde3ed912cd8deec8f72",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/seo/resources/templates/local-service.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.04836,
+    "ast_hash": "458c6f75deb679b67eeafdab33045df1",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/seo/resources/templates/news-article.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0483618,
+    "ast_hash": "cf6b75e998daa1f98bd70fcaa25518d7",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/seo/resources/templates/publisher.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0483634,
+    "ast_hash": "115e24b12341831a04d03d6dfdf52a86",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/seo/resources/templates/saas.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0483654,
+    "ast_hash": "240015c202035be51cd7bbd14a111116",
+    "semantic_hash": ""
+  },
+  ".cursor/skills/seo/resources/templates/technical-article.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0483668,
+    "ast_hash": "6c1b21bb6c336aadbac882477de6bee5",
+    "semantic_hash": ""
+  },
+  ".github/copilot-instructions.md": {
+    "mtime": 1794191791.5346308,
+    "seen": 1794207009.0483685,
+    "ast_hash": "e8169ddd955c65c76332bd3bd92f8465",
+    "semantic_hash": ""
+  },
+  ".github/skills/seo/SKILL.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0483701,
+    "ast_hash": "4ed204028d8288e2fb60ff39819ba100",
+    "semantic_hash": ""
+  },
+  ".github/skills/seo/resources/agents/seo-content.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0483718,
+    "ast_hash": "2c96f75d004545eea5f3504dfebfbdc4",
+    "semantic_hash": ""
+  },
+  ".github/skills/seo/resources/agents/seo-github-analyst.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0483737,
+    "ast_hash": "c69f12a224b1ae1071dbb11ca3e42add",
+    "semantic_hash": ""
+  },
+  ".github/skills/seo/resources/agents/seo-github-benchmark.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0483756,
+    "ast_hash": "135fe8ba75c602e7c1b6b0397adbbd89",
+    "semantic_hash": ""
+  },
+  ".github/skills/seo/resources/agents/seo-github-data.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.048377,
+    "ast_hash": "a9b12f9da26c624ea440b9da0764709d",
+    "semantic_hash": ""
+  },
+  ".github/skills/seo/resources/agents/seo-performance.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.048379,
+    "ast_hash": "bd9d93ffaabb23f4a8c88afe9b377c4a",
+    "semantic_hash": ""
+  },
+  ".github/skills/seo/resources/agents/seo-schema.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0483806,
+    "ast_hash": "28c73e8013dba4fb6e99ea9a2f88945e",
+    "semantic_hash": ""
+  },
+  ".github/skills/seo/resources/agents/seo-sitemap.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0483823,
+    "ast_hash": "42dc6be6c43d27872acacc6b5f971baf",
+    "semantic_hash": ""
+  },
+  ".github/skills/seo/resources/agents/seo-technical.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.048384,
+    "ast_hash": "df3386c91a9fbf81a3a8975a807165cb",
+    "semantic_hash": ""
+  },
+  ".github/skills/seo/resources/agents/seo-verifier.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0483856,
+    "ast_hash": "c6ce319bdccaca600d2e294f83666e15",
+    "semantic_hash": ""
+  },
+  ".github/skills/seo/resources/agents/seo-visual.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.048387,
+    "ast_hash": "65294304e5a6da0d86af17f565655668",
+    "semantic_hash": ""
+  },
+  ".github/skills/seo/resources/references/cwv-thresholds.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.048389,
+    "ast_hash": "57b34c8aa800b87e08fe79b70e051253",
+    "semantic_hash": ""
+  },
+  ".github/skills/seo/resources/references/eeat-framework.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0483904,
+    "ast_hash": "60087ef394e0d4dcdf2b0a5df1850d52",
+    "semantic_hash": ""
+  },
+  ".github/skills/seo/resources/references/github-api-ops.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0483918,
+    "ast_hash": "d9b7477804ed980dbada7973418c8acb",
+    "semantic_hash": ""
+  },
+  ".github/skills/seo/resources/references/github-ranking-factors.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0483937,
+    "ast_hash": "229ee76f5591db8a51e32e4812327d0b",
+    "semantic_hash": ""
+  },
+  ".github/skills/seo/resources/references/google-seo-reference.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0483952,
+    "ast_hash": "30c5fd18f001827320e591f2e38a1044",
+    "semantic_hash": ""
+  },
+  ".github/skills/seo/resources/references/link-building.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0483968,
+    "ast_hash": "2509ece7328f928619b9d7b2d86965a9",
+    "semantic_hash": ""
+  },
+  ".github/skills/seo/resources/references/llm-audit-rubric.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0483985,
+    "ast_hash": "a5be819ed8a49609729ec2fef1b45105",
+    "semantic_hash": ""
+  },
+  ".github/skills/seo/resources/references/quality-gates.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0484,
+    "ast_hash": "3ab01586f386bad9333015dcad5a9648",
+    "semantic_hash": ""
+  },
+  ".github/skills/seo/resources/references/readme-audit-rubric.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0484016,
+    "ast_hash": "396ea44cccee4cda122488fc1cc2bcec",
+    "semantic_hash": ""
+  },
+  ".github/skills/seo/resources/references/schema-types.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0484033,
+    "ast_hash": "8e148d049a877e7035adc0c137beddcd",
+    "semantic_hash": ""
+  },
+  ".github/skills/seo/resources/skills/seo-aeo.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.048405,
+    "ast_hash": "fc0ccb2814590195193c01a4e67b637d",
+    "semantic_hash": ""
+  },
+  ".github/skills/seo/resources/skills/seo-article.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0484066,
+    "ast_hash": "152f731c6774a16b4789ed03481bf8af",
+    "semantic_hash": ""
+  },
+  ".github/skills/seo/resources/skills/seo-audit.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.048408,
+    "ast_hash": "8081f40ccea2e49dd69f9e51d6678600",
+    "semantic_hash": ""
+  },
+  ".github/skills/seo/resources/skills/seo-competitor-pages.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0484097,
+    "ast_hash": "62610de524d8dca6053c3ac4c4fafd8e",
+    "semantic_hash": ""
+  },
+  ".github/skills/seo/resources/skills/seo-content.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0484114,
+    "ast_hash": "7d95b9e8077fc67fcaceff577b884164",
+    "semantic_hash": ""
+  },
+  ".github/skills/seo/resources/skills/seo-geo.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0484135,
+    "ast_hash": "e6d74e59205bfc4121923669ea9feb40",
+    "semantic_hash": ""
+  },
+  ".github/skills/seo/resources/skills/seo-github.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.048415,
+    "ast_hash": "fb34ebea10541abc7f17cfcff22c8d21",
+    "semantic_hash": ""
+  },
+  ".github/skills/seo/resources/skills/seo-hreflang.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0484166,
+    "ast_hash": "295ce961527b06f691866ba51cb86348",
+    "semantic_hash": ""
+  },
+  ".github/skills/seo/resources/skills/seo-images.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0484183,
+    "ast_hash": "1381e917e01987662cbb44aa370b5426",
+    "semantic_hash": ""
+  },
+  ".github/skills/seo/resources/skills/seo-links.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.04842,
+    "ast_hash": "cdd527f9c1dee39b60909ed01585a313",
+    "semantic_hash": ""
+  },
+  ".github/skills/seo/resources/skills/seo-page.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0484214,
+    "ast_hash": "1014003a08e67bd4abb30726f94820b7",
+    "semantic_hash": ""
+  },
+  ".github/skills/seo/resources/skills/seo-plan.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.048423,
+    "ast_hash": "847dfa6a8bc34845e8363daff0dd2e03",
+    "semantic_hash": ""
+  },
+  ".github/skills/seo/resources/skills/seo-programmatic.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0484247,
+    "ast_hash": "7fe1d3fe6632aa6a70d20da517b09fa9",
+    "semantic_hash": ""
+  },
+  ".github/skills/seo/resources/skills/seo-schema.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0484264,
+    "ast_hash": "7d51218acab435aa3665f553a9694d3d",
+    "semantic_hash": ""
+  },
+  ".github/skills/seo/resources/skills/seo-sitemap.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0484283,
+    "ast_hash": "a7f8c7a4874207148b6fcf7bb9f3f70f",
+    "semantic_hash": ""
+  },
+  ".github/skills/seo/resources/skills/seo-technical.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0484297,
+    "ast_hash": "10562323155622e8f7e943284e157dfd",
+    "semantic_hash": ""
+  },
+  ".github/skills/seo/resources/templates/agency.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0484316,
+    "ast_hash": "4965bf78dac73d91f256877c9fdc31f5",
+    "semantic_hash": ""
+  },
+  ".github/skills/seo/resources/templates/blog-post.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0484333,
+    "ast_hash": "6a11d07b4c9f8b85dfa79761f601c5fb",
+    "semantic_hash": ""
+  },
+  ".github/skills/seo/resources/templates/ecommerce.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.048435,
+    "ast_hash": "27412d2c9d27928fbb33d19091fa0113",
+    "semantic_hash": ""
+  },
+  ".github/skills/seo/resources/templates/generic.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0484369,
+    "ast_hash": "248f681d12da7ca62bd95e5173662726",
+    "semantic_hash": ""
+  },
+  ".github/skills/seo/resources/templates/github-seo-report.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0484385,
+    "ast_hash": "b2b653bc88ccd83a1ab5ebec9c7ff059",
+    "semantic_hash": ""
+  },
+  ".github/skills/seo/resources/templates/github-weekly-scorecard.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0484402,
+    "ast_hash": "d28fdd572901bde3ed912cd8deec8f72",
+    "semantic_hash": ""
+  },
+  ".github/skills/seo/resources/templates/local-service.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.048442,
+    "ast_hash": "458c6f75deb679b67eeafdab33045df1",
+    "semantic_hash": ""
+  },
+  ".github/skills/seo/resources/templates/news-article.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0484436,
+    "ast_hash": "cf6b75e998daa1f98bd70fcaa25518d7",
+    "semantic_hash": ""
+  },
+  ".github/skills/seo/resources/templates/publisher.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0484452,
+    "ast_hash": "115e24b12341831a04d03d6dfdf52a86",
+    "semantic_hash": ""
+  },
+  ".github/skills/seo/resources/templates/saas.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.048447,
+    "ast_hash": "240015c202035be51cd7bbd14a111116",
+    "semantic_hash": ""
+  },
+  ".github/skills/seo/resources/templates/technical-article.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0484488,
+    "ast_hash": "6c1b21bb6c336aadbac882477de6bee5",
+    "semantic_hash": ""
+  },
+  ".windsurf/rules/seo.md": {
+    "mtime": 1794191790.7306867,
+    "seen": 1794207009.0484502,
+    "ast_hash": "e8169ddd955c65c76332bd3bd92f8465",
+    "semantic_hash": ""
+  },
+  ".windsurf/skills/seo/SKILL.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0484521,
+    "ast_hash": "4ed204028d8288e2fb60ff39819ba100",
+    "semantic_hash": ""
+  },
+  ".windsurf/skills/seo/resources/agents/seo-content.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0484538,
+    "ast_hash": "2c96f75d004545eea5f3504dfebfbdc4",
+    "semantic_hash": ""
+  },
+  ".windsurf/skills/seo/resources/agents/seo-github-analyst.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0484555,
+    "ast_hash": "c69f12a224b1ae1071dbb11ca3e42add",
+    "semantic_hash": ""
+  },
+  ".windsurf/skills/seo/resources/agents/seo-github-benchmark.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.048457,
+    "ast_hash": "135fe8ba75c602e7c1b6b0397adbbd89",
+    "semantic_hash": ""
+  },
+  ".windsurf/skills/seo/resources/agents/seo-github-data.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.048459,
+    "ast_hash": "a9b12f9da26c624ea440b9da0764709d",
+    "semantic_hash": ""
+  },
+  ".windsurf/skills/seo/resources/agents/seo-performance.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0484607,
+    "ast_hash": "bd9d93ffaabb23f4a8c88afe9b377c4a",
+    "semantic_hash": ""
+  },
+  ".windsurf/skills/seo/resources/agents/seo-schema.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0484626,
+    "ast_hash": "28c73e8013dba4fb6e99ea9a2f88945e",
+    "semantic_hash": ""
+  },
+  ".windsurf/skills/seo/resources/agents/seo-sitemap.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.048464,
+    "ast_hash": "42dc6be6c43d27872acacc6b5f971baf",
+    "semantic_hash": ""
+  },
+  ".windsurf/skills/seo/resources/agents/seo-technical.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0484657,
+    "ast_hash": "df3386c91a9fbf81a3a8975a807165cb",
+    "semantic_hash": ""
+  },
+  ".windsurf/skills/seo/resources/agents/seo-verifier.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0484674,
+    "ast_hash": "c6ce319bdccaca600d2e294f83666e15",
+    "semantic_hash": ""
+  },
+  ".windsurf/skills/seo/resources/agents/seo-visual.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.048469,
+    "ast_hash": "65294304e5a6da0d86af17f565655668",
+    "semantic_hash": ""
+  },
+  ".windsurf/skills/seo/resources/references/cwv-thresholds.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0484705,
+    "ast_hash": "57b34c8aa800b87e08fe79b70e051253",
+    "semantic_hash": ""
+  },
+  ".windsurf/skills/seo/resources/references/eeat-framework.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0484724,
+    "ast_hash": "60087ef394e0d4dcdf2b0a5df1850d52",
+    "semantic_hash": ""
+  },
+  ".windsurf/skills/seo/resources/references/github-api-ops.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0484738,
+    "ast_hash": "d9b7477804ed980dbada7973418c8acb",
+    "semantic_hash": ""
+  },
+  ".windsurf/skills/seo/resources/references/github-ranking-factors.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0484755,
+    "ast_hash": "229ee76f5591db8a51e32e4812327d0b",
+    "semantic_hash": ""
+  },
+  ".windsurf/skills/seo/resources/references/google-seo-reference.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.048477,
+    "ast_hash": "30c5fd18f001827320e591f2e38a1044",
+    "semantic_hash": ""
+  },
+  ".windsurf/skills/seo/resources/references/link-building.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0484784,
+    "ast_hash": "2509ece7328f928619b9d7b2d86965a9",
+    "semantic_hash": ""
+  },
+  ".windsurf/skills/seo/resources/references/llm-audit-rubric.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0484867,
+    "ast_hash": "a5be819ed8a49609729ec2fef1b45105",
+    "semantic_hash": ""
+  },
+  ".windsurf/skills/seo/resources/references/quality-gates.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0484884,
+    "ast_hash": "3ab01586f386bad9333015dcad5a9648",
+    "semantic_hash": ""
+  },
+  ".windsurf/skills/seo/resources/references/readme-audit-rubric.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.04849,
+    "ast_hash": "396ea44cccee4cda122488fc1cc2bcec",
+    "semantic_hash": ""
+  },
+  ".windsurf/skills/seo/resources/references/schema-types.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0484917,
+    "ast_hash": "8e148d049a877e7035adc0c137beddcd",
+    "semantic_hash": ""
+  },
+  ".windsurf/skills/seo/resources/skills/seo-aeo.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0484936,
+    "ast_hash": "fc0ccb2814590195193c01a4e67b637d",
+    "semantic_hash": ""
+  },
+  ".windsurf/skills/seo/resources/skills/seo-article.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0484953,
+    "ast_hash": "152f731c6774a16b4789ed03481bf8af",
+    "semantic_hash": ""
+  },
+  ".windsurf/skills/seo/resources/skills/seo-audit.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.048497,
+    "ast_hash": "8081f40ccea2e49dd69f9e51d6678600",
+    "semantic_hash": ""
+  },
+  ".windsurf/skills/seo/resources/skills/seo-competitor-pages.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0484986,
+    "ast_hash": "62610de524d8dca6053c3ac4c4fafd8e",
+    "semantic_hash": ""
+  },
+  ".windsurf/skills/seo/resources/skills/seo-content.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0485003,
+    "ast_hash": "7d95b9e8077fc67fcaceff577b884164",
+    "semantic_hash": ""
+  },
+  ".windsurf/skills/seo/resources/skills/seo-geo.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.048502,
+    "ast_hash": "e6d74e59205bfc4121923669ea9feb40",
+    "semantic_hash": ""
+  },
+  ".windsurf/skills/seo/resources/skills/seo-github.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0485036,
+    "ast_hash": "fb34ebea10541abc7f17cfcff22c8d21",
+    "semantic_hash": ""
+  },
+  ".windsurf/skills/seo/resources/skills/seo-hreflang.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.048505,
+    "ast_hash": "295ce961527b06f691866ba51cb86348",
+    "semantic_hash": ""
+  },
+  ".windsurf/skills/seo/resources/skills/seo-images.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.048507,
+    "ast_hash": "1381e917e01987662cbb44aa370b5426",
+    "semantic_hash": ""
+  },
+  ".windsurf/skills/seo/resources/skills/seo-links.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0485084,
+    "ast_hash": "cdd527f9c1dee39b60909ed01585a313",
+    "semantic_hash": ""
+  },
+  ".windsurf/skills/seo/resources/skills/seo-page.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0485103,
+    "ast_hash": "1014003a08e67bd4abb30726f94820b7",
+    "semantic_hash": ""
+  },
+  ".windsurf/skills/seo/resources/skills/seo-plan.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0485117,
+    "ast_hash": "847dfa6a8bc34845e8363daff0dd2e03",
+    "semantic_hash": ""
+  },
+  ".windsurf/skills/seo/resources/skills/seo-programmatic.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0485132,
+    "ast_hash": "7fe1d3fe6632aa6a70d20da517b09fa9",
+    "semantic_hash": ""
+  },
+  ".windsurf/skills/seo/resources/skills/seo-schema.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0485148,
+    "ast_hash": "7d51218acab435aa3665f553a9694d3d",
+    "semantic_hash": ""
+  },
+  ".windsurf/skills/seo/resources/skills/seo-sitemap.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0485165,
+    "ast_hash": "a7f8c7a4874207148b6fcf7bb9f3f70f",
+    "semantic_hash": ""
+  },
+  ".windsurf/skills/seo/resources/skills/seo-technical.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0485182,
+    "ast_hash": "10562323155622e8f7e943284e157dfd",
+    "semantic_hash": ""
+  },
+  ".windsurf/skills/seo/resources/templates/agency.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0485196,
+    "ast_hash": "4965bf78dac73d91f256877c9fdc31f5",
+    "semantic_hash": ""
+  },
+  ".windsurf/skills/seo/resources/templates/blog-post.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0485215,
+    "ast_hash": "6a11d07b4c9f8b85dfa79761f601c5fb",
+    "semantic_hash": ""
+  },
+  ".windsurf/skills/seo/resources/templates/ecommerce.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.048523,
+    "ast_hash": "27412d2c9d27928fbb33d19091fa0113",
+    "semantic_hash": ""
+  },
+  ".windsurf/skills/seo/resources/templates/generic.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0485246,
+    "ast_hash": "248f681d12da7ca62bd95e5173662726",
+    "semantic_hash": ""
+  },
+  ".windsurf/skills/seo/resources/templates/github-seo-report.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.048526,
+    "ast_hash": "b2b653bc88ccd83a1ab5ebec9c7ff059",
+    "semantic_hash": ""
+  },
+  ".windsurf/skills/seo/resources/templates/github-weekly-scorecard.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0485277,
+    "ast_hash": "d28fdd572901bde3ed912cd8deec8f72",
+    "semantic_hash": ""
+  },
+  ".windsurf/skills/seo/resources/templates/local-service.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0485291,
+    "ast_hash": "458c6f75deb679b67eeafdab33045df1",
+    "semantic_hash": ""
+  },
+  ".windsurf/skills/seo/resources/templates/news-article.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0485306,
+    "ast_hash": "cf6b75e998daa1f98bd70fcaa25518d7",
+    "semantic_hash": ""
+  },
+  ".windsurf/skills/seo/resources/templates/publisher.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0485322,
+    "ast_hash": "115e24b12341831a04d03d6dfdf52a86",
+    "semantic_hash": ""
+  },
+  ".windsurf/skills/seo/resources/templates/saas.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.048534,
+    "ast_hash": "240015c202035be51cd7bbd14a111116",
+    "semantic_hash": ""
+  },
+  ".windsurf/skills/seo/resources/templates/technical-article.md": {
+    "mtime": 1778771488.0,
+    "seen": 1794207009.0485356,
+    "ast_hash": "6c1b21bb6c336aadbac882477de6bee5",
+    "semantic_hash": ""
+  },
+  "CREDITS.md": {
+    "mtime": 1794129878.6315787,
+    "seen": 1794207009.048537,
+    "ast_hash": "f6aa731ca8a3b7879f1cc757a59ea2f1",
+    "semantic_hash": ""
+  },
+  "README.md": {
+    "mtime": 1794206124.637302,
+    "seen": 1794207009.048539,
+    "ast_hash": "f08108e13d604b84e4c8b4361b96f90b",
+    "semantic_hash": ""
+  },
+  "SHIFT_MART_GDD.md": {
+    "mtime": 1794193848.0413256,
+    "seen": 1794207009.0485404,
+    "ast_hash": "93ca7e0794bca62d6b29b719db0969dd",
+    "semantic_hash": ""
+  },
+  "docs/ASSET_LIST.md": {
+    "mtime": 1794129878.6840007,
+    "seen": 1794207009.048542,
+    "ast_hash": "3539f9887ad2c2ee70cfd5b8a6a73ff1",
+    "semantic_hash": ""
+  },
+  "docs/DECISIONS.md": {
+    "mtime": 1794129878.6940114,
+    "seen": 1794207009.0485435,
+    "ast_hash": "bb0be46dd86735883ef920153aba16a1",
+    "semantic_hash": ""
+  },
+  "docs/IMPLEMENTATION_PLAN.md": {
+    "mtime": 1794129878.7019958,
+    "seen": 1794207009.0485451,
+    "ast_hash": "be598b983c77b0c71a516c9723288231",
+    "semantic_hash": ""
+  },
+  "docs/ITCH_DRAFT.md": {
+    "mtime": 1794129878.7109988,
+    "seen": 1794207009.0485466,
+    "ast_hash": "5c7f7c53bf77a70755ecb850514f17c7",
+    "semantic_hash": ""
+  },
+  "docs/PROGRESS.md": {
+    "mtime": 1794206124.637302,
+    "seen": 1794207009.048548,
+    "ast_hash": "0ab008529a3dc8f4eb608060444de377",
+    "semantic_hash": ""
+  },
+  "docs/TEST_MATRIX.md": {
+    "mtime": 1794129878.7279952,
+    "seen": 1794207009.04855,
+    "ast_hash": "bf1dd69f263a622d7955a259801e74c8",
+    "semantic_hash": ""
+  },
+  "tests/race-preview.png": {
+    "mtime": 1794205681.8375382,
+    "seen": 1794207009.0485513,
+    "ast_hash": "d68ce505e86f18fffba7a30ea2a53119",
+    "semantic_hash": ""
+  },
+  "tests/screenshot.png": {
+    "mtime": 1794200051.3341172,
+    "seen": 1794207009.048553,
+    "ast_hash": "e54ce95c78378d0a9a7d26000291bce4",
+    "semantic_hash": ""
+  }
+}

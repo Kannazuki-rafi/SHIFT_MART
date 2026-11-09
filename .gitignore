@@ -2,3 +2,4 @@
 builds/
 *.log
 *.tmp
+.audio-user/

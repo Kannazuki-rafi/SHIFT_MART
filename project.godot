@@ -16,7 +16,12 @@ config/features=PackedStringArray("4.6", "GL Compatibility")
 
 [autoload]
 
+SoundManager="*res://sound_manager/sound_manager.gd"
 Session="*res://scripts/net/network_session.gd"
+
+[audio]
+
+default_bus_layout="res://sound_manager/default_bus_layout.tres"
 
 [display]
 

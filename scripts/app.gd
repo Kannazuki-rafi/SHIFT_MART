@@ -101,6 +101,7 @@ func button(parent: Node, text: String, pos: Vector2, width: float, callback: Ca
 	node.position = pos
 	node.size = Vector2(width,48)
 	node.pressed.connect(callback, CONNECT_DEFERRED)
+	node.pressed.connect(SoundManager.play_ui_click)
 	parent.add_child(node)
 	if parent == overlay and not overlay.has_meta("initial_focus"):
 		overlay.set_meta("initial_focus",true)
@@ -393,14 +394,18 @@ func _credits() -> void:
 	button(box,"BACK",Vector2(315,550),650,_close_overlay)
 
 func _settings() -> void:
-	var box: Control = _modal("DISPLAY SETTINGS")
+	var box: Control = _modal("SETTINGS")
 	var full: CheckButton = CheckButton.new()
-	full.position = Vector2(320,220)
+	full.position = Vector2(320,180)
 	full.text = "Fullscreen"
 	full.button_pressed = DisplayServer.window_get_mode() == DisplayServer.WINDOW_MODE_FULLSCREEN
 	full.toggled.connect(func(value: bool): DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN if value else DisplayServer.WINDOW_MODE_WINDOWED))
 	box.add_child(full)
-	label(box,"Compatibility renderer • 720p canvas\nSimple lighting • Shadows off\nAudio and persistent settings planned for later milestone.",Vector2(320,310),19)
+	label(box,"SOUND SETTINGS",Vector2(320,245),22,LIME)
+	var audio_settings: VBoxContainer = preload("res://sound_manager/sound_settings.gd").new()
+	audio_settings.position = Vector2(320,285)
+	audio_settings.size.x = 640
+	box.add_child(audio_settings)
 	button(box,"BACK",Vector2(315,550),650,_close_overlay)
 
 func _unhandled_key_input(event: InputEvent) -> void:

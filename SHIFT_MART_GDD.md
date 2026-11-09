@@ -131,9 +131,11 @@ One inventory slot. Marked stands provide a known item; driving through collects
 | Item | Use | Effect | Counterplay |
 |---|---|---|---|
 | Banana peel | Drop behind the trolley | The next trolley hitting it briefly loses grip and speed; no direct damage | Visible peel, steering around it, slowing before contact |
-| Canned drink | Fire straight ahead | A short-lived projectile deals a small fixed amount of durability damage and a shove | Misses are possible; dodge or use a different lane |
+| Canned drink | Fire forward with mild launch aim assist | A short-lived projectile deals a small fixed amount of durability damage and a shove | Misses are possible; dodge or use a different lane |
 
 A peel disappears on contact or after eight seconds. A can disappears on its first collision or after four seconds. Both can hit their owner after deployment, so careless placement is a risk. Spawn protection blocks their harmful effects. No bouncing, homing, chain reactions, or product combinations.
+
+Can aim assist adjusts direction only at launch toward a visible opponent within a narrow forward cone. Initial tuning: at most 8 degrees either side and 12 meters from the thrower. Prefer the opponent closest to the firing line by angle, with distance breaking ties. Walls, shelves and closed gates block targeting; exclude protected, respawning and finished racers. Without a valid target, fire straight ahead. After launch the can travels straight without tracking or predicting target movement, so opponents can still dodge. The host decides the launch direction for all players.
 
 ## 6 One supermarket track
 
@@ -147,7 +149,11 @@ The course loops through checkout, produce, a freezer aisle, and the edge of the
 
 Each fork needs an approach long enough to read the shift warning and brake. No layout should be consistently the fastest for all situations. Branches need only be close enough in travel time to make choices interesting, not perfectly identical.
 
-**Environmental hazard cap:** fixed walls, pallets, and one marked slippery patch. Shelved products are static decoration; hundreds of individually simulated groceries are outside scope.
+**Environmental hazards (approved expansion):** fixed walls, pallets, two marked wet patches, three proximity-triggered falling cabinets, and two produce racks that spill fruit. Twelve fixed item pads distribute banana and can pickups around the course. Short shelving bays, bakery displays, end caps and stocked corner departments fill the supermarket interior. The tightened footprint is approximately 101 by 120 meters, retaining the long circuit and stockroom S-bends.
+
+- **Falling cabinet:** an eligible racer within 12 meters of the landing area starts a red floor warning. After 1.5 seconds the cabinet tips over during 0.5 seconds; the red footprint stays visible until impact. Racers inside that footprint at impact take 25 durability damage and a 0.75-second stun. Damage occurs once per fall, and dodging outside the footprint avoids it. The cabinet rises after three seconds on the floor, then rearms 18 seconds after the initial trigger. The fallen visual does not seal the lane with a persistent collider.
+- **Fruit spill:** proximity to a produce rack triggers an amber warning. Five pieces fall after 0.75 seconds and land 0.5 seconds later. Touching landed fruit consumes that piece, reduces speed and causes 1.25 seconds of slipping without damage. Unused fruit clears after eight seconds on the floor. The event rearms 15 seconds after triggering.
+- The host controls activation, impact and consumption. Trigger timestamps and consumed fruit replicate to all peers. Protected, respawning and finished racers are immune. Events activate only during active racing and reset on rematch. These are bounded scripted events; loose groceries do not use individual rigid-body simulation.
 
 **Example race moment:** A player approaches the tight checkout shortcut. Their friend shifts into Rush, opening the outside loop instead. The first player brakes and gets rear-ended by a third racer. They recover, drop a banana, and later shift down to redirect the next pack of trolleys. Every reversal comes from a visible player action.
 

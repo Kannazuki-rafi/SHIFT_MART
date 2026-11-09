@@ -28,6 +28,8 @@ var test_rematched: bool = false
 var test_verified: bool = false
 var test_shift_requested: bool = false
 var test_shift_verified: bool = false
+var test_events: bool = false
+var test_events_verified: bool = false
 var capture_path: String = ""
 var results_shown: bool = false
 var shift_busy_until: int = 0
@@ -119,65 +121,100 @@ func _main_menu() -> void:
 	var art: Control = preload("res://scripts/menu_art.gd").new()
 	screen.add_child(art)
 	art.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	art.motion_enabled = menu_motion
 	_menu_theme()
-	label(screen,"AFTER HOURS. NO SPEED LIMIT.",Vector2(44,30),15,LIME)
-	var title: Label = label(screen,"SHIFT",Vector2(36,47),108,LIME)
-	title.add_theme_constant_override("outline_size",2)
-	label(screen,"MART",Vector2(39,149),108,Color("ffffff"))
-	var badge: Panel = panel(screen,Rect2(398,190,135,38),Color("ff9654"))
-	badge.rotation = -0.08
-	label(badge,"NIGHT SHIFT",Vector2(10,7),17,Color("10151d"))
-	label(screen,"Clock out. Roll in. Cause chaos.",Vector2(44,285),23)
-	label(screen,"SUPERMARKET TROLLEY RACING",Vector2(45,322),13,Color("9bb8c1"))
-	label(screen,"2-4 RIDERS    /    3 LAPS    /    TOTAL CHAOS",Vector2(44,574),15,LIME)
-	button(screen,"HOW TO PLAY",Vector2(44,614),180,_help)
-	button(screen,"SETTINGS",Vector2(236,614),145,_settings)
-	button(screen,"CREDITS",Vector2(393,614),140,_credits)
-	label(screen,"M0-M1  /  DEVELOPMENT BUILD",Vector2(44,680),12,Color("9bb8c1"))
-	button(screen,"QUIT",Vector2(1120,660),112,func(): get_tree().quit())
-	panel(screen,Rect2(582,28,650,612),Color("1c2632"))
-	label(screen,"01  /  CLOCK IN",Vector2(614,50),14,Color("ff9654"))
-	label(screen,"START YOUR SHIFT",Vector2(612,77),36,Color.WHITE)
-	label(screen,"Grab a trolley. Bring your rivals.",Vector2(614,124),18,Color("b7cad3"))
-	label(screen,"RACER NAME",Vector2(614,169),14,LIME)
-	player_name = field(Session.local_name,Vector2(614,193),586)
+	label(screen,"AFTER HOURS / TROLLEY RACING",Vector2(48,38),14,LIME)
+	label(screen,"SHIFT MART",Vector2(42,64),68,Color.WHITE)
+	label(screen,"Clock out. Roll in.",Vector2(48,153),25,PALE)
+	label(screen,"2-4 RIDERS   /   3 LAPS",Vector2(48,203),14,LIME)
+	label(screen,"Your everyday trolley. Your late-night getaway.",Vector2(48,591),16,Color("9bb8c1"))
+	button(screen,"HOW TO PLAY",Vector2(48,638),172,_help)
+	button(screen,"SETTINGS",Vector2(232,638),136,_settings)
+	button(screen,"CREDITS",Vector2(380,638),136,_credits)
+
+	var card := PanelContainer.new()
+	card.position = Vector2(584,38)
+	card.size = Vector2(648,584)
+	var card_style := StyleBoxFlat.new()
+	card_style.bg_color = Color("1b2a36")
+	card_style.set_corner_radius_all(16)
+	card_style.set_content_margin_all(28)
+	card.add_theme_stylebox_override("panel",card_style)
+	screen.add_child(card)
+	var form := VBoxContainer.new()
+	form.add_theme_constant_override("separation",12)
+	card.add_child(form)
+	_menu_caption(form,"PLAY TOGETHER",13,LIME)
+	_menu_caption(form,"Start your shift",32,Color.WHITE)
+	_menu_caption(form,"Host a lobby or join your friends.",17,Color("b7cad3"))
+	_menu_caption(form,"RACER NAME",13,PALE)
+	player_name = field(Session.local_name,Vector2.ZERO,0)
+	player_name.reparent(form)
+	player_name.custom_minimum_size.y = 44
 	player_name.max_length = 20
 	player_name.placeholder_text = "Enter your racer name"
-	label(screen,"HOST ADDRESS",Vector2(614,252),14,Color("b7cad3"))
-	address = field("127.0.0.1",Vector2(614,276),385)
-	label(screen,"UDP PORT",Vector2(1020,252),14,Color("b7cad3"))
+	var connection := HBoxContainer.new()
+	connection.add_theme_constant_override("separation",16)
+	form.add_child(connection)
+	var address_column := VBoxContainer.new()
+	address_column.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	address_column.add_theme_constant_override("separation",8)
+	connection.add_child(address_column)
+	_menu_caption(address_column,"HOST ADDRESS",13,PALE)
+	address = field("127.0.0.1",Vector2.ZERO,0)
+	address.reparent(address_column)
+	address.custom_minimum_size.y = 44
+	var port_column := VBoxContainer.new()
+	port_column.custom_minimum_size.x = 150
+	port_column.add_theme_constant_override("separation",8)
+	connection.add_child(port_column)
+	_menu_caption(port_column,"PORT",13,PALE)
 	port = SpinBox.new()
-	port.position = Vector2(1020,276)
-	port.size = Vector2(180,44)
+	port.custom_minimum_size.y = 44
 	port.min_value = 1024
 	port.max_value = 65535
 	port.value = 24567
-	screen.add_child(port)
-	var host: Button = button(screen,"HOST LOBBY",Vector2(614,345),283,func(): Session.host_session(player_name.text,int(port.value)))
+	port_column.add_child(port)
+	var actions := HBoxContainer.new()
+	actions.add_theme_constant_override("separation",12)
+	form.add_child(actions)
+	var host: Button = button(screen,"HOST LOBBY",Vector2.ZERO,0,func(): Session.host_session(player_name.text,int(port.value)))
+	host.reparent(actions)
+	host.custom_minimum_size.y = 50
+	host.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	_menu_primary(host)
-	button(screen,"JOIN HOST",Vector2(917,345),283,func(): Session.join_session(player_name.text,address.text,int(port.value)))
-	button(screen,"SOLO DEBUG DRIVE",Vector2(614,408),586,_solo_debug_drive)
-	label(screen,"PRACTICE OFFLINE  /  NO CONNECTION NEEDED",Vector2(632,462),12,Color("9bb8c1"))
-	label(screen,"DIRECT IP / CONNECTION NOTES",Vector2(614,504),13,Color("ff9654"))
-	label(screen,"Host: public IP + UDP forwarding required (CGNAT unsupported).\nOn this PC: use 127.0.0.1 to connect a second window.",Vector2(614,530),15,Color("b7cad3"))
-	status_label = label(screen,notice,Vector2(614,581),16,Color("ffb780"))
+	var join: Button = button(screen,"JOIN HOST",Vector2.ZERO,0,func(): Session.join_session(player_name.text,address.text,int(port.value)))
+	join.reparent(actions)
+	join.custom_minimum_size.y = 50
+	join.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	var solo: Button = button(screen,"PRACTICE SOLO",Vector2.ZERO,0,_solo_debug_drive)
+	solo.reparent(form)
+	solo.custom_minimum_size.y = 46
+	solo.tooltip_text = "Offline practice drive"
+	_menu_caption(form,"Same PC: 127.0.0.1  /  LAN: use the host IP",14,Color("9bb8c1"))
+	var connection_help := LinkButton.new()
+	connection_help.text = "Playing over the internet? Connection help"
+	connection_help.add_theme_font_size_override("font_size",14)
+	connection_help.pressed.connect(_connection_help, CONNECT_DEFERRED)
+	form.add_child(connection_help)
+	status_label = _menu_caption(form,notice,15,Color("ffb780"))
 	status_label.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
-	status_label.size = Vector2(586,52)
-	label(screen,"TAB / ARROWS  NAVIGATE     ENTER  SELECT",Vector2(614,678),12,Color("9bb8c1"))
+	status_label.custom_minimum_size.y = 40
+	label(screen,"TAB  NAVIGATE   /   ENTER  SELECT",Vector2(588,653),12,Color("9bb8c1"))
+	button(screen,"QUIT",Vector2(1120,638),112,func(): get_tree().quit())
 	host.grab_focus()
-	var motion: CheckButton = CheckButton.new()
-	motion.text = "Menu motion"
-	motion.position = Vector2(640,646)
-	motion.button_pressed = menu_motion
-	art.motion_enabled = menu_motion
-	motion.toggled.connect(func(enabled: bool):
-		menu_motion = enabled
-		art.motion_enabled = enabled
-	)
-	screen.add_child(motion)
 	if menu_motion:
 		screen.modulate.a = 0.0
 		screen.create_tween().tween_property(screen,"modulate:a",1.0,0.28)
+
+func _menu_caption(parent: Node, text: String, font_size: int, color: Color) -> Label:
+	var caption: Label = label(parent,text,Vector2.ZERO,font_size,color)
+	return caption
+
+func _connection_help() -> void:
+	_modal("CONNECT WITH FRIENDS")
+	label(overlay,"Same computer: open two game windows.\nHost in one, then join 127.0.0.1 in the other.\n\nSame network: enter the host computer's local IP.\n\nInternet: enter the host's public IP. The host must\nforward UDP port 24567 (or the chosen port).\nDirect hosting through CGNAT is unsupported.",Vector2(315,185),19)
+	button(overlay,"BACK",Vector2(315,540),650,_close_overlay)
 
 func _menu_theme() -> void:
 	for state_name: String in ["normal","hover","pressed","focus"]:
@@ -347,7 +384,7 @@ func _close_overlay() -> void:
 
 func _help() -> void:
 	var box: Control = _modal("HOW TO PLAY")
-	label(box,"W / Up      Accelerate\nS / Down    Brake, then reverse\nA / D       Steer\nE           Shift Grip / Rush and change shared layout\nSpace       Use banana peel or canned drink\nHold R 2s   Reset to last checkpoint (3s penalty)\nEsc         Local menu; race keeps running\n\nFollow floor arrows and pass checkpoints in order.\nCross checkout to complete each of three laps.\nBlue / Orange gates warn 1.5s before changing.\nDrive through marked pads to collect an item.\nBroken carts respawn at the last checkpoint after 3s.",Vector2(318,180),19)
+	label(box,"W / Up      Accelerate\nS / Down    Brake, then reverse\nA / D       Steer\nE           Shift Grip / Rush and change shared layout\nSpace       Use banana peel or canned drink\nHold R 2s   Reset to last checkpoint (3s penalty)\nEsc         Local menu; race keeps running\n\nFollow floor arrows and pass checkpoints in order.\nCross checkout to complete each of three laps.\nBlue / Orange gates warn 1.5s before changing.\nDrive through marked pads to collect an item.\nBroken carts respawn at the last checkpoint after 3s.\nRed floor = falling cabinet: dodge to avoid 25 damage + stun.\nFalling fruit causes slips; watch the produce racks.",Vector2(318,180),17)
 	button(box,"BACK",Vector2(315,550),650,_close_overlay)
 
 func _credits() -> void:
@@ -400,6 +437,7 @@ func _cli() -> void:
 		if argument.begins_with("--auto-join="): join_port = int(argument.get_slice("=",1))
 		if argument.begins_with("--name="): Session.local_name = argument.get_slice("=",1)
 		if argument == "--test-ready": debug_ready = true
+		if argument == "--test-events": test_events = true
 		if argument.begins_with("--test-seconds="): test_seconds = float(argument.get_slice("=",1))
 		if argument.begins_with("--test-expected="): debug_expected = int(argument.get_slice("=",1))
 		if argument.begins_with("--capture="): capture_path = argument.trim_prefix("--capture=")
@@ -416,6 +454,13 @@ func _test_process(delta: float) -> void:
 		if multiplayer.is_server() and Session.roster.size() == debug_expected and Session.can_start(): Session.start_race()
 	if debug_ready and is_instance_valid(world) and Session.phase == "race":
 		Input.action_press("accelerate")
+		if test_events and world.session_id == 1:
+			if multiplayer.is_server() and world.tick == 195:
+				world.carts[1].position = world.store_events.events[0].root.to_global(Vector3(0,0,-2.5))
+				world.carts[1].protection_end = 0
+			if world.store_events.events[0].trigger >= 0 and not test_events_verified:
+				test_events_verified = true
+				print("EVENT VERIFIED: cabinet_trigger=",world.store_events.events[0].trigger)
 		if world.tick > 230 and not test_verified:
 			var local_cart = world.carts.get(multiplayer.get_unique_id())
 			if local_cart != null and local_cart.position.distance_to(local_cart.safe_position) > 0.2:

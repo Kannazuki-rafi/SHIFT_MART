@@ -7,7 +7,7 @@ signal input_received(peer_id: int, throttle: float, steer: float, recovery: boo
 signal shift_received(peer_id: int)
 signal snapshot_received(data: Dictionary)
 signal return_lobby
-const VERSION: String = "shift-mart-circuit-v3"
+const VERSION: String = "shift-mart-store-events-v4"
 const MAX_PLAYERS: int = 4
 var roster: Dictionary = {}
 var phase: String = "menu"

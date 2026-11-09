@@ -1,4 +1,4 @@
-﻿extends Node
+extends Node
 const World = preload("res://scripts/race/race_world.gd")
 var failures: int = 0
 var world
@@ -19,7 +19,7 @@ func _ready() -> void:
 	world.set_physics_process(false)
 	world.set_process(false)
 	await get_tree().physics_frame
-	for test: String in ["checkpoint_rules","route_physics","shift_rules","items_and_respawn","ram_rules","branch_progress","replication"]:
+	for test: String in ["checkpoint_rules","route_physics","shift_rules","items_and_respawn","ram_rules","branch_progress","replication","can_aim_assist"]:
 		if await call(test) != true:
 			failures += 1
 			push_error("Test did not finish: "+test)
@@ -37,6 +37,59 @@ func reset_cart(cart) -> void:
 	cart.health = 100
 	cart.held_item = ""
 
+func can_aim_assist() -> bool:
+	# Elevated isolated fixture avoids depending on authored track geometry.
+	for id: int in world.carts:
+		var cart = world.carts[id]
+		cart.process_mode = Node.PROCESS_MODE_DISABLED
+		reset_cart(cart)
+		cart.position = Vector3(50 + id * 10,10,0)
+	var owner = world.carts[1]
+	var target = world.carts[2]
+	owner.position = Vector3(0,10,0)
+	owner.rotation = Vector3.ZERO
+	var forward := Vector3.FORWARD
+	var origin: Vector3 = owner.position + forward * 1.5 + Vector3.UP * 0.6
+	check(world._can_launch_direction(owner,origin,forward,100) == forward,"Can without a target fires straight")
+	target.position = Vector3(0.6,10,-8)
+	var assisted: Vector3 = world._can_launch_direction(owner,origin,forward,100)
+	check(assisted.x > 0 and forward.angle_to(assisted) <= deg_to_rad(8),"Can corrects toward a target inside the narrow cone")
+	world.carts[3].position = Vector3(-0.2,10,-9)
+	check(world._can_launch_direction(owner,origin,forward,100).x < 0,"Can prefers the target closest to the firing line")
+	world.carts[3].position = Vector3(80,10,0)
+	for invalid_position: Vector3 in [Vector3(4,10,-8),Vector3(0.2,10,-14),Vector3(0,10,5)]:
+		target.position = invalid_position
+		check(world._can_launch_direction(owner,origin,forward,100) == forward,"Can rejects target outside cone, range or forward direction")
+	target.position = Vector3(0.6,10,-8)
+	target.protection_end = 200
+	check(world._can_launch_direction(owner,origin,forward,100) == forward,"Can ignores protected targets")
+	target.protection_end = 0
+	target.repairing = true
+	check(world._can_launch_direction(owner,origin,forward,100) == forward,"Can ignores respawning targets")
+	target.repairing = false
+	target.finish_tick = 10
+	check(world._can_launch_direction(owner,origin,forward,100) == forward,"Can ignores finished targets")
+	target.finish_tick = -1
+	var blocker := StaticBody3D.new()
+	var collision := CollisionShape3D.new()
+	var shape := BoxShape3D.new()
+	shape.size = Vector3(3,3,0.5)
+	collision.shape = shape
+	blocker.add_child(collision)
+	blocker.position = Vector3(0,10,-4)
+	world.add_child(blocker)
+	await get_tree().physics_frame
+	check(world._can_launch_direction(owner,origin,forward,100) == forward,"Can assist cannot target through solid obstacles")
+	blocker.free()
+	await get_tree().physics_frame
+	world._spawn_can(owner,100)
+	var projectile: Dictionary = world.cans.back()
+	var velocity: Vector3 = projectile.velocity
+	target.position = Vector3(-5,10,-8)
+	world._update_cans(1.0/60.0,101)
+	check(velocity.x > 0 and projectile.velocity == velocity,"Can keeps its launch velocity when the target moves; no homing")
+	return true
+
 func cross_gate(cart, index: int, offset: Vector3 = Vector3.ZERO) -> void:
 	var point: Vector3 = World.GATES[index]+offset
 	var direction: Vector3 = World.DIRECTIONS[index]
@@ -53,7 +106,7 @@ func checkpoint_rules() -> bool:
 	cart.position = World.GATES[0]-Vector3.RIGHT
 	world._checkpoint(cart,World.GATES[0]+Vector3.RIGHT)
 	check(cart.next_checkpoint == 0,"Reverse checkpoint crossing is rejected")
-	cross_gate(cart,0,Vector3(0,0,12))
+	cross_gate(cart,0,Vector3(0,0,World.CHECKPOINT_HALF_WIDTH+3))
 	check(cart.next_checkpoint == 0,"Crossing beyond the lane width is rejected")
 	cart.position = World.GATES[0]+Vector3.RIGHT
 	world._checkpoint(cart,World.GATES[0])
@@ -81,7 +134,7 @@ func route_physics() -> bool:
 		world._update_gates()
 		await get_tree().physics_frame
 		reset_cart(cart)
-		cart.position = Vector3(19,0,-23)
+		cart.position = Vector3(19,0,-23)*Vector3(1.2,1,1.76)
 		var east: float = 26.0 if selected == 0 else 36.0
 		var north: float = 28.0 if selected == 0 else 19.0
 		var south: float = -19.0 if selected == 0 else -28.0
@@ -90,9 +143,10 @@ func route_physics() -> bool:
 			Vector3(east,0,10),Vector3(31,0,14),Vector3(31,0,23),
 			Vector3(20,0,23),Vector3(18,0,north),Vector3(-18,0,north),
 			Vector3(-20,0,23),Vector3(-31,0,23),Vector3(-31,0,14),
-			Vector3(-31,0,-23),Vector3(-24,0,-23),Vector3(-18,0,-23),
+			Vector3(-34,0,12),Vector3(-34,0,7),Vector3(-28,0,3),Vector3(-28,0,-3),Vector3(-34,0,-7),Vector3(-34,0,-12),Vector3(-31,0,-23),Vector3(-24,0,-23),Vector3(-18,0,-23),
 			Vector3(-16,0,south),Vector3(14,0,south),Vector3(19,0,-23),
 		]
+		for i: int in path.size(): path[i] *= Vector3(1.2,1,1.76)
 		var clear: bool = true
 		for lap: int in 3:
 			for target: Vector3 in path:
@@ -262,13 +316,13 @@ func branch_progress() -> bool:
 	reset_cart(cart)
 	for i: int in 3: cart.branch_choices[i] = -1
 	cart.next_checkpoint = 2
-	cart.position = Vector3(36,0,-9)
-	world._checkpoint(cart,Vector3(36,0,-11))
+	cart.position = (Vector3(36,0,-9)*Vector3(1.2,1,1.76))
+	world._checkpoint(cart,(Vector3(36,0,-11)*Vector3(1.2,1,1.76)))
 	check(cart.branch_choices[0] == 1,"Ranking remembers the actual Orange entrance")
 	var before: float = world.progress(cart)
 	world.layout = 0
 	check(is_equal_approx(before,world.progress(cart)),"Layout change cannot change progress inside an existing branch")
-	cart.position = Vector3(36,0,-1)
+	cart.position = (Vector3(36,0,-1)*Vector3(1.2,1,1.76))
 	check(world.progress(cart) > before and world.progress(cart) < 3.0,"Branch progress increases toward the next ordered checkpoint")
 	world.carts[2].apply_snapshot(cart.state_data())
 	check(world.carts[2].branch_choices == cart.branch_choices,"Actual branch choices replicate to clients")

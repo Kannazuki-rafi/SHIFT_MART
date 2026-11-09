@@ -170,7 +170,7 @@ func simulate(delta: float, tick: int, driving: bool) -> void:
 				external_velocity += collision.get_normal() * clampf(impact * 0.45, 1.5, 4.0)
 				if impact > 6.0: damage(minf(25,(impact-4)*3),tick)
 	velocity.y = 0
-	if position.y < -3 or absf(position.x) > 43 or absf(position.z) > 35: start_repair(tick,true)
+	if position.y < -3 or absf(position.x) > 52 or absf(position.z) > 62: start_repair(tick,true)
 
 func damage(amount: float, tick: int) -> void:
 	if repairing or tick < protection_end or finish_tick >= 0: return

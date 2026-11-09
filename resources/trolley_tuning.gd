@@ -17,3 +17,5 @@ extends Resource
 @export var default_stun_ticks: int = 18
 @export var can_damage: float = 15.0
 @export var can_speed: float = 32.0
+@export_range(0.0, 15.0, 0.5) var can_assist_angle_degrees: float = 8.0
+@export_range(0.0, 30.0, 0.5) var can_assist_range: float = 12.0

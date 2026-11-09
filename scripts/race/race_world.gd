@@ -1,37 +1,45 @@
 extends Node3D
+const HazardEvents = preload("res://scripts/race/store_events.gd")
 const Cart = preload("res://scripts/race/trolley_controller.gd")
 const TUNING = preload("res://resources/balance.tres")
 const COLORS: Array[Color] = [Color("d6f663"),Color("ffad62"),Color("65d8d0"),Color("e29dc9"),Color("929ef5")]
 
 # One authored circuit. Every branch rejoins before the next shared checkpoint.
 const GATES: Array[Vector3] = [
-	Vector3(23,0,-23), Vector3(31,0,-14), Vector3(31,0,0),
-	Vector3(31,0,14), Vector3(20,0,23), Vector3(0,0,23),
-	Vector3(-20,0,23), Vector3(-31,0,14), Vector3(-31,0,0),
-	Vector3(-31,0,-14), Vector3(-24,0,-23), Vector3(16,0,-23),
+	Vector3(27.6,0,-40.48), Vector3(37.2,0,-24.64), Vector3(37.2,0,0),
+	Vector3(37.2,0,24.64), Vector3(24,0,40.48), Vector3(0,0,40.48),
+	Vector3(-24,0,40.48), Vector3(-37.2,0,24.64), Vector3(-33.6,0,0),
+	Vector3(-37.2,0,-24.64), Vector3(-28.8,0,-40.48), Vector3(19.2,0,-40.48),
 ]
 const DIRECTIONS: Array[Vector3] = [
 	Vector3.RIGHT, Vector3.BACK, Vector3.BACK, Vector3.BACK,
 	Vector3.LEFT, Vector3.LEFT, Vector3.LEFT, Vector3.FORWARD,
 	Vector3.FORWARD, Vector3.FORWARD, Vector3.RIGHT, Vector3.RIGHT,
 ]
-const CHECKPOINT_HALF_WIDTH: float = 9.0
+const CHECKPOINT_HALF_WIDTH: float = 16.0
 const PUDDLES: Array[Dictionary] = [
-	{"pos":Vector3(0,0,28), "size":Vector2(7,4)},
+	{"pos":Vector3(-15,0,48), "size":Vector2(3,3)},
+	{"pos":Vector3(0,0,49.28), "size":Vector2(7,4)},
 ]
 const PICKUP_STANDS: Array[Dictionary] = [
-	{"pos":Vector3(26,0,5), "item":"banana"},
-	{"pos":Vector3(36,0,5), "item":"banana"},
-	{"pos":Vector3(-6,0,19), "item":"can"},
-	{"pos":Vector3(-6,0,28), "item":"can"},
-	{"pos":Vector3(-31,0,-3), "item":"banana"},
-	{"pos":Vector3(19,0,-23), "item":"can"},
+	{"pos":Vector3(31.2,0,8.8), "item":"banana"},
+	{"pos":Vector3(43.2,0,8.8), "item":"banana"},
+	{"pos":Vector3(-7.2,0,33.44), "item":"can"},
+	{"pos":Vector3(-7.2,0,49.28), "item":"can"},
+	{"pos":Vector3(-37.2,0,-5.28), "item":"banana"},
+	{"pos":Vector3(22.8,0,-40.48), "item":"can"},
+	{"pos":Vector3(31.2,0,-10), "item":"can"},
+	{"pos":Vector3(43.2,0,-10), "item":"can"},
+	{"pos":Vector3(13,0,33.44), "item":"banana"},
+	{"pos":Vector3(13,0,49.28), "item":"banana"},
+	{"pos":Vector3(-40.8,0,26), "item":"can"},
+	{"pos":Vector3(7,0,-49.28), "item":"banana"},
 ]
 # Entrances close; exits always stay open. Blue/Orange are route identities.
 const FORKS: Array[Dictionary] = [
-	{"name":"PRODUCE", "a":Vector3(26,0,-10), "b":Vector3(36,0,-10), "forward":Vector3.BACK, "size":Vector3(8,1.1,0.5)},
-	{"name":"FREEZER", "a":Vector3(14,0,28), "b":Vector3(14,0,19), "forward":Vector3.LEFT, "size":Vector3(0.5,1.1,7.5)},
-	{"name":"CHECKOUT", "a":Vector3(-14,0,-19), "b":Vector3(-14,0,-28), "forward":Vector3.RIGHT, "size":Vector3(0.5,1.1,7.5)},
+	{"name":"PRODUCE", "a":Vector3(31.2,0,-17.6), "b":Vector3(43.2,0,-17.6), "forward":Vector3.BACK, "size":Vector3(9.6,1.1,0.88)},
+	{"name":"FREEZER", "a":Vector3(16.8,0,49.28), "b":Vector3(16.8,0,33.44), "forward":Vector3.LEFT, "size":Vector3(0.6,1.1,13.2)},
+	{"name":"CHECKOUT", "a":Vector3(-16.8,0,-33.44), "b":Vector3(-16.8,0,-49.28), "forward":Vector3.RIGHT, "size":Vector3(0.6,1.1,13.2)},
 ]
 var route_gates: Array[Dictionary] = []
 var fork_arrows: Array[MeshInstance3D] = []
@@ -61,6 +69,7 @@ var input_elapsed: float = 0.0
 var snapshot_elapsed: float = 0.0
 var session_id: int = 0
 var local_menu: bool = false
+var store_events: Node3D
 
 func _ready() -> void:
 	Session.input_received.connect(_input_received)
@@ -69,9 +78,11 @@ func _ready() -> void:
 	Session.shift_received.connect(request_shift)
 	_environment()
 	_track()
+	store_events = HazardEvents.new()
+	add_child(store_events)
 	camera = Camera3D.new()
 	camera.fov = 65
-	camera.far = 240
+	camera.far = 360
 	add_child(camera)
 	camera.current = true
 
@@ -87,6 +98,7 @@ func setup(players: Dictionary, id: int) -> void:
 		cart.peer_id = ids[index]
 		cart.paint = COLORS[index % COLORS.size()]
 		cart.position = Vector3(-6.0 - float(index / 2) * 3.2, 0.0, -19.0 + float(index % 2) * 2.0 - 1.0)
+		cart.position *= Vector3(1.2,1,1.76)
 		cart.rotation.y = -PI / 2.0
 		cart.safe_position = cart.position
 		cart.safe_yaw = cart.rotation.y
@@ -270,6 +282,7 @@ func _floor_arrow(pos: Vector3, forward: Vector3, color: Color = Color("d6f663")
 	return instance
 
 func _track() -> void:
+	var first_scenery: int = get_child_count()
 	box(Vector3(84,0.5,68), Vector3(0,-0.3,0), Color("53636b"), true)
 	# Quiet floor, continuous boundaries, low shelves for clear camera sightlines.
 	for z: float in [-33,33]:
@@ -280,15 +293,16 @@ func _track() -> void:
 		box(Vector3(44,0.8,0.6), Vector3(0,0.4,z), Color("93a6a6"), true)
 	for x: float in [-22,22]:
 		box(Vector3(0.6,0.8,28), Vector3(x,0.4,0), Color("93a6a6"), true)
+	# Short shelving bays create cross aisles and distinct departments.
 	for x: int in [-16,-5,6,17]:
-		box(Vector3(3,0.3,23),Vector3(x,0.15,0),Color("294650"),true)
-		for z: float in [-11.5,11.5]:
-			box(Vector3(3,1.4,0.25),Vector3(x,0.7,z),Color("294650"),true)
-		for row: int in 2:
-			box(Vector3(3,0.12,23),Vector3(x,0.6+row*0.65,0),Color("8c9f9e"))
-			for z: int in range(-9,10,3):
-				for side: float in [-1,1]:
-					box(Vector3(0.6,0.4,0.9),Vector3(x+side,0.86+row*0.65,z),COLORS[(row+absi(z))%COLORS.size()])
+		for z: int in [-8,0,8]:
+			var tint: Color = COLORS[(absi(x)+absi(z))%4].darkened(0.45)
+			box(Vector3(2.6,0.3,5.5),Vector3(x,0.15,z),tint,true)
+			for row: int in 3:
+				box(Vector3(2.8,0.12,5.5),Vector3(x,0.4+row*0.5,z),Color("8c9f9e"))
+				for item: int in 4:
+					for side: int in [-1,1]:
+						box(Vector3(0.45,0.35,0.65),Vector3(x+side*0.9,0.63+row*0.5,z-1.8+item*1.2),COLORS[(item+row)%4])
 	# Three fixed splitters separate authored branch pairs; no cross-aisle clutter.
 	box(Vector3(1,0.9,17), Vector3(31,0.45,0), Color("567b60"), true)
 	box(Vector3(25,1.1,1), Vector3(0,0.55,23.5), Color("739baa"), true)
@@ -305,7 +319,7 @@ func _track() -> void:
 	for z: int in [-8,0,8]:
 		box(Vector3(1.4,1.2,2.5), Vector3(-39.5,0.6,z), Color("9a805e"))
 	for p: Dictionary in PUDDLES:
-		puddle(p.pos,p.size)
+		puddle(p.pos / Vector3(1.2,1,1.76),p.size / Vector2(1.2,1.76))
 	# Direction marks follow both branches, then merge into the same circuit.
 	for z: int in [-6,2,9]:
 		_floor_arrow(Vector3(26,0,z),Vector3.BACK)
@@ -315,20 +329,33 @@ func _track() -> void:
 		_floor_arrow(Vector3(x,0,28),Vector3.LEFT)
 		_floor_arrow(Vector3(x,0,-19),Vector3.RIGHT)
 		_floor_arrow(Vector3(x,0,-28),Vector3.RIGHT)
-	for z: int in [17,7,-3,-13]:
-		_floor_arrow(Vector3(-31,0,z),Vector3.FORWARD)
 	for p: Vector3 in [Vector3(26,0,-23),Vector3(31,0,-17),Vector3(31,0,18),Vector3(24,0,23),Vector3(-24,0,23),Vector3(-31,0,-22),Vector3(-22,0,-23)]:
 		var direction: Vector3 = Vector3.RIGHT if p.z < -20 else Vector3.LEFT
 		if p.x == 31: direction = Vector3.BACK
 		_floor_arrow(p,direction)
 	# Finish artwork and the lap detector share the exact same coordinates.
-	var finish: Vector3 = GATES[-1]
+	var finish: Vector3 = GATES[-1] / Vector3(1.2,1,1.76)
 	_gantry(finish,18,true,"CHECKOUT / FINISH","3 LAPS / ONE WAY")
 	for row: int in 18:
 		for col: int in 2:
 			box(Vector3(0.8,0.02,1),Vector3(finish.x+(col-0.5)*0.8,0.015,-31.5+row),Color.WHITE if (row+col)%2 == 0 else Color("182a32"))
 	for i: int in 4:
 		box(Vector3(2,0.02,1.4),Vector3(-6-(i/2)*3.2,0.012,-20+(i%2)*2),Color("87978a"))
+	for child: Node in get_children().slice(first_scenery):
+		if child is Node3D:
+			child.position *= Vector3(1.2,1,1.76)
+			child.scale *= Vector3(1.2,1,1.76)
+	# Stockroom slalom: alternating low islands leave wide escape lanes.
+	for bend: Vector3 in [Vector3(-29.6,0,15.2),Vector3(-46.4,0,0),Vector3(-29.6,0,-15.2)]:
+		box(Vector3(20.8 if bend.z == 0 else 16,0.8,4),bend+Vector3.UP*0.4,Color("a58955"),true)
+		box(Vector3(4.8,0.7,2.4),bend+Vector3.UP*1.15,Color("9a805e"))
+	var bends: Array[Vector3] = [Vector3(-40.8,0,21.6),Vector3(-40.8,0,12),Vector3(-34.4,0,4),Vector3(-34.4,0,-4),Vector3(-40.8,0,-12),Vector3(-40.8,0,-21.6)]
+	for i: int in range(bends.size()-1):
+		_floor_arrow(bends[i],(bends[i+1]-bends[i]).normalized())
+	sign_text("STOCKROOM / S BENDS",Vector3(-44.8,3,28),70)
+
+	_department_details()
+
 	for i: int in FORKS.size():
 		var fork: Dictionary = FORKS[i]
 		var approach: Vector3 = (fork.a+fork.b)*0.5-fork.forward*6.0
@@ -423,12 +450,46 @@ func _advance_shift() -> void:
 
 # ===================== CANNED DRINK PROJECTILES =====================
 
+func _can_launch_direction(owner_cart, origin: Vector3, forward: Vector3, current_tick: int) -> Vector3:
+	# Launch-only correction. The projectile never stores or follows a target.
+	var best_direction: Vector3 = forward
+	var best_angle: float = deg_to_rad(TUNING.can_assist_angle_degrees)
+	var best_distance: float = INF
+	var ids: Array = carts.keys()
+	ids.sort()
+	for id: int in ids:
+		var candidate = carts[id]
+		if id == owner_cart.peer_id or candidate.repairing or candidate.finish_tick >= 0 or current_tick < candidate.protection_end:
+			continue
+		if owner_cart.position.distance_to(candidate.position) > TUNING.can_assist_range:
+			continue
+		var target: Vector3 = candidate.position + Vector3.UP * 0.6
+		var offset: Vector3 = target - origin
+		offset.y = 0.0
+		if offset.length_squared() < 0.001 or offset.dot(forward) <= 0.0:
+			continue
+		var direction: Vector3 = offset.normalized()
+		var angle: float = forward.angle_to(direction)
+		var distance: float = offset.length_squared()
+		if angle > best_angle or (is_equal_approx(angle,best_angle) and distance >= best_distance):
+			continue
+		# Layer 1 contains the track walls, shelves and gates, not racers.
+		var query := PhysicsRayQueryParameters3D.create(origin,target,1)
+		query.hit_from_inside = true
+		if not get_world_3d().direct_space_state.intersect_ray(query).is_empty():
+			continue
+		best_direction = direction
+		best_angle = angle
+		best_distance = distance
+	return best_direction
+
 func _spawn_can(owner_cart, current_tick: int) -> void:
 	var can_node: StaticBody3D = StaticBody3D.new()
 	can_node.collision_layer = 0
 	can_node.collision_mask = 0
 	var forward: Vector3 = -owner_cart.transform.basis.z
 	can_node.position = owner_cart.position + forward * 1.5 + Vector3.UP * 0.6
+	var launch_direction: Vector3 = _can_launch_direction(owner_cart,can_node.position,forward,current_tick)
 	add_child(can_node)
 
 	var rmesh := MeshInstance3D.new()
@@ -444,7 +505,7 @@ func _spawn_can(owner_cart, current_tick: int) -> void:
 
 	cans.append({
 		"node": can_node,
-		"velocity": forward * TUNING.can_speed,
+		"velocity": launch_direction * TUNING.can_speed,
 		"owner_id": owner_cart.peer_id,
 		"spawn_tick": current_tick,
 		"alive": true,
@@ -476,7 +537,7 @@ func _update_cans(delta: float, current_tick: int) -> void:
 			node.queue_free()
 			to_remove.append(i)
 			continue
-		if absf(node.position.x) > 42.0 or absf(node.position.z) > 34.0:
+		if absf(node.position.x) > 51.0 or absf(node.position.z) > 61.0:
 			r.alive = false
 			node.queue_free()
 			to_remove.append(i)
@@ -539,6 +600,7 @@ func _physics_process(delta: float) -> void:
 		if tick >= start_tick and not complete and not was_repairing:
 			_checkpoint(cart, previous_positions[id])
 			_collect_pickup(cart)
+	store_events.advance(tick,carts,tick >= start_tick and not complete)
 	# Update deployed items
 	_update_cans(delta, tick)
 	_update_peels()
@@ -564,7 +626,7 @@ func _checkpoint(cart, previous: Vector3) -> void:
 		var fork: Dictionary = FORKS[i]
 		var midpoint: Vector3 = (fork.a+fork.b)*0.5
 		if (previous-midpoint).dot(fork.forward) <= 0 and (cart.position-midpoint).dot(fork.forward) > 0:
-			if cart.position.distance_to(midpoint) < 12.0:
+			if cart.position.distance_to(midpoint) < 25.0:
 				cart.branch_choices[i] = 0 if cart.position.distance_to(fork.a) < cart.position.distance_to(fork.b) else 1
 	var index: int = cart.next_checkpoint
 	var gate: Vector3 = GATES[index]
@@ -636,7 +698,7 @@ func snapshot() -> Dictionary:
 	var state: Dictionary = {}
 	for id: int in carts:
 		state[id] = carts[id].state_data()
-	return {"session":session_id, "tick":tick, "deadline":deadline_tick, "complete":complete, "carts":state, "layout":layout, "gates":_gate_states(), "shift_owner":shift_owner, "shift_at":shift_at, "shift_available":shift_available, "pickups":pickup_cooldowns, "items":_item_snapshot()}
+	return {"session":session_id, "tick":tick, "deadline":deadline_tick, "complete":complete, "carts":state, "layout":layout, "gates":_gate_states(), "shift_owner":shift_owner, "shift_at":shift_at, "shift_available":shift_available, "pickups":pickup_cooldowns, "items":_item_snapshot(), "events":store_events.state_data()}
 
 func _receive(data: Dictionary) -> void:
 	tick = data.tick
@@ -647,6 +709,7 @@ func _receive(data: Dictionary) -> void:
 	shift_at = data.shift_at
 	shift_available = data.shift_available
 	pickup_cooldowns = data.pickups
+	store_events.apply_state(data.events)
 	_receive_items(data.items)
 	_update_gates(data.gates)
 	for id: int in data.carts:
@@ -663,6 +726,7 @@ func _roster_changed() -> void:
 			previous_positions.erase(id)
 
 func _process(delta: float) -> void:
+	store_events.render(tick)
 	for gate: Dictionary in route_gates:
 		gate.visual.position.y = move_toward(gate.visual.position.y,0.0 if gate.closed else -1.8,delta*5.0)
 		gate.lamp.albedo_color = Color("ffad62") if gate.warning and tick%30 < 15 else (Color("6fff99") if not gate.closed and not gate.warning else Color("763c28"))
@@ -733,15 +797,15 @@ func progress(cart) -> float:
 	var index: int = cart.next_checkpoint
 	var branch: int = cart.branch_choices[0]
 	var lane: float = 26.0 if branch == 0 else 36.0
-	if branch >= 0 and index == 2: path = [previous,Vector3(lane,0,-12),Vector3(lane,0,0)]
-	elif branch >= 0 and index == 3: path = [Vector3(lane,0,0),Vector3(lane,0,10),target]
+	if branch >= 0 and index == 2: path = [previous,(Vector3(lane,0,-12)*Vector3(1.2,1,1.76)),(Vector3(lane,0,0)*Vector3(1.2,1,1.76))]
+	elif branch >= 0 and index == 3: path = [(Vector3(lane,0,0)*Vector3(1.2,1,1.76)),(Vector3(lane,0,10)*Vector3(1.2,1,1.76)),target]
 	branch = cart.branch_choices[1]
 	lane = 28.0 if branch == 0 else 19.0
-	if branch >= 0 and index == 5: path = [previous,Vector3(18,0,lane),Vector3(0,0,lane)]
-	elif branch >= 0 and index == 6: path = [Vector3(0,0,lane),Vector3(-18,0,lane),target]
+	if branch >= 0 and index == 5: path = [previous,(Vector3(18,0,lane)*Vector3(1.2,1,1.76)),(Vector3(0,0,lane)*Vector3(1.2,1,1.76))]
+	elif branch >= 0 and index == 6: path = [(Vector3(0,0,lane)*Vector3(1.2,1,1.76)),(Vector3(-18,0,lane)*Vector3(1.2,1,1.76)),target]
 	branch = cart.branch_choices[2]
 	lane = -19.0 if branch == 0 else -28.0
-	if branch >= 0 and index == 11: path = [previous,Vector3(-16,0,lane),Vector3(14,0,lane),target]
+	if branch >= 0 and index == 11: path = [previous,(Vector3(-16,0,lane)*Vector3(1.2,1,1.76)),(Vector3(14,0,lane)*Vector3(1.2,1,1.76)),target]
 	var length: float = 0.0
 	for i: int in range(path.size()-1): length += path[i].distance_to(path[i+1])
 	var travelled: float = 0.0
@@ -821,8 +885,8 @@ func _collect_pickup(cart) -> void:
 func navigation_text(cart) -> String:
 	var target: Vector3 = GATES[cart.next_checkpoint]
 	# Guide toward the lane the racer occupies; never point into a branch splitter.
-	if cart.next_checkpoint == 2: target.x = 26.0 if cart.position.x < 31.0 else 36.0
-	if cart.next_checkpoint == 5: target.z = 19.0 if cart.position.z < 23.5 else 28.0
+	if cart.next_checkpoint == 2: target.x = 31.2 if cart.position.x < 37.2 else 43.2
+	if cart.next_checkpoint == 5: target.z = 33.44 if cart.position.z < 41.36 else 49.28
 	var offset: Vector3 = target-cart.position
 	var local_offset: Vector3 = cart.transform.basis.inverse()*offset
 	var direction: String = "STRAIGHT"
@@ -836,3 +900,37 @@ func _gate_states() -> PackedByteArray:
 	var states := PackedByteArray()
 	for gate: Dictionary in route_gates: states.append(1 if gate.closed else 0)
 	return states
+
+func _department_details() -> void:
+	# Low displays fill the interior without hiding the racing corridor.
+	for x: float in [-10,3,16]:
+		box(Vector3(5,0.85,4),Vector3(x,0.425,0),Color("aa7751"),true)
+		box(Vector3(5.4,0.12,4.4),Vector3(x,0.9,0),Color("e9c583"))
+		for i: int in 4:
+			box(Vector3(0.8,0.3,1.1),Vector3(x-1.6+i*1.05,1.12,0),Color("dd9b53"))
+	sign_text("BAKERY",Vector3(3,2.6,0),70,Color("ffc97b"))
+	sign_text("FRESH PRODUCE",Vector3(39,3.4,29),74,Color("c8e86b"))
+	sign_text("FROZEN FOODS",Vector3(0,3.4,55),74,Color("9bdfee"))
+	# End caps and stock cages punctuate long straights without blocking either fork.
+	for x: float in [-13,0,13]:
+		box(Vector3(3,1.1,2.5),Vector3(x,0.55,41.36),Color("537e91"),true)
+		box(Vector3(2.8,0.2,2.3),Vector3(x,1.2,41.36),Color("d2edf0"))
+	for pos: Vector3 in [Vector3(-23,0,54),Vector3(25,0,-54),Vector3(46.5,0,-30)]:
+		box(Vector3(2.5,0.3,3),pos+Vector3.UP*0.15,Color("977652"),true)
+		box(Vector3(1.8,1.2,2),pos+Vector3.UP*0.9,Color("c89c6a"),true)
+	# Corner departments occupy the unused outer space and frame the turns.
+	for x: float in [41,46]:
+		box(Vector3(3.5,1,6),Vector3(x,0.5,49),Color("6f944c"),true)
+		for z: float in [47,49,51]:
+			box(Vector3(2.8,0.45,1.4),Vector3(x,1.2,z),Color("e6a54a"))
+	for x: float in [40,45]:
+		box(Vector3(3,1,6),Vector3(x,0.5,-50),Color("647985"),true)
+		box(Vector3(2,0.12,4),Vector3(x,1.07,-50),Color("1d303a"))
+		box(Vector3(0.8,0.8,0.7),Vector3(x,1.4,-47.5),Color("9bd6d2"))
+	for z: float in [47,52]:
+		box(Vector3(8,1.7,2.5),Vector3(-43,0.85,z),Color("94c0cc"),true)
+		box(Vector3(7,0.7,0.12),Vector3(-43,1.1,z-1.3),Color("48798f"))
+	for x: float in [-45,-40]:
+		box(Vector3(3.5,0.2,6),Vector3(x,0.1,-50),Color("9e784b"),true)
+		for z: float in [-52,-50,-48]:
+			box(Vector3(2.5,1.8,1.5),Vector3(x,1.1,z),Color("bb956c"),true)

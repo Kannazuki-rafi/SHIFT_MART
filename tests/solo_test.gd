@@ -9,7 +9,7 @@ func check(condition: bool, description: String) -> void:
 		push_error("FAIL: "+description)
 
 func click(text: String) -> bool:
-	for child in app.screen.get_children():
+	for child in app.screen.find_children("*", "Button", true, false):
 		if child is Button and child.text == text:
 			child.pressed.emit()
 			await get_tree().process_frame
@@ -36,7 +36,7 @@ func run_solo() -> bool:
 	add_child(app)
 	await get_tree().process_frame
 	app.player_name.text = "Solo Regression"
-	await click("SOLO DEBUG DRIVE")
+	await click("PRACTICE SOLO")
 	check(Session.phase == "race" and is_instance_valid(app.world),"Actual Solo button loads the race")
 	check(Session.solo_mode and Session.peer == null and Session.multiplayer.multiplayer_peer is OfflineMultiplayerPeer,"Solo uses offline multiplayer and opens no UDP server")
 	check(Session.roster.size() == 1 and Session.roster[1].name == "Solo Regression","Solo preserves player name with exactly one cart")
@@ -71,6 +71,8 @@ func run_solo() -> bool:
 	check(not Session.can_start(),"Normal network lobby still requires two players")
 	Session.leave()
 	await get_tree().process_frame
-	await click("SOLO DEBUG DRIVE")
+	await click("PRACTICE SOLO")
 	check(Session.phase == "race" and Session.peer == null,"Solo can be launched again after leaving a network lobby")
 	return true
+
+

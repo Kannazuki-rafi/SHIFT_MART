@@ -1,12 +1,12 @@
 extends Node3D
 ## Host advances gameplay; every peer derives visuals from compact event timestamps.
-const CABINET_WARNING: int = 90
-const CABINET_IMPACT: int = 120
+const CABINET_WARNING: int = 72
+const CABINET_IMPACT: int = 96
 const CABINET_DOWN_END: int = 300
 const CABINET_RESET_END: int = 360
 const CABINET_CYCLE: int = 1080
-const FRUIT_DROP: int = 45
-const FRUIT_LAND: int = 75
+const FRUIT_DROP: int = 36
+const FRUIT_LAND: int = 60
 const FRUIT_CLEAR: int = 555
 const FRUIT_CYCLE: int = 900
 const STUN_TICKS: int = 45

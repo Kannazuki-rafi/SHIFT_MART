@@ -143,14 +143,14 @@ func simulate(delta: float, tick: int, driving: bool) -> void:
 	var forward: Vector3 = -transform.basis.z
 	var speed: float = velocity.dot(forward)
 	var is_slipping: bool = tick < slip_end
-	rotation.y -= steer*TUNING.steering*(1.0 if gear == 1 else 0.8)*clampf(absf(speed)/3.0,0,1)*delta*(-1 if speed < -0.2 else 1)
+	var effective_steer: float = -steer if is_slipping else steer
+	rotation.y -= effective_steer*TUNING.steering*(1.0 if gear == 1 else 0.8)*clampf(absf(speed)/3.0,0,1)*delta*(-1 if speed < -0.2 else 1)
 	forward = -transform.basis.z
 	var right: Vector3 = transform.basis.x
 	var current_grip: float = TUNING.grip * (0.25 if is_slipping else (1.0 if gear == 1 else 0.6))
 	velocity -= right*velocity.dot(right)*minf(1,current_grip*delta)
 	var cur_top_speed: float = TUNING.top_speed * (0.8 if gear == 1 else 1.0)
 	if health < 35: cur_top_speed *= 0.9
-	if is_slipping: cur_top_speed *= 0.7
 	var cur_accel: float = TUNING.acceleration
 	velocity += forward*throttle*cur_accel*delta
 	velocity = velocity.move_toward(Vector3.ZERO,(2.0 if throttle != 0 else 7.0)*delta)

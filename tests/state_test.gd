@@ -19,7 +19,7 @@ func _ready() -> void:
 	world.set_physics_process(false)
 	world.set_process(false)
 	await get_tree().physics_frame
-	for test: String in ["checkpoint_rules","route_physics","shift_rules","items_and_respawn","ram_rules","branch_progress","replication","can_aim_assist"]:
+	for test: String in ["checkpoint_rules","route_physics","shift_rules","items_and_respawn","ram_rules","branch_progress","replication","can_aim_assist","slip_steering"]:
 		if await call(test) != true:
 			failures += 1
 			push_error("Test did not finish: "+test)
@@ -36,6 +36,27 @@ func reset_cart(cart) -> void:
 	cart.protection_end = 0
 	cart.health = 100
 	cart.held_item = ""
+
+func slip_steering() -> bool:
+	var cart = world.carts[1]
+	cart.process_mode = Node.PROCESS_MODE_INHERIT
+	await get_tree().physics_frame
+	reset_cart(cart)
+	for gear: int in [1, 2]:
+		cart.position = Vector3(0, 10, 0)
+		cart.rotation.y = 0
+		cart.velocity = Vector3(3, 0, -6)
+		cart.external_velocity = Vector3.ZERO
+		cart.gear = gear
+		cart.steer = 1.0
+		cart.throttle = 0.0
+		cart.last_input_tick = 100
+		cart.slip_end = 160
+		cart.simulate(1.0 / 60.0, 100, true)
+		check(cart.rotation.y < 0 if gear == 1 else cart.rotation.y > 0, "Slip steering stays normal in Grip and reverses in Rush (gear %d)" % gear)
+		if gear == 1:
+			check(absf(cart.velocity.x) > 2.0, "Grip still slides sideways while slipping")
+	return true
 
 func can_aim_assist() -> bool:
 	# Elevated isolated fixture avoids depending on authored track geometry.

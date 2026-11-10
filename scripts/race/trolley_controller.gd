@@ -143,11 +143,11 @@ func simulate(delta: float, tick: int, driving: bool) -> void:
 	var forward: Vector3 = -transform.basis.z
 	var speed: float = velocity.dot(forward)
 	var is_slipping: bool = tick < slip_end
-	var effective_steer: float = -steer if is_slipping else steer
-	rotation.y -= effective_steer*TUNING.steering*(1.0 if gear == 1 else 0.8)*clampf(absf(speed)/3.0,0,1)*delta*(-1 if speed < -0.2 else 1)
+	var effective_steer: float = -steer if is_slipping and gear == 2 else steer
+	rotation.y -= effective_steer*TUNING.steering*(1.1 if gear == 1 else 0.75)*clampf(absf(speed)/3.0,0,1)*delta*(-1 if speed < -0.2 else 1)
 	forward = -transform.basis.z
 	var right: Vector3 = transform.basis.x
-	var current_grip: float = TUNING.grip * (0.25 if is_slipping else (1.0 if gear == 1 else 0.6))
+	var current_grip: float = TUNING.grip * (0.25 if is_slipping else (1.1 if gear == 1 else 0.45))
 	velocity -= right*velocity.dot(right)*minf(1,current_grip*delta)
 	var cur_top_speed: float = TUNING.top_speed * (0.8 if gear == 1 else 1.0)
 	if health < 35: cur_top_speed *= 0.9
@@ -163,6 +163,9 @@ func simulate(delta: float, tick: int, driving: bool) -> void:
 	move_and_slide()
 	for index: int in get_slide_collision_count():
 		var collision: KinematicCollision3D = get_slide_collision(index)
+		var obstacle := collision.get_collider()
+		if obstacle != null and obstacle.has_meta("cabinet_event"):
+			obstacle.get_meta("store_events").break_cabinet(int(obstacle.get_meta("cabinet_event")),tick)
 		if absf(collision.get_normal().y) < 0.3:
 			var impact: float = -before.dot(collision.get_normal())
 			if impact > 2.2:

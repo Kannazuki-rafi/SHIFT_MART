@@ -25,7 +25,7 @@ func _ready() -> void:
 	var replica = Events.new()
 	add_child(replica)
 	replica.apply_state(events.state_data())
-	replica.render(1080)
+	replica.render(1090)
 	check(replica.state_data() == events.state_data(),"Warning timestamps and consumed fruit replicate exactly")
 	replica.free()
 	for i: int in World.PICKUP_STANDS.size(): world.pickup_cooldowns[i] = 1200
@@ -68,20 +68,24 @@ func test_cabinet(event: Dictionary) -> void:
 	world.store_events.advance(1000,world.carts,true)
 	world.store_events.render(1000)
 	check(event.trigger == 1000 and event.marker.visible,"Nearby racer starts a visible red landing warning")
-	world.store_events.advance(1095,world.carts,true)
+	world.store_events.advance(1089,world.carts,true)
 	check(cart.health == 100 and cart.stun_end == 0,"Cabinet cannot hurt racers before its impact")
-	world.store_events.advance(1096,world.carts,true)
-	world.store_events.render(1096)
-	check(cart.health == 75 and cart.stun_end == 1141,"Cabinet impact deals exactly 25 damage and 0.75 second stun")
+	world.store_events.advance(1090,world.carts,true)
+	world.store_events.render(1090)
+	check(cart.health == 75 and cart.stun_end == 1135,"Cabinet impact deals exactly 25 damage and 0.75 second stun")
 	check(not event.marker.visible and is_equal_approx(event.pivot.rotation.x,-PI/2),"Cabinet lands inside the marked area and clears warning")
 	check(world.carts[2].health == 100 and world.carts[2].stun_end == 0,"Racer outside the red area dodges the cabinet")
 	check(world.carts[3].health == 100 and world.carts[3].stun_end == 0,"Spawn protection blocks cabinet damage and stun")
 	check(world.carts[4].health == 100,"Finished racer is immune to cabinets")
 	cart.protection_end = 0
-	world.store_events.advance(1097,world.carts,true)
+	world.store_events.advance(1091,world.carts,true)
 	check(cart.health == 75,"A cabinet impacts only once per activation")
+	check(not event.collision.disabled,"Fallen cabinet has solid collision")
+	world.store_events.break_cabinet(world.store_events.events.find(event),1091)
+	world.store_events.render(1091)
+	check(event.mask == 1 and event.collision.disabled and not event.pivot.visible,"One collision destroys cabinet and clears passage")
 	world.store_events.render(1360)
-	check(is_zero_approx(event.pivot.rotation.x) and not event.collision.disabled,"Cabinet safely returns upright before rearming")
+	check(is_zero_approx(event.pivot.rotation.x) and event.collision.disabled,"Destroyed cabinet stays passable until rearming")
 	world.store_events.advance(2079,world.carts,true)
 	check(event.trigger == 1000,"Cabinet cooldown prevents rapid retriggering")
 	world.store_events.advance(2080,world.carts,true)
@@ -133,7 +137,7 @@ func capture_previews() -> void:
 	get_viewport().get_texture().get_image().save_png("res://tests/store-overview.png")
 	var event: Dictionary = world.store_events.events[0]
 	event.trigger = 1000
-	world.store_events.render(1080)
+	world.store_events.render(1090)
 	world.carts[1].visible = true
 	world.carts[1].position = event.root.to_global(Vector3(2.8,0,-3))
 	world.camera.position = event.root.to_global(Vector3(10,10,-14))
@@ -151,3 +155,4 @@ func capture_previews() -> void:
 	await get_tree().create_timer(0.3).timeout
 	await RenderingServer.frame_post_draw
 	get_viewport().get_texture().get_image().save_png("res://tests/fruit-spill.png")
+

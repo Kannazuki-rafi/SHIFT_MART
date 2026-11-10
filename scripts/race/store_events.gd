@@ -1,7 +1,7 @@
 extends Node3D
 ## Host advances gameplay; every peer derives visuals from compact event timestamps.
-const CABINET_WARNING: int = 72
-const CABINET_IMPACT: int = 96
+const CABINET_WARNING: int = 60
+const CABINET_IMPACT: float = 1.49 * 60.0
 const CABINET_DOWN_END: int = 300
 const CABINET_RESET_END: int = 360
 const CABINET_CYCLE: int = 1080
@@ -38,6 +38,9 @@ func _ready() -> void:
 		collision.shape = shape
 		collision.position.y = shape.size.y*0.5
 		body.add_child(collision)
+		if cabinet:
+			body.set_meta("cabinet_event", events.size())
+			body.set_meta("store_events", self)
 		var pivot := Node3D.new()
 		root.add_child(pivot)
 		var color := Color("7193a3") if cabinet else Color("a67c4c")
@@ -139,6 +142,15 @@ func advance(tick: int, carts: Dictionary, active: bool) -> void:
 						event.mask |= 1 << i
 						break
 
+func break_cabinet(index: int, tick: int) -> void:
+	if not multiplayer.is_server(): return
+	var event: Dictionary = events[index]
+	var age: int = tick-event.trigger if event.trigger >= 0 else -1
+	if age < CABINET_IMPACT or age >= CABINET_DOWN_END or event.mask != 0: return
+	event.mask = 1
+	event.pivot.visible = false
+	event.collision.disabled = true
+
 func state_data() -> PackedInt32Array:
 	var state := PackedInt32Array()
 	for event: Dictionary in events:
@@ -155,7 +167,7 @@ func apply_state(state: PackedInt32Array) -> void:
 func render(tick: int) -> void:
 	for event: Dictionary in events:
 		var age: int = tick-event.trigger if event.trigger >= 0 else -1
-		var landing: int = CABINET_IMPACT if event.cabinet else FRUIT_LAND
+		var landing: float = CABINET_IMPACT if event.cabinet else FRUIT_LAND
 		event.marker.visible = age >= 0 and age < landing
 		event.warning.visible = event.marker.visible
 		if event.marker.visible:
@@ -170,7 +182,11 @@ func render(tick: int) -> void:
 			elif age >= CABINET_DOWN_END and age < CABINET_RESET_END:
 				angle = lerpf(-PI*0.5,0.0,float(age-CABINET_DOWN_END)/float(CABINET_RESET_END-CABINET_DOWN_END))
 			event.pivot.rotation.x = angle
-			event.collision.disabled = age >= CABINET_WARNING and age < CABINET_RESET_END
+			var fallen: bool = age >= CABINET_IMPACT and age < CABINET_DOWN_END
+			event.pivot.visible = event.mask == 0
+			event.collision.rotation.x = -PI*0.5 if fallen else 0.0
+			event.collision.position = Vector3(0,0.5,-2.5) if fallen else Vector3(0,2.5,0)
+			event.collision.disabled = event.mask != 0 or (age >= CABINET_WARNING and age < CABINET_RESET_END and not fallen)
 		else:
 			for i: int in event.fruits.size():
 				var fruit: MeshInstance3D = event.fruits[i]

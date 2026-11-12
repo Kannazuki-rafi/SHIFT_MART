@@ -1,10 +1,15 @@
 extends Node3D
 const RaceWorld = preload("res://scripts/race/race_world.gd")
+const MidnightTheme = preload("res://scripts/midnight_theme.gd")
+const MenuAction = preload("res://scripts/menu_action.gd")
 const LIME: Color = Color("d6f663")
 const PALE: Color = Color("eff5e4")
 var modal_focus_modes: Dictionary = {}
 var previous_focus: Control
 var menu_motion: bool = true
+var menu_hint: Label
+var saved_address := "127.0.0.1"
+var saved_port := 24567
 var ui: CanvasLayer
 var screen: Control
 var world
@@ -36,8 +41,13 @@ var shift_busy_until: int = 0
 
 func _ready() -> void:
 	_setup_input()
+	var preferences := ConfigFile.new()
+	if preferences.load("user://menu_settings.cfg") == OK:
+		menu_motion = bool(preferences.get_value("menu", "motion", true))
 	ui = CanvasLayer.new()
+	ui.name = "Interface"
 	add_child(ui)
+	get_viewport().size_changed.connect(_fit_screen)
 	Session.changed.connect(_session_changed)
 	Session.message.connect(_message)
 	Session.begin_race.connect(_begin)
@@ -59,8 +69,10 @@ func _new_screen() -> void:
 	previous_focus = null
 	if is_instance_valid(screen): screen.free()
 	screen = Control.new()
-	screen.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	screen.name = "Screen"
+	screen.size = Vector2(1280,720)
 	ui.add_child(screen)
+	_fit_screen()
 	var theme: Theme = Theme.new()
 	theme.default_font_size = 18
 	theme.set_color("font_color","Label",PALE)
@@ -74,6 +86,13 @@ func _new_screen() -> void:
 		style.content_margin_bottom = 12
 		theme.set_stylebox(state_name,"Button",style)
 	screen.theme = theme
+
+func _fit_screen() -> void:
+	if not is_instance_valid(screen): return
+	var viewport_size: Vector2 = get_viewport().get_visible_rect().size
+	var factor: float = minf(viewport_size.x / 1280.0, viewport_size.y / 720.0)
+	screen.scale = Vector2.ONE * factor
+	screen.position = (viewport_size - Vector2(1280,720) * factor) * 0.5
 
 func panel(parent: Node, rect: Rect2, color: Color = Color("112932")) -> Panel:
 	var node: Panel = Panel.new()
@@ -119,41 +138,63 @@ func field(text: String, pos: Vector2, width: float) -> LineEdit:
 
 func _main_menu() -> void:
 	_new_screen()
+	screen.set_meta("midnight_menu",true)
 	var art: Control = preload("res://scripts/menu_art.gd").new()
+	art.name = "MenuArt"
 	screen.add_child(art)
 	art.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 	art.motion_enabled = menu_motion
 	_menu_theme()
-	label(screen,"AFTER HOURS / TROLLEY RACING",Vector2(48,38),14,LIME)
-	label(screen,"SHIFT MART",Vector2(42,64),68,Color.WHITE)
-	label(screen,"Clock out. Roll in.",Vector2(48,153),25,PALE)
-	label(screen,"2-4 RIDERS   /   3 LAPS",Vector2(48,203),14,LIME)
-	label(screen,"Your everyday trolley. Your late-night getaway.",Vector2(48,591),16,Color("9bb8c1"))
-	button(screen,"HOW TO PLAY",Vector2(48,638),172,_help)
-	button(screen,"SETTINGS",Vector2(232,638),136,_settings)
-	button(screen,"CREDITS",Vector2(380,638),136,_credits)
-
-	var card := PanelContainer.new()
-	card.position = Vector2(584,38)
-	card.size = Vector2(648,584)
-	var card_style := StyleBoxFlat.new()
-	card_style.bg_color = Color("1b2a36")
-	card_style.set_corner_radius_all(16)
-	card_style.set_content_margin_all(28)
-	card.add_theme_stylebox_override("panel",card_style)
-	screen.add_child(card)
-	var form := VBoxContainer.new()
-	form.add_theme_constant_override("separation",12)
-	card.add_child(form)
-	_menu_caption(form,"PLAY TOGETHER",13,LIME)
-	_menu_caption(form,"Start your shift",32,Color.WHITE)
-	_menu_caption(form,"Host a lobby or join your friends.",17,Color("b7cad3"))
-	_menu_caption(form,"RACER NAME",13,PALE)
-	player_name = field(Session.local_name,Vector2.ZERO,0)
-	player_name.reparent(form)
-	player_name.custom_minimum_size.y = 44
+	label(screen,"SHIFT MART   /   AFTER-HOURS TROLLEY RACING",Vector2(64,34),13,MidnightTheme.PAPER)
+	label(screen,"STORE CLOSED.  NIGHT WIDE OPEN.",Vector2(66,324),14,MidnightTheme.PAPER)
+	menu_hint = label(screen,"",Vector2(66,589),16,MidnightTheme.PAPER)
+	var clock_in := _menu_action("CLOCK IN", "Host a lobby or join your friends.  2-4 riders.", 0, _multiplayer_menu)
+	_menu_action("PRACTICE SOLO", "One trolley. The whole store. Practice offline.", 1, _solo_debug_drive)
+	_menu_action("HOW TO PLAY", "Learn the routes, the gears, and the dirty tricks.", 2, _help)
+	_menu_action("SETTINGS", "Tune your sound, screen, and menu motion.", 3, _settings)
+	label(screen,"RACER",Vector2(66,632),12,MidnightTheme.MUTED)
+	player_name = field(Session.local_name,Vector2(128,621),302)
+	player_name.name = "RacerName"
+	player_name.size.y = 36
 	player_name.max_length = 20
-	player_name.placeholder_text = "Enter your racer name"
+	player_name.placeholder_text = "Your racer name"
+	player_name.text_changed.connect(func(value: String): Session.local_name = value)
+	label(screen,"TAB / ARROWS   MOVE     ENTER   SELECT",Vector2(64,686),12,MidnightTheme.MUTED)
+	var credits := button(screen,"CREDITS",Vector2(684,670),132,_credits)
+	credits.size.y = 40
+	var quit := button(screen,"QUIT",Vector2(833,670),112,func(): get_tree().quit())
+	quit.size.y = 40
+	if not notice.is_empty(): panel(screen,Rect2(522,578,710,70),MidnightTheme.INK)
+	status_label = label(screen,notice,Vector2(538,590),16,MidnightTheme.PINK)
+	status_label.size = Vector2(678,48)
+	status_label.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	clock_in.grab_focus()
+
+func _menu_action(text: String, hint: String, index: int, callback: Callable) -> Button:
+	var action := MenuAction.new()
+	action.name = "MenuAction%d" % index
+	action.text = text
+	action.index_text = "%02d" % (index + 1)
+	action.position = Vector2(66 + index * 5,356 + index * 55)
+	action.size = Vector2(398,49)
+	action.motion_enabled = menu_motion
+	action.pressed.connect(callback, CONNECT_DEFERRED)
+	action.pressed.connect(SoundManager.play_ui_click)
+	action.focus_entered.connect(func():
+		if is_instance_valid(menu_hint): menu_hint.text = hint
+	)
+	screen.add_child(action)
+	action.enter(0.08 + index * 0.065)
+	return action
+
+func _multiplayer_menu() -> void:
+	_modal("CLOCK IN")
+	label(overlay,"Bring the night crew. Host a lobby or join a friend.",Vector2(315,169),18,MidnightTheme.MUTED)
+	var form := VBoxContainer.new()
+	form.position = Vector2(315,213)
+	form.size = Vector2(650,320)
+	form.add_theme_constant_override("separation",12)
+	overlay.add_child(form)
 	var connection := HBoxContainer.new()
 	connection.add_theme_constant_override("separation",16)
 	form.add_child(connection)
@@ -162,9 +203,11 @@ func _main_menu() -> void:
 	address_column.add_theme_constant_override("separation",8)
 	connection.add_child(address_column)
 	_menu_caption(address_column,"HOST ADDRESS",13,PALE)
-	address = field("127.0.0.1",Vector2.ZERO,0)
+	address = field(saved_address,Vector2.ZERO,0)
 	address.reparent(address_column)
+	address.name = "HostAddress"
 	address.custom_minimum_size.y = 44
+	address.text_changed.connect(func(value: String): saved_address = value)
 	var port_column := VBoxContainer.new()
 	port_column.custom_minimum_size.x = 150
 	port_column.add_theme_constant_override("separation",8)
@@ -174,7 +217,8 @@ func _main_menu() -> void:
 	port.custom_minimum_size.y = 44
 	port.min_value = 1024
 	port.max_value = 65535
-	port.value = 24567
+	port.value = saved_port
+	port.value_changed.connect(func(value: float): saved_port = int(value))
 	port_column.add_child(port)
 	var actions := HBoxContainer.new()
 	actions.add_theme_constant_override("separation",12)
@@ -188,25 +232,17 @@ func _main_menu() -> void:
 	join.reparent(actions)
 	join.custom_minimum_size.y = 50
 	join.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-	var solo: Button = button(screen,"PRACTICE SOLO",Vector2.ZERO,0,_solo_debug_drive)
-	solo.reparent(form)
-	solo.custom_minimum_size.y = 46
-	solo.tooltip_text = "Offline practice drive"
-	_menu_caption(form,"Same PC: 127.0.0.1  /  LAN: use the host IP",14,Color("9bb8c1"))
+	_menu_caption(form,"Same PC: 127.0.0.1  /  LAN: use the host IP",15,MidnightTheme.MUTED)
 	var connection_help := LinkButton.new()
 	connection_help.text = "Playing over the internet? Connection help"
 	connection_help.add_theme_font_size_override("font_size",14)
 	connection_help.pressed.connect(_connection_help, CONNECT_DEFERRED)
 	form.add_child(connection_help)
-	status_label = _menu_caption(form,notice,15,Color("ffb780"))
+	status_label = _menu_caption(form,notice,16,MidnightTheme.PINK)
 	status_label.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	status_label.custom_minimum_size.y = 40
-	label(screen,"TAB  NAVIGATE   /   ENTER  SELECT",Vector2(588,653),12,Color("9bb8c1"))
-	button(screen,"QUIT",Vector2(1120,638),112,func(): get_tree().quit())
+	button(overlay,"BACK",Vector2(315,550),650,_close_overlay)
 	host.grab_focus()
-	if menu_motion:
-		screen.modulate.a = 0.0
-		screen.create_tween().tween_property(screen,"modulate:a",1.0,0.28)
 
 func _menu_caption(parent: Node, text: String, font_size: int, color: Color) -> Label:
 	var caption: Label = label(parent,text,Vector2.ZERO,font_size,color)
@@ -215,31 +251,10 @@ func _menu_caption(parent: Node, text: String, font_size: int, color: Color) -> 
 func _connection_help() -> void:
 	_modal("CONNECT WITH FRIENDS")
 	label(overlay,"Same computer: open two game windows.\nHost in one, then join 127.0.0.1 in the other.\n\nSame network: enter the host computer's local IP.\n\nInternet: enter the host's public IP. The host must\nforward UDP port 24567 (or the chosen port).\nDirect hosting through CGNAT is unsupported.",Vector2(315,185),19)
-	button(overlay,"BACK",Vector2(315,540),650,_close_overlay)
+	button(overlay,"BACK",Vector2(315,540),650,_multiplayer_menu)
 
 func _menu_theme() -> void:
-	for state_name: String in ["normal","hover","pressed","focus"]:
-		var style: StyleBoxFlat = StyleBoxFlat.new()
-		style.bg_color = Color("293a4a") if state_name == "normal" else Color("40586b")
-		if state_name == "focus": style.bg_color = Color(0,0,0,0)
-		style.set_corner_radius_all(4)
-		style.set_border_width_all(2 if state_name == "focus" else 1)
-		style.border_color = LIME if state_name == "focus" else Color("577182")
-		style.content_margin_left = 18
-		style.content_margin_right = 18
-		screen.theme.set_stylebox(state_name,"Button",style)
-		screen.theme.set_color("font_color","Button",Color.WHITE)
-	for state_name: String in ["normal","focus"]:
-		var style: StyleBoxFlat = StyleBoxFlat.new()
-		style.bg_color = Color("101923")
-		style.set_corner_radius_all(4)
-		style.set_border_width_all(2)
-		style.border_color = LIME if state_name == "focus" else Color("496172")
-		style.content_margin_left = 14
-		style.content_margin_right = 14
-		screen.theme.set_stylebox(state_name,"LineEdit",style)
-	screen.theme.set_color("font_color","LineEdit",Color.WHITE)
-	screen.theme.set_color("font_color","CheckButton",PALE)
+	screen.theme = MidnightTheme.build()
 
 func _menu_primary(node: Button) -> void:
 	for state_name: String in ["normal","hover","pressed"]:
@@ -371,8 +386,19 @@ func _modal(title: String) -> Control:
 	shade.color = Color(0,0,0,0.7)
 	shade.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 	overlay.add_child(shade)
-	panel(overlay,Rect2(280,90,720,540))
-	label(overlay,title,Vector2(315,118),34,LIME)
+	var backdrop := panel(overlay,Rect2(280,90,720,540))
+	if screen.has_meta("midnight_menu"):
+		var paper := StyleBoxFlat.new()
+		paper.bg_color = MidnightTheme.INK
+		paper.set_border_width_all(2)
+		paper.border_color = MidnightTheme.MUTED
+		paper.shadow_color = MidnightTheme.PINK
+		paper.shadow_size = 0
+		paper.shadow_offset = Vector2(8,8)
+		backdrop.add_theme_stylebox_override("panel",paper)
+		label(overlay,"STAFF ONLY / MIDNIGHT SHIFT",Vector2(315,603),11,MidnightTheme.MUTED)
+	var heading := label(overlay,title,Vector2(315,118),34,MidnightTheme.ACID if screen.has_meta("midnight_menu") else LIME)
+	heading.add_theme_font_override("font",MidnightTheme.heading_font())
 	return overlay
 
 func _close_overlay() -> void:
@@ -385,12 +411,16 @@ func _close_overlay() -> void:
 
 func _help() -> void:
 	var box: Control = _modal("HOW TO PLAY")
-	label(box,"W / Up      Accelerate\nS / Down    Brake, then reverse\nA / D       Steer\nE           Shift Grip / Rush and change shared layout\nSpace       Use banana peel or canned drink\nHold R 2s   Reset to last checkpoint (3s penalty)\nEsc         Local menu; race keeps running\n\nFollow floor arrows and pass checkpoints in order.\nCross checkout to complete each of three laps.\nBlue / Orange gates warn 1.5s before changing.\nDrive through marked pads to collect an item.\nBroken carts respawn at the last checkpoint after 3s.\nRed floor = falling cabinet: dodge to avoid 25 damage + stun.\nFalling fruit causes slips; watch the produce racks.",Vector2(318,180),17)
+	label(box,"DRIVE",Vector2(315,180),14,MidnightTheme.PINK)
+	label(box,"W / Up    Accelerate\nS / Down    Brake, then reverse\nA / D    Steer\nE    Grip / Rush + route shift\nSpace    Use held item\nHold R (2s)    Recover\nEsc    Local menu",Vector2(315,211),17)
+	label(box,"Recovery adds a 3s penalty.\nOnline races keep running\nwhile your local menu is open.",Vector2(315,440),16,MidnightTheme.MUTED)
+	label(box,"RACE THE STORE",Vector2(650,180),14,MidnightTheme.PINK)
+	label(box,"Follow the floor arrows.\nPass every checkpoint in order.\nCross checkout. Finish 3 laps.\n\nRoute gates give a 1.5s warning.\nMarked pads give you items.\nBroken carts respawn after 3s.\n\nRed floor: falling cabinet!\nDodge to avoid 25 damage + stun.\nFalling fruit makes tires slip.",Vector2(650,211),16)
 	button(box,"BACK",Vector2(315,550),650,_close_overlay)
 
 func _credits() -> void:
 	var box: Control = _modal("CREDITS")
-	label(box,"SHIFT MART / 3D multiplayer prototype\n\nProject direction: user-provided SHIFT MART plan\nImplementation: assisted by OpenAI Codex\nEngine: Godot 4.6.3 (MIT)\nAll meshes: original procedural primitive shapes\n\nReplace placeholders with your team's final assets.\nSee CREDITS.md for engine license information.",Vector2(318,200),20)
+	label(box,"MIDNIGHT SHIFT / SHIFT MART\n\nProject direction: user-provided SHIFT MART plan\nImplementation: assisted by OpenAI Codex\nEngine: Godot (MIT)\n3D meshes: procedural prototype geometry\nMenu illustration + title: AI-generated concept assets\n\nReplaceable artwork for the final art pass.\nSee CREDITS.md for engine license information.",Vector2(318,200),19)
 	button(box,"BACK",Vector2(315,550),650,_close_overlay)
 
 func _settings() -> void:
@@ -401,12 +431,30 @@ func _settings() -> void:
 	full.button_pressed = DisplayServer.window_get_mode() == DisplayServer.WINDOW_MODE_FULLSCREEN
 	full.toggled.connect(func(value: bool): DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN if value else DisplayServer.WINDOW_MODE_WINDOWED))
 	box.add_child(full)
-	label(box,"SOUND SETTINGS",Vector2(320,245),22,LIME)
+	var reduce := CheckButton.new()
+	reduce.name = "ReduceMotion"
+	reduce.position = Vector2(320,225)
+	reduce.text = "Reduce menu motion"
+	reduce.button_pressed = not menu_motion
+	reduce.toggled.connect(func(value: bool): _set_menu_motion(not value))
+	box.add_child(reduce)
+	label(box,"SOUND SETTINGS",Vector2(320,277),22,LIME)
 	var audio_settings: VBoxContainer = preload("res://sound_manager/sound_settings.gd").new()
-	audio_settings.position = Vector2(320,285)
+	audio_settings.position = Vector2(320,313)
 	audio_settings.size.x = 640
 	box.add_child(audio_settings)
 	button(box,"BACK",Vector2(315,550),650,_close_overlay)
+	full.grab_focus()
+
+func _set_menu_motion(value: bool) -> void:
+	menu_motion = value
+	if screen.has_node("MenuArt"): screen.get_node("MenuArt").motion_enabled = value
+	for child: Node in screen.get_children():
+		if child is MenuAction: child.set_motion(value)
+	var preferences := ConfigFile.new()
+	preferences.set_value("menu","motion",value)
+	var error: Error = preferences.save("user://menu_settings.cfg")
+	if error != OK: push_warning("Could not save menu motion preference: %s" % error_string(error))
 
 func _unhandled_key_input(event: InputEvent) -> void:
 	if event.is_action_pressed("shift") and not event.is_echo() and is_instance_valid(world) and not is_instance_valid(overlay):
